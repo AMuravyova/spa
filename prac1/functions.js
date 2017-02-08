@@ -18,7 +18,7 @@ function func2() {
 
 
 function func3() {
-     return console.log("debounce function is called");
+     return console.log("debounce function is called! Delay is 5 sec. ");
 }
 
 function myMap(arr, func){
@@ -79,11 +79,6 @@ function myThrottle(func2, delay){
 }
 
 
-
-
-
-
-
 var trottle = myThrottle(func2, delay);
 
 var checkInterval = setInterval(function(){
@@ -97,22 +92,99 @@ setTimeout(function(){
 
 
 
+function myDebounce(func3, delay){
 
+    var callFunc = true;
+   // var callFunc = false;
 
+    var timer = 0;
+    //  timer = setTimeout(function(){
+    //     callFunc = true;
+    // }, delay);
 
-function myDebounce(func, time){
-    var state = true;
+    var fn = function(){
+        return setTimeout(function(){
+            callFunc = true;
+            func3.apply(this, arguments);
+        }, delay);
+    };
 
-    return (function(){
-        if(!state) return;
-        func.apply(this, arguments);
-        state = false;
-        setTimeout(function(){
-            state = true;
-        }, time);
-    })();
+    return function(){
+
+        if(!callFunc){
+            clearTimeout(timer);
+            timer = fn();
+            return;
+        }
+
+        //func3.apply(this, arguments);
+        callFunc = false;
+        timer = fn();
+    };
 
 }
-console.log(myDebounce(func3, delay));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+function myDebounce(func3, delay){
+
+    // var callFunc = true;
+    var callFunc = false;
+
+    //var timer = 0;
+    var timer = setTimeout(function(){
+        callFunc = true;
+    }, delay);
+    return function(){
+
+        if(!callFunc){
+            clearTimeout(timer);
+            timer = setTimeout(function(){ callFunc = true}, delay);
+            return;
+        }
+        // if(!callFunc) {
+        //
+        //     return;
+        // }
+        func3.apply(this, arguments);
+        callFunc = false;
+        // setTimeout(function(){
+        //     callFunc = true;
+        // }, delay);
+    };
+
+}
+*/
+
+
+
+
+
+
+
+var deboun = myDebounce(func3, 1000);
+
+
+var checkInterval2 = setInterval(function(){
+    console.log("called debounce from checkInterval every 1 sec during 15 sec ");
+    deboun();
+}, 500);
+
+setTimeout(function(){
+    clearInterval(checkInterval2);
+}, 5000);
+
 
 

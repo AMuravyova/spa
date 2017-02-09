@@ -2,7 +2,48 @@
  * Created by amurav on 08.02.2017.
  */
 
+function Scope(){
 
+    this.$$watchers = [];
+    this.$watch = function (propertyFn, listenerFn) {
+        var watcher = {
+            property: propertyFn,
+            listener: listenerFn
+        };
+        this.$$watchers.push(watcher);
+    };
+    this.$digest = function () {
+
+        for (var i = 0; i < this.$$watchers.length; i++) {
+            this.$$watchers[i].listener();
+        }
+
+    };
+
+}
+
+var scope = new Scope();
+
+scope.$watch(
+    function() {console.log('watchFn'); },
+    function() {console.log('listener'); }
+);
+
+scope.$digest(); //listener
+scope.$digest(); //listener
+scope.$digest(); //listener
+
+
+
+
+
+
+
+
+
+
+
+/*
 var scope = new Scope();
 
 scope.firstName = 'Joe';
@@ -31,6 +72,8 @@ scope.$digest = function () {
 
 };
 
+
+
 function Cl() {
     this.a = 54645564;
     this.r = function () {
@@ -52,3 +95,4 @@ class Cl2 {
 
     }
 }
+*/

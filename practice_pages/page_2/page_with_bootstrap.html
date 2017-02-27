@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
 
@@ -15,26 +15,123 @@
     <div class="container">
         <div class="col-md-12">
             <div class="row">
-                <div class="navbar_title">
-                    <span>HTML&CSS practice</span>
-                </div>
 
-                <div class="navbar_links">
+
+
+                <div class="nav nav-tabs">
+                    <div>
+                        <div class="nav_title">
+                            HTML&CSS practice
+                        </div>
+                    </div>
+
                     <ul>
-                        <li class="active"><a href="#">dashboard</a></li>
-                        <li><a href="#">documents</a></li>
-                        <li><a href="#">images</a></li>
-                        <li><a href="#">requests</a></li>
+                        <li role="presentation" class="active"><a href="#tabs-1">Dashboard</a></li>
+                        <li role="presentation"><a href="#tabs-2">Documents</a></li>
+                        <li role="presentation"><a href="#tabs-3">Images</a></li>
+                        <li role="presentation"><a href="#tabs-4">Requests</a></li>
                     </ul>
+
+
+                    <div role="presentation" class="dropdown">
+                        <a id="dropdownMenu1" class="dropdown-toggle account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#">mur@mera.ru
+                            <div class="avatar"><img  src="avatar.svg"></div>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                            <li><a href="account_user_page.html">Account</a></li>
+                            <li><a href="logout_page.html">Log out</a></li>
+                        </ul>
+                    </div>
+
                 </div>
 
-                <div class="account">
-                    <a href="#">mur@mera.ru</a>
-                    <img class="avatar" src="avatar.svg">
-                </div>
+
             </div>
         </div>
     </div>
+</header>
+
+    <div class="container">
+        <div class="col-md-12">
+            <div class="row">
+
+                <div class="col-md-3 column__left">
+                    <div class="blur"></div>
+                    <div class="img__container">
+                        <img class="picture">
+                    </div>
+                    <div class="text__container">
+                        <div class="text">
+                            <span>Mera team</span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat  dolore ea, perspiciatis!</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta incidunt , hic maiores nam reprehenderit reiciendis deserunt!</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-9 column__right">
+                    <div class="blur"></div>
+                    <div id="tabs-1">
+                    <div id="tabs-2" class="tabs__content tabs__content__doc tabs__content__selected">
+                        <div>
+                            <div class="doc__title">Documents</div>
+                            <div><a class="view__all" href="#">View all</a></div>
+                        </div>
+
+                        <div class=content__container>
+
+                            <div class="doc"></div>
+                            <div class="doc"></div>
+                            <div class="doc"></div>
+                            <div class="doc"></div>
+                            <div class="doc"></div>
+                            <div class="doc"></div>
+                            <div class="doc"></div>
+                            <div class="doc"></div>
+                        </div>
+
+                    </div>
+                    <div id="tabs-3" class="tabs__content tabs__content__img">
+                        <div>
+                            <div class="img__title">Images</div>
+                            <div><a class="view__all" href="#">View all</a></div>
+                        </div>
+                        <div class=content__container>
+                            <div class="img"></div>
+                            <div class="img"></div>
+                            <div class="img"></div>
+                            <div class="img"></div>
+                            <div class="img"></div>
+                            <div class="img"></div>
+                            <div class="img"></div>
+                            <div class="img"></div>
+                        </div>
+                    </div>
+                    <div id="tabs-4" class="tabs__content tabs__content__req">
+                        <div>
+                            <div class="req__title">Requests</div>
+                            <div><a class="view__all" href="#">View all</a></div>
+                        </div>
+                        <div class=content__container>
+                            <div class="req"></div>
+                            <div class="req"></div>
+                            <div class="req"></div>
+                            <div class="req"></div>
+                            <div class="req"></div>
+                            <div class="req"></div>
+                            <div class="req"></div>
+                            <div class="req"></div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+    </div>
+
 </header>
 </body>
 </html>

@@ -1,7 +1,7 @@
 body{
     letter-spacing: 0.05em;
     line-height: 0.9em;
-    font-size: 14 px;
+    font-size: 14px;
     font-family: sans-serif;
 }
 
@@ -41,6 +41,8 @@ a:hover{
 
 
 }
+
+
 
 .tabs__account{
     display: inline-block;
@@ -92,7 +94,6 @@ a:hover{
 }
 
 .picture{
-
     width: 170px;
     height:170px;
     border-radius: 100%;
@@ -139,7 +140,7 @@ a:hover{
     top: 0;
     bottom: 0;
     right: 0;
-    padding: 15 px;
+    padding: 15px;
     z-index: -2;
 
 }

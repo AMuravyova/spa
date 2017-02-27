@@ -49,13 +49,15 @@ function Scope(){
 var scope = new Scope();
 scope.firstName = 'Joe';
 scope.counter = 0;
+scope.count = 0;
 
 scope.$watch(
     function() {
         return scope.counter;
     },
     function(newValue, oldValue, ctx) {
-        scope.counterIsTwo = (newValue === 2);
+        scope.counterIsTwo = (newValue === 3);
+        console.log('scope counterIsTwo ----', scope.counterIsTwo);
     }
 );
 
@@ -65,6 +67,15 @@ scope.$watch(
     },
     function(newValue, oldValue, ctx) {
         scope.counter++;
+    }
+);
+
+scope.$watch(
+    function() {
+        return scope.count;
+    },
+    function(newValue, oldValue, ctx) {
+        scope.firstName += scope.counter;
     }
 );
 
@@ -89,4 +100,6 @@ console.log("scope.counter === 2 " + scope.counter);
 console.assert(scope.counterIsTwo, "!scope.counterIsTwo"); // true
 
 console.log("scope.counterIsTwo " + scope.counterIsTwo);
+scope.count = 1;
+scope.$digest();
 

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style>
+        #container{
+            position: relative;
+        }
+
+        #textBlock{
+            display: inline-block;
+            background: gray;
+            color: black;
+            width: 350px;
+            height: auto;
+        }
+
+        #inputBlock
+        {   display: inline-block;
+            background: lightyellow;
+            width: 350px;
+            height: auto;
+        }
+    </style>
+
+
+</head>
+<body>
+
+<div id="container">
+
+    <div id="inputBlock">
+
+        <input id="add" type="text" name="newText" value="" style="margin: 20px 20px">
+        <label for="add" onclick="myFunction()" style="color: blue">Add</label>
+
+    </div>
+
+    <div id="textBlock">
+        <h4 style="color: white; text-align: center">List notes:</h4>
+    </div>
+
+</div>
+
+<script>
+
+    document.getElementById("remove").onclick = myFunction2(this);
+
+
+    function myFunction() {
+        //создаем  узел  removeInput в блоке ввода:
+
+        var removeInput = document.createElement("div");
+
+        var newSpan1 = document.createElement("span");
+
+        var removeLabel = document.createElement("label");
+        removeLabel.style.color="red";
+        removeLabel.style.margin="20px";
+        removeLabel.setAttribute("for","del");
+        removeLabel.setAttribute("onclick","myFunction2(this)");
+
+        var newInput = document.createElement("input");
+        newInput.setAttribute("id", "remove");
+        newInput.setAttribute("value","default value");
+        var node = document.createTextNode("remove");
+        removeLabel.appendChild(node);
+        //newSpan1.appendChild(newInput);
+        removeInput.appendChild(newInput);
+        removeInput.appendChild(removeLabel);
+        removeInput.style.margin="20px 0 0 20px";
+        removeInput.setAttribute("id","del");
+
+        var inputBlock = document.getElementById("inputBlock");
+        var addInput = document.getElementById("add");
+
+        //копируем содержимое в поле remove
+        newInput.value = addInput.value;
+        //onclick add: вставлем новый узел перед вводом текста
+        inputBlock.insertBefore(removeInput,addInput);
+
+
+        var newDiv = document.createElement("div");
+        newDiv.setAttribute("value",addInput.value);
+        var textDiv = document.createTextNode(addInput.value);
+
+
+        //добавяем текстовый узел с текстом в новый div
+        newDiv.appendChild(textDiv);
+        newDiv.style.margin="20px";
+        newDiv.style.backgroundColor="lightgrey";
+
+        //помещаем новый узел с содержимым в поле с текстом
+        var textBlock = document.getElementById("textBlock");
+        textBlock.appendChild(newDiv);
+
+        addInput.value="";
+
+    }
+
+    //onclick remove - id: remove
+
+    function myFunction2(id){
+        //удаляем в блоке ввода
+        var targetDel = id.parentNode;
+
+
+        var parentTargetDel = targetDel.parentNode;
+        parentTargetDel.removeChild(targetDel);
+
+        //удаляем в блоке текста
+        var textBlock = document.getElementById("textBlock");
+        var listChild = textBlock.children;
+
+        for(var i=0;i<listChild.length;i++){
+            var valueListChildren = listChild[i].innerHTML;
+            var targetDelValue = targetDel.childNodes[0].value;
+            var isTrue =(valueListChildren===targetDelValue);
+
+            if(isTrue){
+                var parentRemoveChild = listChild[i].parentNode;
+                parentRemoveChild.removeChild(listChild[i]);
+            }
+        }
+
+    }
+
+</script>
+</body>
+</html>

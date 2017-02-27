@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $( "#tabs" ).tabs();
+        } );
+    </script>
+</head>
+<body>
+<div class="page">
+
+    <div class="tabs__header">
+        <div><div class="tabs__title">HTML&CSS practice</div></div>
+        <div class="tabs__item tabs__item__selected"><a href="#">Dashboard</a></div>
+        <div class="tabs__item"><a href="#tabs-1">Documents</a></div>
+        <div class="tabs__item"><a href="#tabs-2">Images</a></div>
+        <div class="tabs__item"><a href="#tabs-3">Requests</a></div>
+        <div class="tabs__account"><a href="#">muravjeva@mera.ru</a><div class="avatar"><img  src="avatar.svg"></div></div>
+
+    </div>
+
+
+    <div class="column__left">
+        <div class="blur"></div>
+        <div class="img__container">
+            <img class="picture">
+
+        </div>
+        <div class="text__container">
+            <div class="text">
+                <span>Mera team</span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat  dolore ea, perspiciatis!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta incidunt , hic maiores nam reprehenderit reiciendis deserunt!</p>
+            </div>
+        </div>
+
+    </div>
+    <div class="column__right">
+        <div class="blur"></div>
+        <div id="tabs-1" class="tabs__content tabs__content__doc tabs__content__selected">
+            <div>
+                <div class="doc__title">Documents</div>
+                <div><a class="view__all" href="#">View all</a></div>
+            </div>
+
+            <div class=content__container>
+
+                <div class="doc"></div>
+                <div class="doc"></div>
+                <div class="doc"></div>
+                <div class="doc"></div>
+                <div class="doc"></div>
+                <div class="doc"></div>
+                <div class="doc"></div>
+                <div class="doc"></div>
+            </div>
+
+        </div>
+        <div id="tabs-2" class="tabs__content tabs__content__img">
+            <div>
+                <div class="img__title">Images</div>
+                <div><a class="view__all" href="#">View all</a></div>
+            </div>
+            <div class=content__container>
+                <div class="img"></div>
+                <div class="img"></div>
+                <div class="img"></div>
+                <div class="img"></div>
+                <div class="img"></div>
+                <div class="img"></div>
+                <div class="img"></div>
+                <div class="img"></div>
+            </div>
+        </div>
+        <div id="tabs-3" class="tabs__content tabs__content__req">
+            <div>
+                <div class="req__title">Requests</div>
+                <div><a class="view__all" href="#">View all</a></div>
+            </div>
+            <div class=content__container>
+                <div class="req"></div>
+                <div class="req"></div>
+                <div class="req"></div>
+                <div class="req"></div>
+                <div class="req"></div>
+                <div class="req"></div>
+                <div class="req"></div>
+                <div class="req"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,209 @@
+body{
+    letter-spacing: 0.05em;
+    line-height: 0.9em;
+    font-size: 14 px;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+a:hover{
+    font-weight: bold;
+}
+
+.view__all:hover{
+    color: red;
+}
+
+.page{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left:0;
+    min-width: 700px;
+
+
+}
+
+.tabs__header{
+    position: fixed;
+    right:0;
+    left: 0;
+    display: inline-block;
+    background: linear-gradient(to right, lightblue, pink);
+    border: 1px, solid;
+    font-size: 20px;
+    overflow: auto;
+    opacity: 0.7;
+
+
+}
+
+.tabs__account{
+    display: inline-block;
+    position: absolute;
+    right: 58px;
+    color: #fff;
+    height: 60px;
+    box-sizing: border-box;
+    vertical-align: middle;
+    padding: 13px 0 12px 0;
+}
+
+
+
+.tabs__title{
+    float: left;
+    width: 30%;
+    height: 60px;
+    box-sizing: border-box;
+    padding: 20px 0 20px 40px;
+    color: #fff;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+}
+
+
+.tabs__item{
+    display: inline-block;
+    font-size: 20px;
+    padding: 20px 0 20px 0;
+    margin-right: 30px;
+    color: #fff;
+    white-space: nowrap;
+    height: 60px;
+    box-sizing: border-box;
+    vertical-align: middle;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+}
+
+.column__left{
+    margin-top: 90px;
+    position: absolute;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 70%;
+    z-index: -3;
+}
+
+.picture{
+
+    width: 170px;
+    height:170px;
+    border-radius: 100%;
+    background-position: 50%;
+    background-size: cover;
+    background-image: url("pic_people.jpg");
+    position: absolute;
+    margin-left: 70px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 0;
+}
+
+.img__container{
+    position: relative;
+    margin-bottom: 30px;
+    height: 170px;
+}
+
+.text{
+    width: 200px;
+    position: absolute;
+    margin-left: 70px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 0;
+}
+
+.text__container{
+    position: relative;
+    font-size: 13px;
+}
+
+.text span{
+    font-size: 20px;
+}
+
+.column__right{
+    margin-top: 90px;
+    position: absolute;
+    left: 30%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    padding: 15 px;
+    z-index: -2;
+
+}
+
+.blur{
+    z-index: 1;
+    filter: blur(5px);
+    position: fixed;
+    left:0;
+    right: 0;
+    top: 0;
+    height: 57px;
+    background: linear-gradient(to right, lightblue, pink);
+    opacity:0.6;
+    border: 1px solid transparent;
+
+    text-shadow: gray 0 0 10px;
+}
+
+
+.avatar{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background-color: white;
+    border-radius: 100%;
+    padding:10px;
+    margin-left: 10px;
+    position: relative;
+    vertical-align: middle;
+
+}
+.view__all{
+    float: right;
+    margin-bottom: 20px;
+    padding-right: 60px;
+    font-size: 0.9em;
+    font-weight: bold;
+    color: blue;
+}
+
+.doc__title,
+.img__title,
+.req__title{
+    float: left;
+    font-size: 1.5em;
+}
+
+.doc,
+.img,
+.req {
+    display: inline-block;
+    width: 170px;
+    height: 170px;
+    background: lightgray;
+    margin-right:15px;
+    margin-bottom:15px;
+}
+
+.content__container{
+    display: inline-block;
+    margin-bottom: 40px;
+}
+
+.tabs__item:hover{
+    font-weight: bold;
+    border-bottom: 5px solid #fff;
+}

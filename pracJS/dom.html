@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>О лосях</title>
+</head>
+<body>
+
+// find examples
+
+<p id="intro">Hello World!</p>
+
+<p>This example demonstrates the <b>getElementById</b> method!</p>
+
+<p id="demo"></p>
+
+<script>
+    var myElement = document.getElementById("intro");
+    document.getElementById("demo").innerHTML =
+        "The text from the intro paragraph is " + myElement.innerHTML;
+</script>
+
+
+
+
+<p>Hello World!</p>
+
+<p>The DOM is very useful.</p>
+<p>This example demonstrates the <b>getElementsByTagName</b> method</p>
+
+<p id="demo"></p>
+
+<script>
+    var x = document.getElementsByTagName("p");
+    document.getElementById("demo").innerHTML =
+        'The first paragraph (index 0) is: ' + x[0].innerHTML;
+</script>
+
+
+
+<div id="main">
+    <p>The DOM is very useful.</p>
+    <p>This example demonstrates the <b>getElementsByTagName</b> method</p>
+</div>
+
+<p id="demo"></p>
+
+<script>
+    var x = document.getElementById("main");
+    var y = x.getElementsByTagName("p");
+    document.getElementById("demo").innerHTML =
+        'The first paragraph (index 0) inside "main" is: ' + y[0].innerHTML;
+</script>
+
+
+
+<p>Hello World!</p>
+
+<p class="intro">The DOM is very useful.</p>
+<p class="intro">This example demonstrates the <b>getElementsByClassName</b> method.</p>
+
+<p id="demo"></p>
+
+<script>
+    var x = document.getElementsByClassName("intro");
+    document.getElementById("demo").innerHTML =
+        'The first paragraph (index 0) with class="intro": ' + x[0].innerHTML;
+</script>
+
+
+<p>Hello World!</p>
+
+<p class="intro">The DOM is very useful.</p>
+<p class="intro">This example demonstrates the <b>querySelectorAll</b> method.</p>
+
+<p id="demo"></p>
+
+<script>
+    var x = document.querySelectorAll("p.intro");
+    document.getElementById("demo").innerHTML =
+        'The first paragraph (index 0) with class="intro": ' + x[0].innerHTML;
+</script>
+
+
+
+<form id="frm1" action="form_action.asp">
+    First name: <input type="text" name="fname" value="Donald"><br>
+    Last name: <input type="text" name="lname" value="Duck"><br><br>
+    <input type="submit" value="Submit">
+</form>
+
+<p>Click "Try it" to display the value of each element in the form.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+    function myFunction() {
+        var x = document.forms["frm1"];
+        var text = "";
+        var i;
+        for (i = 0; i < x.length ;i++) {
+            text += x.elements[i].value + "<br>";
+        }
+        document.getElementById("demo").innerHTML = text;
+    }
+</script>
+
+
+
+//exersise
+
+<p id="demo">Use the DOM to change my text!</p>
+
+<script>
+    // Add code here
+    document.getElementById("demo").innerHTML = "My text";
+</script>
+
+
+//////////
+
+<p>Use the DOM to change my text!</p>
+
+<script>
+    // Add code here
+    var x = document.getElementsByTagName("p");
+    x[0].innerHTML = "My text";
+</script>
+
+
+////////////////
+
+<p class="test">Use the DOM to change my text!</p>
+
+<script>
+    // Add code here
+    var x = document.getElementsByClassName("test");
+    x[0].innerHTML = "My text";
+</script>
+
+
+/////////////////////
+
+
+<p>Use the DOM to change my text!</p>
+
+<script>
+    // Add code here
+    var x = document.guerySelectorAll("p")[0].innerHTML = "My text";
+</script>
+
+/////////////////////////
+
+<p id="demo"></p>
+
+<script>
+    document.getElementById("demo").innerHTML =
+        "The title of this document is: "+document.getElementsByTagName("title")[0].innerHTML;
+</script>
+
+
+<p id="demo"></p>
+
+<script>
+    document.getElementById("demo").innerHTML =
+        "The title of this document is: " + document.title;
+</script>
+
+
+
+/////////////////////////////
+
+
+<h1 id="header">Old Header</h1>
+
+<script>
+    var element = document.getElementById("header");
+    element.innerHTML = "New Header";
+</script>
+
+
+////////////////////////////////
+
+
+<h1 id="header">Old Header</h1>
+
+<script>
+    var element = document.getElementById("header");
+    element.innerHTML = "New Header";
+</script>
+
+///////////////////////////////////////////
+
+
+<img id="image" src="smiley.gif" width="160" height="120">
+
+<script>
+    document.getElementById("image").src = "landscape.jpg";
+</script>
+
+<p>The original image was smiley.gif, but the script changed it to landscape.jpg</p>
+
+
+///////////////////////////////////////////////
+
+
+<p id="demo">Display the result here.</p>
+
+<script>
+    // Add code here
+    document.getElementById("demo").innerHTML = "New text!";
+</script>
+
+//////////////////////////////////////
+
+<h1 id="myHeader">Give Me a New Header</h1>
+
+<script>
+    // Add code here
+    document.getElementById("myHeader").innerHTML = "New Header";
+</script>
+
+//////////////////////////////////////////
+
+<input type="text" id="myText" value="Hello">
+
+<script>
+    // Add code here
+    document.getElementById("myText").value = "Goodbye";
+</script>
+
+/////////////////////////////////////////////
+
+<script>
+    // Add code here
+    document.write("Hello World!");
+</script>
+
+/////////////////////////////////////////////////
+
+<p id="p1">Hello World!</p>
+<p id="p2">Hello World!</p>
+
+<script>
+    document.getElementById("p2").style.color = "blue";
+    document.getElementById("p2").style.fontFamily = "Arial";
+    document.getElementById("p2").style.fontSize = "larger";
+</script>
+
+<p>The paragraph above was changed by a script.</p>
+
+//////////////////////////////
+
+<h1 id="id1">My Heading 1</h1>
+
+<button type="button"
+        onclick="document.getElementById('id1').style.color = 'red'">
+    Click Me!</button>
+
+////////////////////////////////
+
+<p id="p1">
+    This is a text.
+    This is a text.
+    This is a text.
+    This is a text.
+</p>
+
+<input type="button" value="Hide text" onclick="document.getElementById('p1').style.visibility='hidden'">
+<input type="button" value="Show text" onclick="document.getElementById('p1').style.visibility='visible'
+
+/////////////////////////////////
+
+<head>
+<style>
+body {
+    background-color: yellow;
+    color: red;
+}
+</style>
+</head>
+<body>
+
+<p>Click the button to display the style properties of this document.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+    function myFunction() {
+        var x = document.getElementsByTagName("STYLE")[0];
+        document.getElementById("demo").innerHTML = x.innerHTML;
+    }
+</script>
+
+</body>
+
+/////////////////////////////////
+
+<h1 id="myH1" style="color:red">My Header</h1>
+
+<p>Click the button to get the style property of the H1 element.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("myH1").style.color;
+        document.getElementById("demo").innerHTML = x;
+    }
+</script>
+
+/////////////////////////////////////
+
+<h1 id="myH1">How to change the style of a header</h1>
+
+<p>Click the button to change the style of the H1 element.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+    function myFunction() {
+        document.getElementById("myH1").style.color = "red";
+    }
+</script>
+
+/////////////////////////////////////
+
+<p id="demo">Hello World!</p>
+
+<script>
+    // Add code here
+    document.getElementById("demo").style.color="red";
+</script>
+
+////////////////////////////
+
+<p id="demo">Hello World!</p>
+
+<script>
+    // Add code here
+    document.getElementById("demo").style.backgroundColor = "yellow";
+</script>
+
+//////////////////////////////////
+
+<p id="demo">Hello World!</p>
+
+<script>
+    document.getElementById("demo").style.textAlign = "center";
+</script>
+
+/////////////////////////////////////
+
+<p id="demo">Hello World!</p>
+
+<script>
+    document.getElementById("demo").style.fontSize = "40px";
+</script>
+
+//////////////////////////////////////////////
+
+<p id="demo">Hello World!</p>
+
+<script>
+    // Add code here
+    document.getElementById("demo").style.visibility='hidden';
+</script>
+
+/////////////////////////////////////////////////////////////
+
+<p>
+    <button onclick="myMove()">Click Me</button>
+</p>
+
+<div id ="container">
+    <div id ="animate"></div>
+</div>
+
+<script>
+    function myMove() {
+        var elem = document.getElementById("animate");
+        var pos = 0;
+        var id = setInterval(frame, 5);
+        function frame() {
+            if (pos == 350) {
+                clearInterval(id);
+            } else {
+                pos++;
+                elem.style.top = pos + 'px';
+                elem.style.left = pos + 'px';
+            }
+        }
+    }
+</script>
+
+//////////////////////////////////////////////////////////////////
+
+<body>
+
+<h1 onclick="this.innerHTML = 'Ooops!'">Click on this text!</h1>
+
+</body>
+
+//////////////////////////////////////////////////////////////////
+
+<h1 onclick="changeText(this)">Click on this text!</h1>
+
+<script>
+    function changeText(id) {
+        id.innerHTML = "Ooops!";
+    }
+</script>
+
+///////////////////////////////////////////////////////////////////
+
+<p>Click the button to display the date.</p>
+
+<button onclick="displayDate()">The time is?</button>
+
+<script>
+    function displayDate() {
+        document.getElementById("demo").innerHTML = Date();
+    }
+</script>
+
+<p id="demo"></p>
+
+///////////////////////////////////////////////////////////////
+
+<p>Click "Try it" to execute the displayDate() function.</p>
+
+<button id="myBtn">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+    document.getElementById("myBtn").onclick = displayDate;
+
+    function displayDate() {
+        document.getElementById("demo").innerHTML = Date();
+    }
+</script>
+
+///////////////////////////////////////////////////////////////////////
+
+
+<body onload="checkCookies()">
+
+<p id="demo"></p>
+
+<script>
+    function checkCookies() {
+        var text = "";
+        if (navigator.cookieEnabled == true) {
+            text = "Cookies are enabled.";
+        } else {
+            text = "Cookies are not enabled.";
+        }
+        document.getElementById("demo").innerHTML = text;
+    }
+</script>
+
+</body>
+
+/////////////////////////////////////////////////////////////////////////
+
+<head>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("fname");
+            x.value = x.value.toUpperCase();
+        }
+    </script>
+</head>
+<body>
+
+Enter your name: <input type="text" id="fname" onchange="myFunction()">
+<p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+
+</body>
+
+/////////////////////////////////////////////////////////////////////////
+
+
+
+<div onmouseover="mOver(this)" onmouseout="mOut(this)"
+     style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+    Mouse Over Me</div>
+
+<script>
+    function mOver(obj) {
+        obj.innerHTML = "Thank You"
+    }
+
+    function mOut(obj) {
+        obj.innerHTML = "Mouse Over Me"
+    }
+</script>
+
+//////////////////////////////////////////////////////////////////////////////
+
+<div onmousedown="mDown(this)" onmouseup="mUp(this)"
+     style="background-color:#D94A38;width:90px;height:20px;padding:40px;">
+    Click Me</div>
+
+<script>
+    function mDown(obj) {
+        obj.style.backgroundColor = "#1ec5e5";
+        obj.innerHTML = "Release Me";
+    }
+
+    function mUp(obj) {
+        obj.style.backgroundColor="#D94A38";
+        obj.innerHTML="Thank You";
+    }
+</script>
+
+////////////////////////////////////////////////////////////////////////////////
+
+<head>
+    <script>
+        function lighton() {
+            document.getElementById('myimage').src = "bulbon.gif";
+        }
+        function lightoff() {
+            document.getElementById('myimage').src = "bulboff.gif";
+        }
+    </script>
+</head>
+
+<body>
+
+<img id="myimage" onmousedown="lighton()" onmouseup="lightoff()" src="bulboff.gif" width="100" height="180" />
+
+<p>Click mouse and hold down!</p>
+
+</body>
+
+/////////////////////////////////////////////////////////////////////////////////////
+
+<script>
+    function mymessage() {
+        alert("This message was triggered from the onload event");
+    }
+</script>
+</head>
+
+<body onload="mymessage()">
+</body>
+
+//////////////////////////////////////////////////////////////////////////////////////
+
+<head>
+    <script>
+        function myFunction(x) {
+            x.style.background = "yellow";
+        }
+    </script>
+</head>
+<body>
+
+Enter your name: <input type="text" onfocus="myFunction(this)">
+
+<p>When the input field gets focus, a function is triggered which changes the background-color.</p>
+
+</body>
+
+/////////////////////////////////////////////////////////////////////////////////////////
+
+<body>
+
+<h1 onmouseover="style.color='red'"
+    onmouseout="style.color='black'">
+    Mouse over this text</h1>
+
+</body>
+
+//////////////////////////////////////////////////////////////////////////////////
+
+<button onclick='myFunction()'>Click Me</button>
+
+<p id="demo"></p>
+
+<script>
+    function myFunction() {
+        document.getElementById("demo").innerHTML = "Hello World";
+    }
+</script>
+
+////////////////////////////////////////////////////////////////////////////
+
+
+
+
+</body>
+</html>

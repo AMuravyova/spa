@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" href="taskHome.css">
+    <script src="taskHome.js"></script>
+
+</head>
+
+<body>
+<section>
+    <form action="#" name="new-task" class="task-form">
+        <div class="panel">
+            <div class = "panel-heading">Add task:</div>
+            <div class = "panel-body">
+                <input type="text" name="task" class="task-form_text"/>
+                <input type="submit" value="Add" class="btn"/>
+            </div>
+        </div>
+    </form>
+    <table class="table">
+        <thead>
+        <tr>
+            <th class ="table_id">#</th>
+            <th class="table_note">Поставленные задачи</th>
+            <th></th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody class="table_body">
+        <tr>
+          <th>1</th>
+          <td>text</td>
+          <td><button type="button" class="btn btn-info">i</button></td>
+          <td><button type="button" class="btn btn-danger">x</button></td>
+        </tr>
+        </tbody>
+    </table>
+</section>
+
+</body>
+</html>

@@ -8,7 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/media.css">
+    <!--<link rel="stylesheet" href="css/media.css">-->
     <script style="js/common.js"></script>
 </head>
 <body>
@@ -24,12 +24,13 @@
                         HTML&CSS practice
                     </div>
                 </div>
-
                 <button class="menu__button hidden-md hidden-lg"><span class="glyphicon glyphicon-align-justify"></span></button>
                 <button class="account__button hidden-lg"><span class="glyphicon glyphicon-menu-down"></span></button>
 
 
-                <nav class="menu__tabs hidden-sm">
+
+                <nav class="menu__tabs hidden-sm hidden-xs">
+
 
                     <ul id="myTab">
 
@@ -41,8 +42,8 @@
                     </ul>
 
 
-                    <div class="dropdown">
-                        <a id="dropdownMenu1" class="dropdown-toggle account hidden-md hidden-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#">mur@mera.ru
+                    <div class="dropdown account">
+                        <a id="dropdownMenu1" class="dropdown-toggle hidden-md hidden-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#">mur@mera.ru
                             <div class="avatar"><img  src="css/avatar.svg"></div>
                         </a>
                         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
@@ -53,18 +54,17 @@
                 </nav>
 
 
-
             </div>
         </div>
     </div>
-
 </header>
 
     <div class="container">
-        <div class="col-md-12">
-            <div class="row">
+        <div class="row">
+        <!--<div class="col-md-12"vvvvvvvvvvvvvvvvvvvvvv>-->
 
-                <div class="col-md-3 column__left">
+
+                <div class="col-md-2 col-sm-3 col-xs-12">
                     <div class="blur"></div>
                     <div class="img__container">
                         <img class="picture">
@@ -78,7 +78,7 @@
                     </div>
                 </div>
 
-                <div class="col-md-9 column__right">
+                <div class="col-md-10 col-sm-9 col-xs-11">
                     <div class="blur"></div>
 
                     <div class="tab-content">
@@ -128,7 +128,6 @@
                                 <div class="req"></div>
                                 <div class="req"></div>
                             </div>
-
                         </div>
 
                         <div class="tab-pane fade" id="doc">
@@ -186,14 +185,14 @@
                         </div>
                     </div>
 
-                    </div>
+
                 </div>
             </div>
 
-        </div>
+        <!--</div>-->
     </div>
-    </div>
-    </div>
+    <!--</div>-->
+    <!--</div>-->
 <script>
     $(document.ready(function() {
             $(".menu__button").click()(function () {
@@ -203,6 +202,16 @@
 
     )
 </script>
+
+<!--<script>-->
+    <!--$(document.ready(function() {-->
+            <!--$(".menu__button").click()(function () {-->
+                <!--$("#myTab").toggle();-->
+            <!--});-->
+        <!--})-->
+
+    <!--)-->
+<!--</script>-->
 
 </body>
 </html>

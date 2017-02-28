@@ -1,9 +1,10 @@
 /* Small devices (tablets, 768px and up) */
 
-@media (max-width: 768px){
+@media (min-width: 768px){
     .hidden-xs{
         display: none !important;
     }
+
 }
 
 @media (min-width: 768px) and (max-width: 992px){
@@ -12,7 +13,7 @@
     }
 
     .col-md-3{
-        width: 300px;
+
         position: absolute;
         top: 0;
         left:0;
@@ -67,13 +68,6 @@
     }
 }
 
-/* Large devices (large desktops, 1200px and up) */
-@media (min-width: @screen-lg-min) { ... }
-
-@media (max-width: @screen-xs-max) { ... }
-@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { ... }
-@media (min-width: @screen-md-min) and (max-width: @screen-md-max) { ... }
-@media (min-width: @screen-lg-min) { ... }
 
 
 

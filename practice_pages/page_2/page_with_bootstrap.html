@@ -7,48 +7,56 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
+    <script style="js/common.js"></script>
 </head>
 <body>
 
 <header class="top_header">
+
     <div class="container">
         <div class="col-md-12">
             <div class="row">
 
-
-
-                <div class="nav nav-tabs">
-                    <div>
-                        <div class="nav_title">
-                            HTML&CSS practice
-                        </div>
+                <div>
+                    <div class="header_title">
+                        HTML&CSS practice
                     </div>
+                </div>
 
-                    <ul>
-                        <li role="presentation" class="active"><a href="#tabs-1">Dashboard</a></li>
-                        <li role="presentation"><a href="#tabs-2">Documents</a></li>
-                        <li role="presentation"><a href="#tabs-3">Images</a></li>
-                        <li role="presentation"><a href="#tabs-4">Requests</a></li>
+                <button class="menu__button hidden-md hidden-lg"><span class="glyphicon glyphicon-align-justify"></span></button>
+
+                <nav class="menu__tabs">
+
+                    <ul id="myTab">
+
+                        <li class="tabs__item active"><a href="#dashboard" data-toggle="tab">Dashboard</a></li>
+                        <li class="tabs__item"><a href="#doc" data-toggle="tab">Documents</a></li>
+                        <li class="tabs__item"><a href="#img" data-toggle="tab">Images</a></li>
+                        <li class="tabs__item"><a href="#req" data-toggle="tab">Requests</a></li>
+
                     </ul>
 
+                    <button class="account__button hidden-lg"><span class="glyphicon glyphicon-menu-down"></span></button>
 
-                    <div role="presentation" class="dropdown">
-                        <a id="dropdownMenu1" class="dropdown-toggle account" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#">mur@mera.ru
-                            <div class="avatar"><img  src="avatar.svg"></div>
+                    <div class="dropdown account">
+                        <a id="dropdownMenu1" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#">mur@mera.ru
+                            <div class="avatar"><img  src="css/avatar.svg"></div>
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                            <li><a href="account_user_page.html">Account</a></li>
-                            <li><a href="logout_page.html">Log out</a></li>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="account_user_page.html">Account</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="logout_page.html">Log out</a></li>
                         </ul>
                     </div>
+                </nav>
 
-                </div>
 
 
             </div>
         </div>
     </div>
+
 </header>
 
     <div class="container">
@@ -71,58 +79,112 @@
 
                 <div class="col-md-9 column__right">
                     <div class="blur"></div>
-                    <div id="tabs-1">
-                    <div id="tabs-2" class="tabs__content tabs__content__doc tabs__content__selected">
-                        <div>
-                            <div class="doc__title">Documents</div>
-                            <div><a class="view__all" href="#">View all</a></div>
+
+                    <div class="tab-content">
+                        <div class="tab-pane fade in active" id="dashboard">
+                            <div>
+                                <div class="doc__title">Documents</div>
+                                <div><a class="view__all" href="#">View all</a></div>
+                            </div>
+
+                            <div class=content__container>
+                                <div class="doc"></div>
+                                <div class="doc"></div>
+                                <div class="doc"></div>
+                                <div class="doc"></div>
+                                <div class="doc"></div>
+                                <div class="doc"></div>
+                                <div class="doc"></div>
+                                <div class="doc"></div>
+                            </div>
+
+                            <div>
+                                <div class="img__title">Images</div>
+                                <div><a class="view__all" href="#">View all</a></div>
+                            </div>
+                            <div class=content__container>
+                                <div class="img"></div>
+                                <div class="img"></div>
+                                <div class="img"></div>
+                                <div class="img"></div>
+                                <div class="img"></div>
+                                <div class="img"></div>
+                                <div class="img"></div>
+                                <div class="img"></div>
+                            </div>
+
+                            <div>
+                                <div class="req__title">Requests</div>
+                                <div><a class="view__all" href="#">View all</a></div>
+                            </div>
+                            <div class=content__container>
+                                <div class="req"></div>
+                                <div class="req"></div>
+                                <div class="req"></div>
+                                <div class="req"></div>
+                                <div class="req"></div>
+                                <div class="req"></div>
+                                <div class="req"></div>
+                                <div class="req"></div>
+                            </div>
+
                         </div>
 
-                        <div class=content__container>
+                        <div class="tab-pane fade" id="doc">
+                            <div>
+                                <div class="doc__title">Documents</div>
+                                <div><a class="view__all" href="#">View all</a></div>
+                            </div>
 
-                            <div class="doc"></div>
-                            <div class="doc"></div>
-                            <div class="doc"></div>
-                            <div class="doc"></div>
-                            <div class="doc"></div>
-                            <div class="doc"></div>
-                            <div class="doc"></div>
-                            <div class="doc"></div>
+                            <div class=content__container>
+
+                                <div class="doc"></div>
+                                <div class="doc"></div>
+                                <div class="doc"></div>
+                                <div class="doc"></div>
+                                <div class="doc"></div>
+                                <div class="doc"></div>
+                                <div class="doc"></div>
+                                <div class="doc"></div>
+                            </div>
                         </div>
 
+
+                        <div class="tab-pane fade" id="img">
+                            <div>
+                                <div class="img__title">Images</div>
+                                <div><a class="view__all" href="#">View all</a></div>
+                            </div>
+                            <div class=content__container>
+                                <div class="img"></div>
+                                <div class="img"></div>
+                                <div class="img"></div>
+                                <div class="img"></div>
+                                <div class="img"></div>
+                                <div class="img"></div>
+                                <div class="img"></div>
+                                <div class="img"></div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="req">
+                            <div>
+                                <div class="req__title">Requests</div>
+                                <div><a class="view__all" href="#">View all</a></div>
+                            </div>
+                            <div class=content__container>
+                                <div class="req"></div>
+                                <div class="req"></div>
+                                <div class="req"></div>
+                                <div class="req"></div>
+                                <div class="req"></div>
+                                <div class="req"></div>
+                                <div class="req"></div>
+                                <div class="req"></div>
+                            </div>
+                        </div>
                     </div>
-                    <div id="tabs-3" class="tabs__content tabs__content__img">
-                        <div>
-                            <div class="img__title">Images</div>
-                            <div><a class="view__all" href="#">View all</a></div>
-                        </div>
-                        <div class=content__container>
-                            <div class="img"></div>
-                            <div class="img"></div>
-                            <div class="img"></div>
-                            <div class="img"></div>
-                            <div class="img"></div>
-                            <div class="img"></div>
-                            <div class="img"></div>
-                            <div class="img"></div>
-                        </div>
-                    </div>
-                    <div id="tabs-4" class="tabs__content tabs__content__req">
-                        <div>
-                            <div class="req__title">Requests</div>
-                            <div><a class="view__all" href="#">View all</a></div>
-                        </div>
-                        <div class=content__container>
-                            <div class="req"></div>
-                            <div class="req"></div>
-                            <div class="req"></div>
-                            <div class="req"></div>
-                            <div class="req"></div>
-                            <div class="req"></div>
-                            <div class="req"></div>
-                            <div class="req"></div>
-                        </div>
-                    </div>
+
                     </div>
                 </div>
             </div>
@@ -131,7 +193,15 @@
     </div>
     </div>
     </div>
+<script>
+    $(document.ready(function() {
+            $(".menu__button").click()(function () {
+                $(".menu__tabs ul").toggle();
+            });
+        })
 
-</header>
+    )
+</script>
+
 </body>
 </html>

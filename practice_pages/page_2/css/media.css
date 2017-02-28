@@ -1,8 +1,71 @@
 /* Small devices (tablets, 768px and up) */
-@media (min-width: @screen-sm-min) { ... }
+
+@media (max-width: 768px){
+    .hidden-xs{
+        display: none !important;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px){
+    .hidden-sm{
+       display: none !important;
+    }
+
+    .col-md-3{
+        width: 300px;
+        position: absolute;
+        top: 0;
+        left:0;
+        right: 300px;
+        bottom:0;
+    }
+
+    .col-md-9{
+        position: absolute;
+        top:0;
+        bottom: 0;
+        left: 300px;
+        right: 0;
+    }
+}
+
+@media (max-width: 992px){
+    .hidden-sm
+    {
+        display: none !important;
+    }
+
+    .col-md-3{
+        width: 300px;
+        position: absolute;
+        top: 0;
+        left:0;
+        right: 300px;
+        bottom:0;
+    }
+
+    .col-md-9{
+        position: absolute;
+        top:0;
+        bottom: 0;
+        left: 300px;
+        right: 0;
+    }
+}
 
 /* Medium devices (desktops, 992px and up) */
-@media (min-width: @screen-md-min) { ... }
+
+@media (min-width: 992px) and (max-width: 1200px){
+  .hidden-md{
+      display: none !important;
+  }
+}
+
+@media (min-width: 1200px){
+    .hidden-lg{
+        display: none !important;
+    }
+}
 
 /* Large devices (large desktops, 1200px and up) */
 @media (min-width: @screen-lg-min) { ... }
@@ -15,45 +78,4 @@
 
 
 
-/*@media only screen and (max-width: 768px){*/
-
-  /*.menu__tabs{*/
-  /*display: none;*/
-  /*vertical-align: middle;*/
-  /*background-color: pink;*/
-  /*position: absolute;*/
-  /*margin-top: 15px;*/
-  /*padding: 15px;*/
-/*}*/
-
-    /*.account{*/
-        /*display: none;*/
-    /*}*/
-
-/*}*/
-
-/*@media only screen and (max-width: 992px){  */
-    /*.menu__button,*/
-/*.account__button{*/
-   /*display: inline-block;*/
- /*}*/
-
-  /*.account__button{*/
-    /*display: inline-block;*/
-  /*}*/
-
-/*.menu__tabs ul li{*/
-  /*display: block !important;*/
-  /*!*vertical-align: middle;*!*/
-  /*!*background-color: pink;*!*/
-  /*!*position: absolute;*!*/
-  /*!*margin-top: 15px;*!*/
-  /*!*padding: 15px;*!*/
-/*}*/
-
-/*.account{*/
-  /*display: none;*/
-/*}*/
-
-/*}*/
 

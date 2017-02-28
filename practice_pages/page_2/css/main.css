@@ -5,7 +5,8 @@ body{
     font-family: sans-serif;
 }
 
-a{
+a,
+.active a{
     text-decoration: none;
     color: #fff;
 }
@@ -65,7 +66,11 @@ text-decoration: none;
     font-size: 20px;
     color: #fff;
     display: inline-block;
-    float: right;
+    position: absolute;
+    top:20px;
+    right: 20px;
+
+
 
 }
 
@@ -109,10 +114,12 @@ float: left;
     float: left;
 }
 
-.tabs__item:hover{
+.tabs__item:hover,
+.tabs__item.active{
     font-weight: bold;
     border-bottom: 5px solid #fff;
 }
+
 
 
 .account{
@@ -128,67 +135,28 @@ float: left;
 }
 
 
-
-/*.nav ul li{*/
-
-
-    /*list-style-type: none;*/
-    /*float: left;*/
-
-
-    /*display: inline-block;*/
-    /*font-size: 20px;*/
-    /*padding: 20px 0 20px 0;*/
-    /*margin-right: 30px;*/
-    /*color: #fff;*/
-    /*white-space: nowrap;*/
-    /*height: 60px;*/
-    /*box-sizing: border-box;*/
-    /*vertical-align: middle;*/
-    /*border-top: 5px solid transparent;*/
-    /*border-bottom: 5px solid transparent;*/
-/*}*/
-
-/*.nav ul li:hover{*/
-    /*font-weight: bold;*/
-    /*border-bottom: 5px solid #fff;*/
-/*}*/
-
-/*.nav a{*/
-    /*padding: 15px;*/
-    /*display: block;*/
-    /*transition: all .25s;*/
-    /*color: #fff;*/
-/*}*/
-
 .col-md-3{
-    padding-right: 0;
-    padding-left: 0;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 30%;
+    margin-top: 100px;
 
 }
 
-.column__left{
+.col-md-9{
+    width: 70%;
     margin-top: 100px;
-    position: absolute;
-    top:0;
-    left: 0;
-    bottom: 0;
-    right: 70%;
+}
+
+.column__left{
     z-index: -3;
-    width: 30%;
     padding-left: 30px;
 }
 
 .column__right{
-    margin-top: 100px;
-    position: absolute;
-    left: 30%;
-    top: 0;
-    bottom: 0;
-    right: 0;
     padding: 0;
     z-index: -2;
-    width: 70%;
+
 }
 
 .content__container{

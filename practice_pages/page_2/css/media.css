@@ -4,6 +4,23 @@
     .hidden-xs{
         display: none !important;
     }
+    .menu__tabs__toggle ul{
+
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        float: left;
+        background-color: #8282b7;
+        color: red;
+        position: absolute;
+        top:60px;
+        right: 400px;
+
+    }
+
+    .menu__tabs__toggle ul li{
+        display: block;
+    }
 
 }
 
@@ -12,22 +29,6 @@
        display: none !important;
     }
 
-    .col-md-3{
-
-        position: absolute;
-        top: 0;
-        left:0;
-        right: 300px;
-        bottom:0;
-    }
-
-    .col-md-9{
-        position: absolute;
-        top:0;
-        bottom: 0;
-        left: 300px;
-        right: 0;
-    }
 }
 
 @media (max-width: 992px){
@@ -36,22 +37,24 @@
         display: none !important;
     }
 
-    .col-md-3{
-        width: 300px;
+    .menu__tabs__toggle{
+
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    float: left;
+    background-color: #8282b7;
+        color: red;
         position: absolute;
-        top: 0;
-        left:0;
-        right: 300px;
-        bottom:0;
+        top:60px;
+        right: 400px;
+
     }
 
-    .col-md-9{
-        position: absolute;
-        top:0;
-        bottom: 0;
-        left: 300px;
-        right: 0;
+    .menu__tabs__toggle ul li{
+    display: block;
     }
+
 }
 
 /* Medium devices (desktops, 992px and up) */

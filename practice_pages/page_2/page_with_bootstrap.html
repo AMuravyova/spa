@@ -10,27 +10,69 @@
     <link rel="stylesheet" href="css/main.css">
     <!--<link rel="stylesheet" href="css/media.css">-->
     <script style="js/common.js"></script>
+
+    <script>
+
+        $(document).ready(function () {
+            $(".menu__button").click(function () {
+   //           $(".menu__tabs").toggle();
+              $(this).next().toggle();
+            });
+        });
+
+    </script>
 </head>
 <body>
 
 <header class="top_header">
 
     <div class="container">
-        <div class="col-md-12">
+        <div class="row">
+            <div class="col-md-3 col-sm-5 col-xs-7">
             <div class="row">
 
-                <div>
-                    <div class="header_title">
-                        HTML&CSS practice
+                    <div>
+                        <div class="header_title">
+                            HTML&CSS practice
+                        </div>
                     </div>
+            </div>
+            </div>
+
+
+
+                <div class="col-md-9 col-sm-7">
+                    <div class="row">
+
+                        <div class="dropdown account__button">
+                    <button class="account__button hidden-lg dropdown-toggle" type="button" id="dropdownMenu2"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        <span class="glyphicon glyphicon-menu-down"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+                        <li role="presentation"><a role="menuitem" tabindex="-1"
+                                                   href="account_user_page.html">Account</a></li>
+                        <li role="presentation"><a role="menuitem" tabindex="-1" href="logout_page.html">Log out</a>
+                        </li>
+                    </ul>
                 </div>
-                <button class="menu__button hidden-md hidden-lg"><span class="glyphicon glyphicon-align-justify"></span></button>
-                <button class="account__button hidden-lg"><span class="glyphicon glyphicon-menu-down"></span></button>
 
+                        <button class="menu__button hidden-md hidden-lg">
+                            <span class="glyphicon glyphicon-align-justify"></span>
+                        </button>
 
+                        <div class="menu__tabs__toggle hidden-md hidden-lg">
+                        <ul>
+
+                        <li class="tabs__item active"><a href="#dashboard" data-toggle="tab">Dashboard</a></li>
+                        <li class="tabs__item"><a href="#doc" data-toggle="tab">Documents</a></li>
+                        <li class="tabs__item"><a href="#img" data-toggle="tab">Images</a></li>
+                        <li class="tabs__item"><a href="#req" data-toggle="tab">Requests</a></li>
+
+                        </ul>
+                        </div>
 
                 <nav class="menu__tabs hidden-sm hidden-xs">
-
 
                     <ul id="myTab">
 
@@ -43,174 +85,237 @@
 
 
                     <div class="dropdown account">
-                        <a id="dropdownMenu1" class="dropdown-toggle hidden-md hidden-sm" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true" href="#">mur@mera.ru
-                            <div class="avatar"><img  src="css/avatar.svg"></div>
+                        <a id="dropdownMenu1" class="dropdown-toggle hidden-md hidden-sm" data-toggle="dropdown"
+                           aria-haspopup="true" aria-expanded="true" href="#">mur@mera.ru
+                            <div class="avatar"><img src="css/avatar.svg"></div>
                         </a>
                         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="account_user_page.html">Account</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="logout_page.html">Log out</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="account_user_page.html">Account</a>
+                            </li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="logout_page.html">Log out</a>
+                            </li>
                         </ul>
                     </div>
                 </nav>
-
-
-            </div>
-        </div>
+                    </div>
+                </div>
     </div>
+</div>
 </header>
 
-    <div class="container">
-        <div class="row">
-        <!--<div class="col-md-12"vvvvvvvvvvvvvvvvvvvvvv>-->
+<div class="container">
+    <div class="row">
 
+        <div class="col-md-3 col-sm-3 col-xs-12 column__left">
 
-                <div class="col-md-2 col-sm-3 col-xs-12">
-                    <div class="blur"></div>
-                    <div class="img__container">
-                        <img class="picture">
-                    </div>
-                    <div class="text__container">
-                        <div class="text">
-                            <span>Mera team</span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat  dolore ea, perspiciatis!</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta incidunt , hic maiores nam reprehenderit reiciendis deserunt!</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-10 col-sm-9 col-xs-11">
-                    <div class="blur"></div>
-
-                    <div class="tab-content">
-                        <div class="tab-pane fade in active" id="dashboard">
-                            <div>
-                                <div class="doc__title">Documents</div>
-                                <div><a class="view__all" href="#">View all</a></div>
-                            </div>
-
-                            <div class=content__container>
-                                <div class="doc"></div>
-                                <div class="doc"></div>
-                                <div class="doc"></div>
-                                <div class="doc"></div>
-                                <div class="doc"></div>
-                                <div class="doc"></div>
-                                <div class="doc"></div>
-                                <div class="doc"></div>
-                            </div>
-
-                            <div>
-                                <div class="img__title">Images</div>
-                                <div><a class="view__all" href="#">View all</a></div>
-                            </div>
-                            <div class=content__container>
-                                <div class="img"></div>
-                                <div class="img"></div>
-                                <div class="img"></div>
-                                <div class="img"></div>
-                                <div class="img"></div>
-                                <div class="img"></div>
-                                <div class="img"></div>
-                                <div class="img"></div>
-                            </div>
-
-                            <div>
-                                <div class="req__title">Requests</div>
-                                <div><a class="view__all" href="#">View all</a></div>
-                            </div>
-                            <div class=content__container>
-                                <div class="req"></div>
-                                <div class="req"></div>
-                                <div class="req"></div>
-                                <div class="req"></div>
-                                <div class="req"></div>
-                                <div class="req"></div>
-                                <div class="req"></div>
-                                <div class="req"></div>
-                            </div>
-                        </div>
-
-                        <div class="tab-pane fade" id="doc">
-                            <div>
-                                <div class="doc__title">Documents</div>
-                                <div><a class="view__all" href="#">View all</a></div>
-                            </div>
-
-                            <div class=content__container>
-
-                                <div class="doc"></div>
-                                <div class="doc"></div>
-                                <div class="doc"></div>
-                                <div class="doc"></div>
-                                <div class="doc"></div>
-                                <div class="doc"></div>
-                                <div class="doc"></div>
-                                <div class="doc"></div>
-                            </div>
-                        </div>
-
-
-                        <div class="tab-pane fade" id="img">
-                            <div>
-                                <div class="img__title">Images</div>
-                                <div><a class="view__all" href="#">View all</a></div>
-                            </div>
-                            <div class=content__container>
-                                <div class="img"></div>
-                                <div class="img"></div>
-                                <div class="img"></div>
-                                <div class="img"></div>
-                                <div class="img"></div>
-                                <div class="img"></div>
-                                <div class="img"></div>
-                                <div class="img"></div>
-                            </div>
-                        </div>
-
-                        <div class="tab-pane fade" id="req">
-                            <div>
-                                <div class="req__title">Requests</div>
-                                <div><a class="view__all" href="#">View all</a></div>
-                            </div>
-                            <div class=content__container>
-                                <div class="req"></div>
-                                <div class="req"></div>
-                                <div class="req"></div>
-                                <div class="req"></div>
-                                <div class="req"></div>
-                                <div class="req"></div>
-                                <div class="req"></div>
-                                <div class="req"></div>
-                            </div>
-                        </div>
-                    </div>
-
-
+            <div class="blur"></div>
+            <div class="img__container">
+                <img class="picture">
+            </div>
+            <div class="text__container">
+                <div class="text">
+                    <span>Mera team</span>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat dolore ea, perspiciatis!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta incidunt , hic maiores nam
+                        reprehenderit reiciendis deserunt!</p>
                 </div>
             </div>
 
-        <!--</div>-->
-    </div>
-    <!--</div>-->
-    <!--</div>-->
-<script>
-    $(document.ready(function() {
-            $(".menu__button").click()(function () {
-                $(".menu__tabs ul").toggle();
-            });
-        })
+        </div>
 
-    )
-</script>
+        <div class="col-md-9 col-sm-9 col-xs-11 column__right">
+        <div class="row">
+
+            <div class="blur"></div>
+
+            <div class="tab-content">
+                <div class="tab-pane fade in active" id="dashboard">
+
+                    <div>
+                        <div class="doc__title">Documents</div>
+                        <div><a class="view__all" href="#">View all</a></div>
+                    </div>
+
+
+                    <div class="content__container">
+                            <div class="row">
+
+                                <div class="col-md-12 col-sm-12">
+                                    <div class="row">
+                                        <div class="col-md-3 col-sm-6">
+                                            <div class="doc"></div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-6">
+                                            <div class="doc"></div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-6">
+                                            <div class="doc"></div>
+                                        </div>
+                                        <div class="col-md-3 col-sm-6">
+                                            <div class="doc"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+
+                    <div>
+                        <div class="img__title">Images</div>
+                        <div><a class="view__all" href="#">View all</a></div>
+                    </div>
+
+                    <div class="content__container">
+                        <div class="row">
+                            <div class="col-md-12 col-sm-12">
+                                <div class="row">
+                                    <div class="col-md-3 col-sm-6">
+                                        <div class="img"></div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6">
+                                        <div class="img"></div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6">
+                                        <div class="img"></div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6">
+                                        <div class="img"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div>
+                        <div class="req__title">Requests</div>
+                        <div><a class="view__all" href="#">View all</a></div>
+                    </div>
+                    <div class="content__container">
+                        <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="req"></div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="req"></div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="req"></div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="req"></div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="tab-pane fade" id="doc">
+                    <div>
+                        <div class="doc__title">Documents</div>
+                        <div><a class="view__all" href="#">View all</a></div>
+                    </div>
+
+                    <div class="content__container">
+                        <div class="row">
+
+                            <div class="col-md-12 col-sm-12">
+                                <div class="row">
+                                    <div class="col-md-3 col-sm-6">
+                                        <div class="doc"></div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6">
+                                        <div class="doc"></div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6">
+                                        <div class="doc"></div>
+                                    </div>
+                                    <div class="col-md-3 col-sm-6">
+                                        <div class="doc"></div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="tab-pane fade" id="img">
+                    <div>
+                        <div class="img__title">Images</div>
+                        <div><a class="view__all" href="#">View all</a></div>
+                    </div>
+                    <div class="content__container">
+                        <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="img"></div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="img"></div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="img"></div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="img"></div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-pane fade" id="req">
+                    <div>
+                        <div class="req__title">Requests</div>
+                        <div><a class="view__all" href="#">View all</a></div>
+                    </div>
+                    <div class="content__container">
+                        <div class="row">
+                        <div class="col-md-12 col-sm-12">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="req"></div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="req"></div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="req"></div>
+                                </div>
+                                <div class="col-md-3 col-sm-6">
+                                    <div class="req"></div>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+
 
 <!--<script>-->
-    <!--$(document.ready(function() {-->
-            <!--$(".menu__button").click()(function () {-->
-                <!--$("#myTab").toggle();-->
-            <!--});-->
-        <!--})-->
+<!--$(document.ready(function() {-->
+<!--$(".menu__button").click()(function () {-->
+<!--$("#myTab").toggle();-->
+<!--});-->
+<!--})-->
 
-    <!--)-->
+<!--)-->
 <!--</script>-->
 
 </body>

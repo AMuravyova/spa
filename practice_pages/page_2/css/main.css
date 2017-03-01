@@ -6,7 +6,7 @@ body{
 }
 
 a,
-.active a{
+/*.active a{*/{
     text-decoration: none;
     color: #fff;
 }
@@ -16,11 +16,11 @@ a:hover{
     text-decoration: none;
 }
 
-header{
-position: fixed;
-top: 0;
-width: 100%;
-}
+/*header{*/
+/*position: fixed;*/
+/*top: 0;*/
+/*width: 100%;*/
+/*}*/
 
 
 .top_header{
@@ -54,8 +54,10 @@ text-decoration: none;
   background-color: transparent;
   font-size: 20px;
   color: #fff;
-    display: inline-block;
-    padding-top: 18px;
+
+    position: fixed;
+    top: 18px;
+    right: 60px;
 
 }
 
@@ -66,32 +68,48 @@ text-decoration: none;
     font-size: 20px;
     color: #fff;
     display: inline-block;
-    position: absolute;
+    position: fixed;
     top:20px;
     right: 20px;
 
+}
 
+.dropdown.account__button
+{
+    position: fixed;
+    top: 60px;
+    right: 180px;
 
 }
+
+.dropdown.menu__button
+{
+    position: fixed;
+    top: 60px;
+    left: 380px;
+
+}
+
+
 
 .menu__tabs ul{
 
 margin: 0;
 padding: 0;
-/*list-style-type: none;*/
-/*float: left;*/
+list-style-type: none;
+float: left;
 
 }
 
-.menu__tabs li{
-    display: block;
+.menu__tabs ul li{
+    display: inline-block;
 }
+
 
 
 
 .header_title{
     float: left;
-    width: 30%;
     height: 60px;
     box-sizing: border-box;
     padding: 20px 0;
@@ -128,7 +146,7 @@ padding: 0;
 
 .account{
     display: inline-block;
-    position: absolute;
+    position: fixed;
     right: 58px;
     color: #fff;
     height: 60px;
@@ -138,59 +156,38 @@ padding: 0;
     float: right;
 }
 
-
-.col-md-2,
-.col-md-10,
-.col-sm-3,
-.col-sm-9,
-.col-xs-12{
-    z-index: -3;
-    padding: 20px;
-    margin-top: 100px;
-
-}
-
-.col-md-2,
-.col-sm-3,
-.col-xs-12{
-
-
-}
-
-.col-md-10,
-.col-sm-9,
-.col-xs-11{
-    padding-left: 50px;
-}
-
-.col-md-9{
-    width: 70%;
-    margin-top: 100px;
+.account a{
+    color: #ffffff;
+    list-style: none;
 }
 
 .column__left{
     z-index: -3;
-    padding: 20px;
-    margin-top: 100px;
+    /*padding: 20px;*/
+    margin-top: 140px;
+
 }
 
+
+
 .column__right{
-    padding: 10px;
+
     z-index: -2;
-    margin-top: 100px;
+    margin-top: 140px;
 
 }
 
 .content__container{
-    display: inline-block;
-    margin-bottom: 40px;
+    /*display: inline-block;*/
+    margin-bottom: 60px;
+    padding-top: 40px;
 }
 
 
 .view__all{
     float: right;
-    margin-bottom: 20px;
-    padding-right: 60px;
+    /*margin-bottom: 20px;*/
+    /*padding-right: 60px;*/
     font-size: 0.9em;
     font-weight: bold;
     color: blue;
@@ -219,6 +216,8 @@ padding: 0;
 .req__title{
     float: left;
     font-size: 1.5em;
+    /*margin-bottom: 40px;*/
+
 }
 
 .doc,
@@ -229,8 +228,11 @@ padding: 0;
     height: 170px;
     background: lightgray;
     margin-right:15px;
-    margin-bottom:15px;
+    margin-bottom:50px;
+    margin-top: 20px;
 }
+
+
 
 .picture{
     width: 170px;
@@ -265,6 +267,8 @@ padding: 0;
 .text__container{
     position: relative;
     font-size: 13px;
+    margin-bottom: 100px;
+
 }
 
 .text span{

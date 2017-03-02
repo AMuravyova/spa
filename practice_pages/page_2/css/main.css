@@ -5,17 +5,77 @@ body{
     font-family: sans-serif;
 }
 
+.top_header a{
+color: #fff;
+text-decoration: none;
+
+}
+
+.menu__tabs__toggle{
+
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    border: 2px solid transparent;
+    background-color: transparent;
+    color: red;
+    position: fixed;
+    top:60px;
+    width: auto;
+    right: 194px;
+    visibility: hidden;
+
+
+}
+
+.menu__tabs__toggle ul{
+    display: inline-block;
+    border-bottom: 2px solid #fff;
+    width: 125px;
+    border-right: 2px solid #ffffff;
+    border-left: 2px solid #ffffff;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    visibility: hidden;
+
+}
+
+.tabs__item__toggle.active{
+    font-weight: 400;
+    border-bottom: 2px solid #fff;
+    background-color: #8696ec;
+
+}
+
+.tabs__item__toggle{
+
+    border-bottom: 2px solid #fff;
+    padding: 10px 15px;
+    font-size: 17px;
+    height: 34px;
+    background-color: #ea839d;
+
+}
+
+.tabs__item__toggle:hover{
+
+    font-weight: bold;
+}
+
+/*
 a,
-/*.active a{*/{
+/*.active a{{
     text-decoration: none;
     color: #fff;
-}
+}*/
+/*
 a:hover{
     font-weight: bold;
     color: white;
     text-decoration: none;
 }
-
+*/
 /*header{*/
 /*position: fixed;*/
 /*top: 0;*/
@@ -29,8 +89,8 @@ a:hover{
     left: 0;
     top:0;
     display: inline-block;
-    background: linear-gradient(to right, #8282b7, pink);
-    border: 1px solid transparent;
+    background: linear-gradient(to right, #5e5edc, #e47a8d);
+
     font-size: 20px;
     overflow: auto;
     opacity: 0.7;
@@ -38,7 +98,7 @@ a:hover{
 
 
 
-
+/*
 .tabs__item a{
 text-decoration: none;
 }
@@ -47,7 +107,7 @@ text-decoration: none;
     text-decoration: none;
     font-weight: bold;
 }
-
+*/
 .menu__button
 {
   border: none;
@@ -57,10 +117,41 @@ text-decoration: none;
 
     position: fixed;
     top: 18px;
-    right: 60px;
+    right: 188px;
 
 }
+.text .pencil__button__1,
+.text .save__button__1{
+    border: none;
+    background-color: transparent;
+    font-size: 15px;
+    color: #e47a8d;
+    display: inline-block;
+    float: right;
+    top: 3px;
+    right: -34px;
+    margin-right: 0;
+    position: absolute;
+}
 
+.text .pencil__button__2,
+.text .save__button__2{
+    border: none;
+    background-color: transparent;
+    font-size: 15px;
+    color: #e47a8d;
+    display: inline-block;
+    float: right;
+    top: 54px;
+    right: -31px;
+    margin-right: 0;
+    position: absolute;
+}
+
+.save__button__2,
+.save__button__1{
+    visibility: hidden;
+}
 
 .account__button{
     border: none;
@@ -81,7 +172,7 @@ text-decoration: none;
     right: 180px;
 
 }
-
+/*
 .dropdown.menu__button
 {
     position: fixed;
@@ -89,6 +180,7 @@ text-decoration: none;
     left: 380px;
 
 }
+*/
 
 
 
@@ -136,10 +228,15 @@ float: left;
     float: left;
 }
 
-.tabs__item:hover,
+
 .tabs__item.active{
     font-weight: bold;
     border-bottom: 5px solid #fff;
+}
+
+.tabs__item:hover{
+    font-weight: bold;
+
 }
 
 
@@ -262,6 +359,7 @@ float: left;
     bottom: 0;
     left: 0;
     top: 0;
+    margin: 20px 0;
 }
 
 .text__container{

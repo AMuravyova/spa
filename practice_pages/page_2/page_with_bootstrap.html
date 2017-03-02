@@ -10,22 +10,26 @@
     <link rel="stylesheet" href="css/main.css">
     <!--<link rel="stylesheet" href="css/media.css">-->
     <script style="js/common.js"></script>
-
     <script>
+        $(document).ready(function() {
 
-        $(document).ready(function () {
             $(".menu__button").click(function () {
-   //           $(".menu__tabs").toggle();
-              $(this).next().toggle();
+
+                $(".menu__tabs__toggle ul").css("visibility","visible").slideToggle("slow");
+                //$(this).next().slideToggle("slow");
+                //$(".menu__tabs__toggle").slideToggle();
             });
+
         });
 
     </script>
+
+
 </head>
 <body>
 
 <header class="top_header">
-
+<!--<div class="row">-->
     <div class="container">
         <div class="row">
             <div class="col-md-3 col-sm-5 col-xs-7">
@@ -43,7 +47,6 @@
 
                 <div class="col-md-9 col-sm-7">
                     <div class="row">
-
                         <div class="dropdown account__button">
                     <button class="account__button hidden-lg dropdown-toggle" type="button" id="dropdownMenu2"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
@@ -64,10 +67,10 @@
                         <div class="menu__tabs__toggle hidden-md hidden-lg">
                         <ul>
 
-                        <li class="tabs__item active"><a href="#dashboard" data-toggle="tab">Dashboard</a></li>
-                        <li class="tabs__item"><a href="#doc" data-toggle="tab">Documents</a></li>
-                        <li class="tabs__item"><a href="#img" data-toggle="tab">Images</a></li>
-                        <li class="tabs__item"><a href="#req" data-toggle="tab">Requests</a></li>
+                        <li class="tabs__item__toggle active"><a href="#dashboard" data-toggle="tab">Dashboard</a></li>
+                        <li class="tabs__item__toggle"><a href="#doc" data-toggle="tab">Documents</a></li>
+                        <li class="tabs__item__toggle"><a href="#img" data-toggle="tab">Images</a></li>
+                        <li class="tabs__item__toggle"><a href="#req" data-toggle="tab">Requests</a></li>
 
                         </ul>
                         </div>
@@ -85,7 +88,7 @@
 
 
                     <div class="dropdown account">
-                        <a id="dropdownMenu1" class="dropdown-toggle hidden-md hidden-sm" data-toggle="dropdown"
+                        <a id="dropdownMenu1" class="dropdown-toggle hodden=md hidden-sm" data-toggle="dropdown"
                            aria-haspopup="true" aria-expanded="true" href="#">mur@mera.ru
                             <div class="avatar"><img src="css/avatar.svg"></div>
                         </a>
@@ -101,29 +104,50 @@
                 </div>
     </div>
 </div>
+<!--</div>-->
 </header>
-
+<!--<div class="row">-->
 <div class="container">
     <div class="row">
 
-        <div class="col-md-3 col-sm-3 col-xs-12 column__left">
+        <div class="col-md-3 col-sm-5 col-xs-8 column__left">
 
             <div class="blur"></div>
             <div class="img__container">
                 <img class="picture">
             </div>
             <div class="text__container">
+
                 <div class="text">
+                   
                     <span>Mera team</span>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat dolore ea, perspiciatis!</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta incidunt , hic maiores nam
+                    <div>
+                        <button class="pencil__button__1">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                        </button>
+                        <button class="save__button__1">
+                            <span class="glyphicon glyphicon-ok"></span>
+                        </button>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat dolore ea, perspiciatis!</p>
+                    </div>
+                    <div>
+                        <button class="pencil__button__2">
+                        <span class="glyphicon glyphicon-pencil"></span>
+                        </button>
+                        <button class="save__button__2">
+                            <span class="glyphicon glyphicon-ok"></span>
+                        </button>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta incidunt , hic maiores nam
                         reprehenderit reiciendis deserunt!</p>
+                    </div>
+
+
                 </div>
             </div>
 
         </div>
 
-        <div class="col-md-9 col-sm-9 col-xs-11 column__right">
+        <div class="col-md-9 col-sm-6 col-xs-5 column__right">
         <div class="row">
 
             <div class="blur"></div>
@@ -317,6 +341,6 @@
 
 <!--)-->
 <!--</script>-->
-
+<!--</div>-->
 </body>
 </html>

@@ -1,10 +1,19 @@
 /**
  * Created by amurav on 27.02.2017.
  */
-$(document.ready(function() {
+$(document).ready(function() {
     $(".menu__button").click()(function () {
         $(".menu__tabs ul").slideToggle();
     });
-})
 
-)
+        $(".menu__button").click(function () {
+            //           $(".menu__tabs").slideToggle();
+            $(this).next().slideToggle();
+        });
+
+
+
+
+
+});
+

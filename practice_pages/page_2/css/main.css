@@ -63,24 +63,6 @@ text-decoration: none;
     font-weight: bold;
 }
 
-/*
-a,
-/*.active a{{
-    text-decoration: none;
-    color: #fff;
-}*/
-/*
-a:hover{
-    font-weight: bold;
-    color: white;
-    text-decoration: none;
-}
-*/
-/*header{*/
-/*position: fixed;*/
-/*top: 0;*/
-/*width: 100%;*/
-/*}*/
 
 
 .top_header{
@@ -90,24 +72,11 @@ a:hover{
     top:0;
     display: inline-block;
     background: linear-gradient(to right, #5e5edc, #e47a8d);
-
     font-size: 20px;
     overflow: auto;
     opacity: 0.7;
 }
 
-
-
-/*
-.tabs__item a{
-text-decoration: none;
-}
-
-.tabs__item a:hover{
-    text-decoration: none;
-    font-weight: bold;
-}
-*/
 .menu__button
 {
   border: none;
@@ -122,9 +91,9 @@ text-decoration: none;
 }
 .text .pencil__button__1,
 .text .save__button__1{
-    border: none;
+    border: 2px solid #e47a8d;
+    border-radius: 3px;
     background-color: transparent;
-    font-size: 15px;
     color: #e47a8d;
     display: inline-block;
     float: right;
@@ -134,11 +103,13 @@ text-decoration: none;
     position: absolute;
 }
 
+
+
 .text .pencil__button__2,
 .text .save__button__2{
-    border: none;
+    border: 2px solid #e47a8d;
+    border-radius: 3px;
     background-color: transparent;
-    font-size: 15px;
     color: #e47a8d;
     display: inline-block;
     float: right;
@@ -172,16 +143,6 @@ text-decoration: none;
     right: 180px;
 
 }
-/*
-.dropdown.menu__button
-{
-    position: fixed;
-    top: 60px;
-    left: 380px;
-
-}
-*/
-
 
 
 .menu__tabs ul{
@@ -260,7 +221,6 @@ float: left;
 
 .column__left{
     z-index: -3;
-    /*padding: 20px;*/
     margin-top: 140px;
 
 }
@@ -275,7 +235,6 @@ float: left;
 }
 
 .content__container{
-    /*display: inline-block;*/
     margin-bottom: 60px;
     padding-top: 40px;
 }
@@ -283,8 +242,6 @@ float: left;
 
 .view__all{
     float: right;
-    /*margin-bottom: 20px;*/
-    /*padding-right: 60px;*/
     font-size: 0.9em;
     font-weight: bold;
     color: blue;
@@ -301,9 +258,6 @@ float: left;
     background-color: white;
     border-radius: 100%;
     padding: 5px;
-
-    /* margin-left: 10px; */
-    /* position: relative; */
     vertical-align: middle;
 
 }
@@ -313,8 +267,6 @@ float: left;
 .req__title{
     float: left;
     font-size: 1.5em;
-    /*margin-bottom: 40px;*/
-
 }
 
 .doc,

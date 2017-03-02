@@ -11,7 +11,5 @@ $(document).ready(function() {
         //$(".menu__tabs__toggle").slideToggle();
     });
 
-
-
 });
 

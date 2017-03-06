@@ -20,9 +20,20 @@ $(document).ready(function() {
     });
 
 
-    $(".picture").click(function () {
+   
+        $(".btn_send").click(function () {
 
-    });
+            var ctx = this;
+
+            var form = ctx.parentNode;
+            var listFormChildren = form.children;
+            var newPath = listFormChildren[0].value;
+
+            var newBGImg = "url(\""+newPath+"\")";
+           var inputImg = $(".picture").css("background-image",newBGImg);
+              
+            
+        });
 
 
     $(".edit_btn").click(function(){
@@ -37,6 +48,8 @@ $(document).ready(function() {
                 var paraText = listBlockChildren[1].innerHTML;
                 var isArea = document.createElement("textarea");
                 isArea.className = "textarea";
+                isArea.rows = "7";
+                isArea.cols = "30";
                 var node = document.createTextNode(paraText);
                 isArea.appendChild(node);
                 parentBlock.removeChild(listBlockChildren[1]);

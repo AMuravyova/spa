@@ -5,23 +5,47 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-theme.min.css">
     <link rel = "stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/main.css">
-    <!--<link rel="stylesheet" href="css/media.css">-->
-    <link rel="stylesheet" href="css/fonts.css">
+    <!--&lt;!&ndash; Optional theme &ndash;&gt;-->
+    <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">-->
+
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
+
+    <!--&lt;!&ndash; Latest compiled and minified JavaScript &ndash;&gt;-->
+    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>-->
+
 
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
     <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>-->
     <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
-    <!--<link rel="stylesheet" href="css/main.css">-->
-    <!--<link rel = "stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">-->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <!--<script src="js/common.js"></script>-->
 
+    <script>
+
+        $(document).ready(function () {
+            $(".menu__button").click(function () {
+   //           $(".menu__tabs").slideToggle();
+              $(this).next().slideToggle();
+            });
+        });
+
+    </script>
 </head>
 <body>
 
+
+
+
+
+
+
 <header class="top_header">
-<!--<div class="row">-->
+
     <div class="container">
         <div class="row">
             <div class="col-md-3 col-sm-5 col-xs-7">
@@ -40,7 +64,7 @@
                 <div class="col-md-9 col-sm-7">
                     <div class="row">
                         <div class="dropdown account__button">
-                    <button class="account__button hidden-md hidden-lg dropdown-toggle" type="button" id="dropdownMenu2"
+                    <button class="account__button hidden-lg dropdown-toggle" type="button" id="dropdownMenu2"
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                         <span class="glyphicon glyphicon-menu-down"></span>
                     </button>
@@ -56,13 +80,13 @@
                             <span class="glyphicon glyphicon-align-justify"></span>
                         </button>
 
-                        <div class="menu__tabs__toggle hidden-md hidden-lg">
+                        <div class="menu__tabs hidden-md hidden-lg">
                         <ul>
 
-                        <li class="tabs__item__toggle active"><a href="#dashboard" data-toggle="tab">Dashboard</a></li>
-                        <li class="tabs__item__toggle"><a href="#doc" data-toggle="tab">Documents</a></li>
-                        <li class="tabs__item__toggle"><a href="#img" data-toggle="tab">Images</a></li>
-                        <li class="tabs__item__toggle"><a href="#req" data-toggle="tab">Requests</a></li>
+                        <li class="tabs__item active"><a href="#dashboard" data-toggle="tab">Dashboard</a></li>
+                        <li class="tabs__item"><a href="#doc" data-toggle="tab">Documents</a></li>
+                        <li class="tabs__item"><a href="#img" data-toggle="tab">Images</a></li>
+                        <li class="tabs__item"><a href="#req" data-toggle="tab">Requests</a></li>
 
                         </ul>
                         </div>
@@ -82,7 +106,7 @@
                     <div class="dropdown account">
                         <a id="dropdownMenu1" class="dropdown-toggle hodden=md hidden-sm" data-toggle="dropdown"
                            aria-haspopup="true" aria-expanded="true" href="#">mur@mera.ru
-                            <div class="avatar"><img src="img/avatar.svg"></div>
+                            <div class="avatar"><img src="css/avatar.svg"></div>
                         </a>
                         <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
                             <li role="presentation"><a role="menuitem" tabindex="-1" href="account_user_page.html">Account</a>
@@ -96,47 +120,61 @@
                 </div>
     </div>
 </div>
-<!--</div>-->
 </header>
-<!--<div class="row">-->
+
 <div class="container">
     <div class="row">
 
-        <div class="col-md-3 col-sm-5 col-xs-8 column__left">
+        <div class="col-md-3 col-sm-3 col-xs-12 column__left">
 
             <div class="blur"></div>
             <div class="img__container">
                 <img class="picture" data-toggle="modal" data-target="#dlModal">
             </div>
+
+
+
+
+
+
+
+
             <div class="text__container">
-
                 <div class="text">
-
                     <span>Mera team</span>
-                    <div>
-                        <button class="btn btn-xs pen__btn__1 edit_btn">
-                        <span class="glyphicon glyphicon-pencil"></span>
-                        </button>
+                    <div class="textBlock">
+                        <button type="button" class="btn btn-info">
+                            <span class="glyphicon glyphicon-pencil">
 
+                            </span>
+                        </button>
                         <p class="paragrath">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat dolore ea, perspiciatis!</p>
                     </div>
+                    <div class="textBlock">
+                        <button type="button" class="btn btn-info">
+                            <span  class="glyphicon glyphicon-pencil">
 
-                    <div>
-                        <button class="btn btn-xs pen__btn__2 edit_btn">
-                        <span class="glyphicon glyphicon-pencil"></span>
+                            </span>
                         </button>
-
-                        <p class="paragrath">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta incidunt , hic maiores nam
-                        reprehenderit reiciendis deserunt!</p>
+                        <p class="paragrath">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat dolore ea, perspiciatis!</p>
                     </div>
-
 
                 </div>
             </div>
 
+
+
+
+
+
+
+
+
+
+
         </div>
 
-        <div class="col-md-9 col-sm-6 col-xs-5 column__right">
+        <div class="col-md-9 col-sm-9 col-xs-11 column__right">
         <div class="row">
 
             <div class="blur"></div>
@@ -319,27 +357,29 @@
 
 
 <div class="modal fade" id="dlModal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="myModalLabel">New image</h4>
-            </div>
-            <div class="modal-body">
-                <form action="#" id="dlform">
-                    <input type="text" class="form-control" placeholder="Image path">
-                    <input type="submit" value="add" class="btn btn-info">
-                    <input type="submit" value="cancel" class="btn btn-info">
-                </form>
-            </div>
-
-        </div>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">New image</h4>
+      </div>
+      <div class="modal-body">
+           <form action="#" id="dlform">
+               <input type="text" class="form-control" placeholder="Image path">
+               <input type="submit" value="add" class="btn btn-info">
+               <input type="submit" value="cancel" class="btn btn-info">
+           </form>       
+      </div>
+      
     </div>
+  </div>
 </div>
+
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="libs/bootstrap/js/bootstrap.min.js"></script>
 <script src="js/common.js"></script>
+
 
 
 

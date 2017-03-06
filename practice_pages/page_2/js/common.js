@@ -62,6 +62,7 @@ $(document).ready(function() {
                 listButtonChildren[0].className = "glyphicon glyphicon-pencil";
                 var areaText = listBlockChildren[1].value;
                 var isP = document.createElement("p");
+                isP.className = "paragrath";
                 var node = document.createTextNode(areaText);
                 isP.appendChild(node);
                 parentBlock.removeChild(listBlockChildren[1]);
@@ -70,15 +71,10 @@ $(document).ready(function() {
 
             }
 
-            return ctx = this;
         }();
 
-
-
     });
-
-
-
+    
 });
 
 

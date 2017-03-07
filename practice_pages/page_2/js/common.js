@@ -8,7 +8,6 @@ $(document).ready(function() {
 
 
     $(".menu__button").click(function () {
-        //       $(".menu__tabs__toggle ul").css("visibility", "visible").slideToggle("slow");
 
         if($(".menu__tabs__toggle ul").css("visibility")==="visible"){
             $(".menu__tabs__toggle ul").slideToggle("slow");
@@ -16,7 +15,6 @@ $(document).ready(function() {
         else{
             $(".menu__tabs__toggle ul").css("visibility", "visible");
         }
-
     });
 
 
@@ -31,8 +29,7 @@ $(document).ready(function() {
 
             var newBGImg = "url(\""+newPath+"\")";
            var inputImg = $(".picture").css("background-image",newBGImg);
-              
-            
+
         });
 
 
@@ -54,8 +51,6 @@ $(document).ready(function() {
                 isArea.appendChild(node);
                 parentBlock.removeChild(listBlockChildren[1]);
                 parentBlock.appendChild(isArea);
-
-
             }
             else if(listBlockChildren[1].className === "textarea"){
                 listButtonChildren = listBlockChildren[0].children;
@@ -68,13 +63,11 @@ $(document).ready(function() {
                 parentBlock.removeChild(listBlockChildren[1]);
                 parentBlock.appendChild(isP);
 
-
             }
-
         }();
 
     });
-    
+
 });
 
 

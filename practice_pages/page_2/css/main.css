@@ -8,7 +8,6 @@ body{
 .top_header a{
 color: #fff;
 text-decoration: none;
-
 }
 
 .menu__tabs__toggle{
@@ -24,8 +23,6 @@ text-decoration: none;
     width: auto;
     right: 194px;
     visibility: hidden;
-
-
 }
 
 .menu__tabs__toggle ul{
@@ -38,14 +35,12 @@ text-decoration: none;
     padding: 0;
     list-style-type: none;
     visibility: hidden;
-
 }
 
 .tabs__item__toggle.active{
     font-weight: 400;
     border-bottom: 2px solid #fff;
     background-color: #8696ec;
-
 }
 
 .tabs__item__toggle{
@@ -55,15 +50,12 @@ text-decoration: none;
     font-size: 17px;
     height: 34px;
     background-color: #ea839d;
-
 }
 
 .tabs__item__toggle:hover{
 
     font-weight: bold;
 }
-
-
 
 .top_header{
     position: fixed;
@@ -84,47 +76,10 @@ text-decoration: none;
   background-color: transparent;
   font-size: 20px;
   color: #fff;
-
     position: fixed;
     top: 18px;
     right: 188px;
-
 }
-/*.pen__btn__1,
-.save__btn__1{
-     border: 2px solid #e47a8d;
-    border-radius: 3px;
-    background-color: transparent;
-    color: #e47a8d;
-    display: inline-block;
-   /* float: right;*/
- /*   top: 3px;
-    right: -34px;
-    margin-right: 0;
-    position: absolute;
-}
-
-
-
-.pen__btn__2,
-.save__btn__2{
-    border: 2px solid #e47a8d;
-    border-radius: 3px;
-    background-color: transparent;
-    color: #e47a8d;
-    display: inline-block;
-   /* float: right;*/
-  /*  top: 29px;
-    right: 8px;
-    margin-right: 0;
-    position: absolute;
-}
-*/
-/*.save__btn__2,
-.save__btn__1{
-    visibility: hidden;
-}
-*/
 
 .account__button{
     border: none;
@@ -135,7 +90,6 @@ text-decoration: none;
     position: fixed;
     top:20px;
     right: 20px;
-
 }
 
 .dropdown.account__button
@@ -143,12 +97,10 @@ text-decoration: none;
     position: fixed;
     top: 60px;
     right: 180px;
-
 }
 
 
 .menu__tabs ul{
-
 margin: 0;
 padding: 0;
 list-style-type: none;
@@ -159,9 +111,6 @@ float: left;
 .menu__tabs ul li{
     display: inline-block;
 }
-
-
-
 
 .header_title{
     float: left;
@@ -226,19 +175,15 @@ float: left;
     clear: both;
 }
 
-
-
 .column__right{
     margin-top: 170px;
     display: inline-block;
-
 }
 
 .content__container{
     margin-bottom: 60px;
     padding-top: 40px;
 }
-
 
 .view__all{
     float: right;
@@ -259,7 +204,6 @@ float: left;
     border-radius: 100%;
     padding: 5px;
     vertical-align: middle;
-
 }
 
 .doc__title,
@@ -319,7 +263,6 @@ float: left;
     position: relative;
     font-size: 13px;
     margin-bottom: 100px;
-
 }
 
 .text span{
@@ -337,7 +280,6 @@ float: left;
     background: linear-gradient(to right, lightblue, pink);
     opacity:0.6;
     border: 1px solid transparent;
-
 }
 
 /*MODALS*/
@@ -351,11 +293,10 @@ float: left;
 /*FORMS*/
 .form_log{
     width: 50%;
-
+    margin: auto;
 }
 
 .edit_btn{
-
     margin: 15px 15px 15px 200px;
 }
 

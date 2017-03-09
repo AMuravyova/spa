@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="SampleApp">
+<head>
+    <meta charset="UTF-8">
+    <title>ng-options</title>
+
+    <script src="../Libraries/angular.js"></script>
+    <link href="../Libraries/bootstrap.css" rel="stylesheet"/>
+    <link href="../Libraries/bootstrap-theme.css" rel="stylesheet">
+
+    <script>
+        var app = angular.module("SampleApp",[]);
+
+        app.controller("SampleAppCtrl", function($scope){
+           $scope.items = ['item 1', 'item 2', 'item 3'];
+           $scope.selected = "item 1";
+        });
+    </script>
+
+
+</head>
+<body ng-controller="SampleAppCtrl">
+
+<select ng-model="selected" ng-options="item for item in items"></select>
+</body>
+</html>

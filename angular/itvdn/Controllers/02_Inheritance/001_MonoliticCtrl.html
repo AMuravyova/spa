@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="sampleApp">
+<head>
+    <meta charset="UTF-8">
+    <title>ScopeLess Ctrl</title>
+
+    <link href="../Libraries/bootstrap.css" rel="stylesheet"/>
+    <link href="../Libraries/bootstrap-theme.css" rel="stylesheet">
+    <script src="../Libraries/angular.js"></script>
+
+    <script>
+       angular.module("sampleApp", [])
+       .controller("defaultCtrl", function($scope){
+
+          $scope.value = "------";
+          $scope.setNewValue = function(){
+              $scope.value = "Hello world!";
+          };
+       });
+    </script>
+
+</head>
+
+<body ng-controller="defaultCtrl">
+   {{value}} <br/>
+   <button ng-click="setNewValue()">Change</button>
+</body>
+</html>

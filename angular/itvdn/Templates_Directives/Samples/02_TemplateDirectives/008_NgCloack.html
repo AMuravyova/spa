@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="SampleApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Template directives</title>
+
+    <script src="../Libraries/angular.js"></script>
+    <link href="../Libraries/bootstrap.css" rel="stylesheet"/>
+    <link href="../Libraries/bootstrap-theme.css" rel="stylesheet">
+
+    <script>
+        var app = angular.module("SampleApp",[]);
+
+        app.controller("SampleAppCtrl", function($scope){
+           $scope.firstName = "Ivan";
+           $scope.lastName = "Ivanov";
+           $scope.age = "25";
+           $scope.position = "Software Developer";
+        });
+    </script>
+
+
+</head>
+<body ng-controller="SampleAppCtrl">
+
+    <h3 ng-cloak>{{firstName}} {{lastName}}</h3>
+
+    <p ng-cloak>age: {{age}}</p>
+    <p>position: {{position}}</p>
+    <script>alert("message")</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="sampleApp">
+<head>
+    <meta charset="UTF-8">
+    <title>One Way Binding</title>
+
+    <link href="../Libraries/bootstrap.css" rel="stylesheet"/>
+    <link href="../Libraries/bootstrap-theme.css" rel="stylesheet">
+    <script src="../Libraries/angular.js"></script>
+
+    <script>
+       angular.module("sampleApp", [])
+       .controller("defaultCtrl", function($scope){
+          $scope.tasks = [
+              { action: "Task 1", complete: false },
+              { action: "Task 2", complete: true },
+              { action: "Task 3", complete: false },
+              { action: "Task 4", complete: true }
+          ];
+       });
+    </script>
+
+
+</head>
+<body class="text-center well">
+  <div class="panel panel-primary" ng-controller="defaultCtrl">
+
+      <div class="panel-heading">
+          <div class="panel-title">
+              <h3>
+                  Незавершенные задачи
+                  <span class="label label-info">
+                      {{(tasks | filter : {complete : 'false'} ).length}}
+                  </span>
+              </h3>
+          </div>
+      </div>
+
+      <table class="table">
+          <tr ng-repeat="task in tasks">
+              <td>{{task.action}}</td>
+              <td>{{task.complete}}</td>
+          </tr>
+      </table>
+  </div>
+
+
+
+</body>
+</html>

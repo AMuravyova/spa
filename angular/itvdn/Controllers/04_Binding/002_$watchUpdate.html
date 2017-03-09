@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="sampleApp">
+<head>
+    <meta charset="UTF-8">
+    <title>setInterval problem</title>
+
+    <link href="../Libraries/bootstrap.css" rel="stylesheet"/>
+    <link href="../Libraries/bootstrap-theme.css" rel="stylesheet">
+    <script src="../Libraries/angular.js"></script>
+
+    <script>
+        angular.module("sampleApp", [])
+            .controller("defaultCtrl", function($scope){
+
+                $scope.counter = 0;
+
+                $scope.$watch("counter", function (newvalue, oldvalue) {
+                    console.log("Старое значение" + oldValue + ", новое значение" + newValue);
+
+                });
+
+                $scope.increment = function (val) {
+                    $scope.counter +=val;
+                };
+
+                setInterval(function () {
+                    $scope.counter ++;
+                }, 1000);
+
+                console.log($scope.$$watchers)
+
+            });
+    </script>
+
+</head>
+
+<body>
+<div ng-controller="defaultCtrl">
+    {{counter}}
+    <button ng-click="increment(1)">+1</button>
+</div>
+
+
+</body>
+</html>

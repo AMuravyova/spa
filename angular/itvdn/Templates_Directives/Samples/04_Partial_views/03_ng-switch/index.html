@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="SampleApp">
+<head>
+    <meta charset="UTF-8">
+    <title>ng-switch</title>
+
+    <script src="../../Libraries/angular.js"></script>
+    <link href="../../Libraries/bootstrap.css" rel="stylesheet"/>
+    <link href="../../Libraries/bootstrap-theme.css" rel="stylesheet">
+    <script src="app.js"></script>
+</head>
+<body>
+   <div ng-controller="SampleAppCtrl">
+       <div class="container">
+           Шаблон <select ng-model="mode" ng-options="item.display for item in options track by item.value"></select>
+
+           <div ng-switch on="mode.value" style="margin-top:20px;">
+
+               <table class="table" ng-switch-when="table">
+                   <thead>
+                   <tr>
+                       <th>Name</th>
+                       <th>Value</th>
+                   </tr>
+                   </thead>
+                   <tr ng-repeat="item in items">
+                       <td>{{item.name}}</td>
+                       <td>{{item.value}}</td>
+                   </tr>
+               </table>
+
+               <ul class="list-group" ng-switch-when="list">
+                   <li ng-repeat="item in items" class="list-group-item list-group-item-info">{{item.name}}:{{item.value}}</li>
+               </ul>
+
+               <ol class="list-group" ng-switch-when="budges">
+                   <li ng-repeat="item in items" class="list-group-item">
+                      <span class="badge">{{item.value}}</span>
+                       {{item.name}}
+                   </li>
+               </ol>
+           </div>
+       </div>
+
+       <ng-include src="url"></ng-include>
+   </div>
+
+</body>
+</html>

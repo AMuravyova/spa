@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="sampleApp">
+<head>
+    <meta charset="UTF-8">
+    <title>$emit</title>
+
+    <link href="../Libraries/bootstrap.css" rel="stylesheet"/>
+    <link href="../Libraries/bootstrap-theme.css" rel="stylesheet">
+    <script src="../Libraries/angular.js"></script>
+
+    <script>
+       var app = angular.module("sampleApp", [])
+       app.controller("testCtrl", function($scope){
+
+          $scope.$on("messageEvent", function (event, args){
+             event.stopPropagation();
+             $scope.info = args.message;
+          })
+
+          $scope.send = function(){
+              $scope.$emit("messageEvent", {
+                  message: $scope.messageInput
+              });
+          }
+
+       });
+    </script>
+
+</head>
+
+<body>
+<div ng-controller="testCtrl">
+    <p>Controller 1</p>
+    <p>Received message - {{info}}</p>
+
+    <div ng-controller="testCtrl">
+        <p>Controller 2</p>
+        <p>Receiver message - {{info}}</p>
+
+        <div ng-controller="testCtrl">
+            <p>Controller 3</p>
+            <p>Receiver message - {{info}}</p>
+
+            <input ng-model="messageInput"/>
+            <button ng-click="send()">Send</button>
+        </div>
+    </div>
+
+</div>
+
+
+</body>
+</html>

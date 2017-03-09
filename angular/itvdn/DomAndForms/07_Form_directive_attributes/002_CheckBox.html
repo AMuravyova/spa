@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="sampleApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Form directive attributes</title>
+
+    <link href="../Libraries/bootstrap.css" rel="stylesheet"/>
+    <link href="../Libraries/bootstrap-theme.css" rel="stylesheet">
+    <script src="../Libraries/angular.js"></script>
+
+    <script>
+       angular.module("sampleApp", [])
+       .controller("defaultCtrl", function($scope){});
+    </script>
+
+</head>
+
+<body>
+<div class="panel" ng-controller="defaultCtrl" style="margin: 10px">
+
+        <input name="sample" type="checkbox" ng-model="inputValue" ng-true-value="'yes'" ng-false-value="'no'"/>
+        <p>Model Value: {{inputValue}}</p>
+
+</div>
+
+</body>
+</html>

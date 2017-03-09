@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html ng-app="sampleApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular attributes</title>
+
+    <link href="../Libraries/bootstrap.css" rel="stylesheet"/>
+    <link href="../Libraries/bootstrap-theme.css" rel="stylesheet">
+    <script src="../Libraries/angular.js"></script>
+
+    <script>
+       angular.module("sampleApp", [])
+       .controller("defaultCtrl", function($scope){
+          $scope.dataValue = false;
+       });
+    </script>
+
+
+</head>
+<body>
+
+
+    <div id="tasksPanel" class="panel well" ng-controller="defaultCtrl">
+
+    <h3 class="panel-header">Boolean attributes</h3>
+
+    <div class="checkbox">
+        <label>
+            <input type="checkbox" ng-model="dataValue">
+            Применить атрибуты
+        </label>
+    </div>
+
+    <div>
+
+    <div class="form-group">
+        <button class="btn btn-success" ng-disabled="dataValue">ng-disabled</button>
+    </div>
+
+    <div class="form-group">
+        <label>
+            ng-readonly
+            <input class="form-control" value="Readonly" ng-readonly="dataValue"/>
+        </label>
+    </div>
+
+   <div class="form-group">
+       <label>
+           <input type="checkbox" ng-checked="dataValue"/>
+           ng-checked
+       </label>
+   </div>
+
+    <div class="form-group">
+        <label>
+            <input type="radio" ng-checked="dataValue"/>
+            ng-checked
+        </label>
+    </div>
+
+    <div class="form-group">
+        <label>
+            ng-select
+            <select class="form-control">
+                <label>
+                    <option value="value">text 1</option>
+                    <option value="value" ng-selected="dataValue">ng-selected</option>
+                </label>
+            </select>
+        </label>
+    </div>
+
+    </div>
+    </div>
+</body>
+</html>

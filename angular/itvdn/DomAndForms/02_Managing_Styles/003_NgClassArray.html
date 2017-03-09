@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="SampleApp">
+<head>
+    <meta charset="UTF-8">
+    <title>ng-show &amp; ng-hide</title>
+
+    <link href="../Libraries/bootstrap.css" rel="stylesheet"/>
+    <link href="../Libraries/bootstrap-theme.css" rel="stylesheet">
+    <script src="../Libraries/angular.js"></script>
+
+    <script>
+        var app = angular.module("SampleApp", []);
+
+        app.controller("SampleAppCtrl", function($scope){
+
+            $scope.clickHandler = function(){
+               $scope.classNames = ["test-div", "lightGreen"];
+            }
+        });
+    </script>
+
+    <style>
+        .lightGreen{
+        background-color: lightgreen;
+        }
+
+        .lightBlue{
+        background-color: lightblue;
+        }
+
+        .lightCoral{
+        background-color: lightcoral;
+        }
+
+        .test-div{
+        border: 1px solid black;
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+        margin: 10px;
+        }
+
+    </style>
+
+</head>
+<body ng-controller="SampleAppCtrl">
+<div class="container">
+    <button ng-click="clickHandler()">Set classes</button>
+    <div ng-class="classNames">Test</div>
+</div>
+
+</body>
+</html>

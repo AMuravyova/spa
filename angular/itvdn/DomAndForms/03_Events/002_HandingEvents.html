@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="SampleApp">
+<head>
+    <meta charset="UTF-8">
+    <title>ng-show &amp; ng-hide</title>
+
+    <link href="../Libraries/bootstrap.css" rel="stylesheet"/>
+    <link href="../Libraries/bootstrap-theme.css" rel="stylesheet">
+    <script src="../Libraries/angular.js"></script>
+
+    <script>
+        var app = angular.module("SampleApp", []);
+
+        app.controller("SampleAppCtrl", function($scope){
+
+            $scope.type;
+
+            $scope.handlerEvent = function (event){
+               console.log(event);
+               $scope.type = event.type;
+            }
+
+            $scope.clickHandler = function (color){
+               alert(color);
+            }
+        });
+    </script>
+
+    <style>
+        div.test {
+           background-color: green;
+           width: 100px;
+           height: 100px;
+           color: white;
+           padding: 4px;
+        }
+
+    </style>
+
+</head>
+<body ng-controller="SampleAppCtrl">
+<div class="container">
+
+    <div class="test" ng-mouseenter="handlerEvent($event)" ng-mouseleave="handlerEvent($event)">{{type}}</div>
+    <ul>
+        <li ng-repeat="item in ['red', 'green', 'blue']" ng-click="clickHandler(item)">{{item}}</li>
+    </ul>
+</div>
+
+</body>
+</html>

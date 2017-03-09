@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html ng-app="sampleApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Controller</title>
+
+    <link href="../Libraries/bootstrap.css" rel="stylesheet"/>
+    <link href="../Libraries/bootstrap-theme.css" rel="stylesheet">
+    <script src="../Libraries/angular.js"></script>
+
+    <script>
+       angular.module("sampleApp", [])
+       .controller("defaultCtrl", function($scope){
+          $scope.fruit = "Apple";
+
+          $scope.getFruit = function(fruit){
+             switch (fruit){
+                case "Apple":
+                   return "Yes!";
+                case "Banana":
+                   return "Nope!";
+             };
+          };
+       });
+    </script>
+
+</head>
+
+<body>
+<div class="panel panel-primary" ng-controller="defaultCtrl">
+     <div class="panel-heading">
+         <h4>The fruit is: {{fruit}}</h4>
+         <h4>Do you want it ? : {{getFruit(fruit)}}</h4>
+     </div>
+</div>
+
+</body>
+</html>

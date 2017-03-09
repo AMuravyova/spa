@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html ng-app="SampleApp">
+<head>
+    <meta charset="UTF-8">
+    <title>ng-show &amp; ng-hide</title>
+
+    <link href="../Libraries/bootstrap.css" rel="stylesheet"/>
+    <link href="../Libraries/bootstrap-theme.css" rel="stylesheet">
+    <script src="../Libraries/angular.js"></script>
+
+    <script>
+        var app = angular.module("SampleApp", []);
+
+        app.controller("SampleAppCtrl", function($scope){
+
+            $scope.styleObj = {
+               color: "red",
+               padding: "10px",
+               border: "1px solid green",
+               marginTop: "50px"
+            };
+        });
+    </script>
+
+
+
+</head>
+<body ng-controller="SampleAppCtrl">
+<div class="container">
+   <div ng-style="styleObj">Test</div>
+</div>
+
+</body>
+</html>

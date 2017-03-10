@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="29317c85-da76-4d30-ab16-8d42fc7f291c" name="Default" comment="" />
+    <list default="true" id="29317c85-da76-4d30-ab16-8d42fc7f291c" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pracMVC/controllerClass.js" afterPath="$PROJECT_DIR$/pracMVC/Controller.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pracMVC/parentTableClass.js" afterPath="$PROJECT_DIR$/pracMVC/TableServiceEntity.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pracMVC/serviceClass.js" afterPath="$PROJECT_DIR$/pracMVC/Service.js" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/pracMVC/tableClass.js" afterPath="$PROJECT_DIR$/pracMVC/TableOperation.js" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,33 +21,35 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="controllerClass.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pracMVC/controllerClass.js">
+      <file leaf-file-name="Controller.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pracMVC/Controller.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="484">
-              <caret line="24" column="22" lean-forward="false" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+            <state relative-caret-position="88">
+              <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
               <folding>
-                <element signature="e#45#77#0" expanded="true" />
+                <element signature="e#45#90#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="serviceClass.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/pracMVC/serviceClass.js">
+      <file leaf-file-name="test.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pracMVC/test.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="198">
+              <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+              <folding>
+                <element signature="e#45#82#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="parentTableClass.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pracMVC/parentTableClass.js">
+      <file leaf-file-name="Entity.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pracMVC/Entity.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="18" column="19" lean-forward="true" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+            <state relative-caret-position="154">
+              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding>
                 <element signature="e#0#43#0" expanded="false" />
               </folding>
@@ -49,12 +57,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tableClass.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pracMVC/tableClass.js">
+      <file leaf-file-name="Service.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pracMVC/Service.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="154">
-              <caret line="9" column="3" lean-forward="false" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-              <folding />
+            <state relative-caret-position="110">
+              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#43#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -63,8 +73,32 @@
         <entry file="file://$PROJECT_DIR$/pracMVC/dataJSON.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="110">
-              <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+              <caret line="5" column="46" lean-forward="true" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TableOperation.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pracMVC/TableOperation.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+              <folding>
+                <element signature="e#44#97#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TableServiceEntity.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pracMVC/TableServiceEntity.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+              <folding>
+                <element signature="e#0#43#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -98,12 +132,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/practice_pages/page_2/index.html" />
-        <option value="$PROJECT_DIR$/practice_pages/page_2/css/main.css" />
-        <option value="$PROJECT_DIR$/practice_pages/page_2/logout_page.html" />
-        <option value="$PROJECT_DIR$/practice_pages/page_2/account_page.html" />
-        <option value="$PROJECT_DIR$/angular/itvdn/Samples/Libraries/angular.js" />
-        <option value="$PROJECT_DIR$/angular/itvdn/Samples/Task/000_HelloWorld.html" />
         <option value="$PROJECT_DIR$/angular/itvdn/Samples/Task/001_GetInput.html" />
         <option value="$PROJECT_DIR$/angular/itvdn/Samples/Task/002_CoursePlanner_Static.html" />
         <option value="$PROJECT_DIR$/angular/itvdn/Samples/Task/Task1.html" />
@@ -144,11 +172,17 @@
         <option value="$PROJECT_DIR$/pracMVC/oldStyle.js" />
         <option value="$PROJECT_DIR$/pracMVC/class.js" />
         <option value="$PROJECT_DIR$/pracMVC/controller.js" />
-        <option value="$PROJECT_DIR$/pracMVC/parentTableClass.js" />
-        <option value="$PROJECT_DIR$/pracMVC/tableClass.js" />
         <option value="$PROJECT_DIR$/pracMVC/dataJSON.json" />
-        <option value="$PROJECT_DIR$/pracMVC/controllerClass.js" />
         <option value="$PROJECT_DIR$/pracMVC/serviceClass.js" />
+        <option value="$PROJECT_DIR$/pracMVC/tableClass.js" />
+        <option value="$PROJECT_DIR$/pracMVC/controllerClass.js" />
+        <option value="$PROJECT_DIR$/pracMVC/parentTableClass.js" />
+        <option value="$PROJECT_DIR$/pracMVC/Service.js" />
+        <option value="$PROJECT_DIR$/pracMVC/Controller.js" />
+        <option value="$PROJECT_DIR$/pracMVC/Entity.js" />
+        <option value="$PROJECT_DIR$/pracMVC/TableOperation.js" />
+        <option value="$PROJECT_DIR$/pracMVC/test.js" />
+        <option value="$PROJECT_DIR$/pracMVC/TableServiceEntity.js" />
       </list>
     </option>
   </component>
@@ -811,12 +845,12 @@
       <workItem from="1488176911989" duration="129599000" />
       <workItem from="1488782180941" duration="23046000" />
       <workItem from="1489037808343" duration="873000" />
-      <workItem from="1489042063191" duration="26633000" />
+      <workItem from="1489042063191" duration="40925000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="433053000" />
+    <option name="totallyTimeSpent" value="447345000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1298" height="1000" extended-state="0" />
@@ -868,20 +902,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/practice_pages/page_2/logout_page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="597">
-          <caret line="48" column="10" lean-forward="false" selection-start-line="48" selection-start-column="10" selection-end-line="48" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/practice_pages/page_2/account_page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="25" lean-forward="false" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/practice_pages/page_2/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
@@ -1206,47 +1226,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pracMVC/tableClass.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="9" column="3" lean-forward="false" selection-start-line="9" selection-start-column="3" selection-end-line="9" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pracMVC/dataJSON.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
-          <caret line="5" column="28" lean-forward="false" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
+          <caret line="5" column="46" lean-forward="true" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pracMVC/parentTableClass.js">
+    <entry file="file://$PROJECT_DIR$/pracMVC/Service.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="18" column="19" lean-forward="true" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+        <state relative-caret-position="110">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
             <element signature="e#0#43#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pracMVC/controllerClass.js">
+    <entry file="file://$PROJECT_DIR$/pracMVC/Entity.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="24" column="22" lean-forward="false" selection-start-line="24" selection-start-column="22" selection-end-line="24" selection-end-column="22" />
+        <state relative-caret-position="154">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <element signature="e#45#77#0" expanded="true" />
+            <element signature="e#0#43#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pracMVC/serviceClass.js">
+    <entry file="file://$PROJECT_DIR$/pracMVC/TableOperation.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="308">
+          <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+          <folding>
+            <element signature="e#44#97#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pracMVC/Controller.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="e#45#90#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pracMVC/TableServiceEntity.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pracMVC/test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="30" lean-forward="true" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
+          <folding>
+            <element signature="e#45#82#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html ng-app="spApp">
+<head>
+    <title>SPA</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-theme.min.css">
+    <link rel = "stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="app.module.js."></script>
+    <script src="x-list/doc-list.module.js"></script>
+    <script src="x-list/img-list.module.js"></script>
+    <script src="x-list/req-list.module.js"></script>
+    <script src="header/header.module.js"></script>
+    <script src="x-list/doc-list.component.js"></script>
+    <script src="x-list/img-list.component.js"></script>
+    <script src="x-list/req-list.component.js"></script>
+    <script src="header/header-comp.component.js"></script>
+
+</head>
+
+<body>
+
+<header-comp></header-comp>
+
+<div class="container">
+    <div class="row">
+
+        <div class="col-md-3 col-sm-5 col-xs-12 column__left">
+            <div class="row">
+                <div class="blur"></div>
+                <div class="img__container">
+                    <img class="picture" data-toggle="modal" data-target="#dlModal">
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="text__container">
+
+                    <div class="text">
+
+                        <span>Mera team</span>
+                        <div>
+                            <button class="btn btn-xs pen__btn__1 edit_btn">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                            </button>
+
+                            <p class="paragrath">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat dolore ea, perspiciatis!</p>
+                        </div>
+
+                        <div>
+                            <button class="btn btn-xs pen__btn__2 edit_btn">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                            </button>
+
+                            <p class="paragrath">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta incidunt , hic maiores nam</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-9 col-sm-6 col-xs-12 column__right">
+        <div class="row">
+
+            <div class="blur"></div>
+
+            <div class="tab-content">
+                <div class="tab-pane fade in active" id="dashboard">
+
+                    <docList></docList>
+                    <imgList></imgList>
+                    <reqList></reqList>
+
+                </div>
+
+
+                <div class="tab-pane fade" id="doc">
+                    <docList></docList>
+                </div>
+
+                <div class="tab-pane fade" id="img">
+                    <imgList></imgList>
+                </div>
+
+                <div class="tab-pane fade" id="req">
+                    <reqList></reqList>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="modal fade" id="dlModal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">New image</h4>
+            </div>
+            <div class="modal-body">
+                <form id="dlform">
+                    <input type="text" class="form-control image_path" placeholder="Image path">
+                    <a href="#" class="btn btn-info btn_send" data-dismiss="modal" aria-label="Close">ok</a>
+                    <a  href="#" class="btn btn-info btn_cancel"  data-dismiss="modal" aria-label="Close">cancel</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="libs/bootstrap/js/bootstrap.min.js"></script>
+<script src="js/common.js"></script>
+<script src="app.bundle.js"></script>
+
+</body>
+</html>

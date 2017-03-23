@@ -3,7 +3,7 @@
  */
 
 var mongoose    =   require("mongoose");
-mongoose.connect('mongodb://localhost:27017/mongoDb');
+mongoose.connect('mongodb://localhost:27017/myDb');
 // create instance of Schema
 var mongoSchema =   mongoose.Schema;
 // create schema

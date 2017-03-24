@@ -4,8 +4,37 @@
 //mongodb-rest
 //var mongodbRest = require('mongodb-rest/server.js');
 //mongodbRest.startServer();
+import express from 'express';
+import bodyParser from 'body-parser';
+import {serverPort} from '../etc/config.json';
+import * as db from './utils/DataBaseUtils.js';
+
+db.setUpConnection();
+const app = express();
+
+//преобразовываем json в нужный формат
+app.use(bodyParser.json());
+
+app.get('/notes', (req, res) => {
+   db.listNotes().then(data => res.send(data));
+});
+
+app.post('/notes', (req, res) => {
+    db.createNote(req.body).then(data => res.send(data));
+});
+
+app.delete('/notes/:id', (req, res) => {
+    db.deleteNote(req.params.id).then(data => res.send(data));
+});
+
+const server = app.listen(serverPort, () => {
+    console.log('Server is up and running on port ${serverPort}');
+});
 
 
+
+
+/*
 //https://codeforgeek.com/2015/08/restful-api-node-mongodb/
 var express     =   require("express");
 var app         =   express();
@@ -130,7 +159,7 @@ router.route("/users/:id")
 app.use('/',router);
 
 //app.listen(8000);
-app.listen(3000);
+app.listen(8080);
 console.log("Listening to PORT 3000");
 
-
+*/

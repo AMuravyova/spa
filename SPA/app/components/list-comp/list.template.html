@@ -3,24 +3,13 @@
 
         <div class="col-md-12 col-sm-12">
             <div class="row">
-                <div class="col-md-3 col-sm-6">
-                    <div class="doc" ng-repeat="doc in $ctrl.docs">
-                        <li>
-                            <span>{{doc.name}}</span>
-                            <p>{{doc.type}}</p>
-                        </li>
 
+                <span ng-repeat="doc in $ctrl.docs">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="doc">{{doc.name}}{{doc.type}}</div>
                     </div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="doc"></div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="doc"></div>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <div class="doc"></div>
-                </div>
+                </span>
+
             </div>
         </div>
     </div>

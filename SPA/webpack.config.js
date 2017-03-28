@@ -5,7 +5,14 @@
 const NODE_ENV=process.env.NODE_ENV || 'development';
 module.exports = {
     entry: './app/index.js',
-    output: {filename: './app/app.bundle.js'},
+    output: {
+
+        filename: './app/webpack.bundle.js'},
+    module:{
+        rules: [
+            {test: /\.(js|jsx)$/, use: 'babel-loader'}
+        ]
+    },
     watch: NODE_ENV == 'development',
     watchOptions: {
         aggregateTimeout: 100

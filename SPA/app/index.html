@@ -8,32 +8,19 @@
     <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-theme.min.css">
     <link rel = "stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
-
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="index.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="webpack.bundle.js"></script>
+
 </head>
 
 <body>
 
-<header-comp></header-comp>
+<ui-view></ui-view>
 
-<div class="container">
-    <div class="row">
-        <div class="col-md-3 col-sm-5 col-xs-12 column__left">
-            <statistic-comp></statistic-comp>
-        </div>
-
-        <div class="col-md-9 col-sm-6 col-xs-12 column__right">
-            <central-comp></central-comp>
-        </div>
-    </div>
-</div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script src="libs/bootstrap/js/bootstrap.min.js"></script>
 <script src="js/common.js"></script>
-<script src="app.bundle.js"></script>
 
 </body>
 </html>

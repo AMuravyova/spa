@@ -2,7 +2,7 @@
  * Created by amurav on 22.03.2017.
  */
 export const listComp = {
-    templateUrl: 'components/list-comp/list.template.html',
+    templateUrl: './components/list-comp/list.template.html',
     controller: function DocListController($http){
         var self = this;
         self.docs = [

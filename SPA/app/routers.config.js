@@ -12,37 +12,37 @@ export function Routes ($stateProvider, $urlRouterProvider){
             templateUrl: '../pages/home-page/home.html'
 
         })
-        .state('page.dashboard',{
+        .state('page.home.dashboard',{
             url: '/dashboard',
             templateUrl: '../pages/dashboard-page/dashboard.html'
             
         })
-        .state('page.documents',{
+        .state('page.home.documents',{
             url: '/documents',
             templateUrl: '../pages/documents-page/documents.html'
             
         })
-        .state('page.images',{
+        .state('page.home.images',{
             url: '/images',
             templateUrl: '../pages/images-page/images.html'
             
         })
 
-        .state('page.requests',{
+        .state('page.home.requests',{
             url: '/requests',
             templateUrl: '../pages/requests-page/requests.html'
             
         })
 
-        .state('page.account',{
+        .state('page.home.account',{
             url: '/account',
-            controller: 'accountCtrl',
+            // controller: 'accountCtrl',
             templateUrl: '../pages/account-page/account.html'
         })
 
-        .state('page.logout',{
+        .state('page.home.logout',{
             url: '/logout',
-            controller: 'logoutCtrl',
+            // controller: 'logoutCtrl',
             templateUrl: '../pages/logout-page/logout.html'
         });
 
@@ -70,5 +70,5 @@ export function Routes ($stateProvider, $urlRouterProvider){
     //     }
     // });
 
-    $urlRouterProvider.when('','/home');
+    $urlRouterProvider.when('','/home/dashboard');
 };

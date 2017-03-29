@@ -40,7 +40,7 @@ gulp.task('mongorest', () => {
 gulp.task('webpack', () => {
     return gulp.src('webpack.config.js')
         .pipe(uglify())
-})
+});
 
 gulp.task('serve', ['webpack'],() => {
     browserSync.init({

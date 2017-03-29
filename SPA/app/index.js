@@ -3,7 +3,7 @@
  */
 import uiRouter from 'angular-ui-router';
 import {compApp} from './components/index';
-import {Routes} from "./routers.config";
+import {Routes} from './routers.config';
 
 export const spApp = angular.module('spApp', [compApp, uiRouter, 'ngResource'])
     .controller('spCtrl', function spCtrl() {

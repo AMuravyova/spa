@@ -40,10 +40,10 @@ export function Routes ($stateProvider, $urlRouterProvider){
             templateUrl: '../pages/account-page/account.html'
         })
 
-        .state('page.home.logout',{
-            url: '/logout',
+        .state('page.sing',{
+            url: '/sing',
             // controller: 'logoutCtrl',
-            templateUrl: '../pages/logout-page/logout.html'
+            templateUrl: '../pages/sing-page/sing.html'
         });
 
     //     .state('page.images.image', {
@@ -70,5 +70,5 @@ export function Routes ($stateProvider, $urlRouterProvider){
     //     }
     // });
 
-    $urlRouterProvider.when('','/home/dashboard');
+    $urlRouterProvider.when('','/sing');
 };

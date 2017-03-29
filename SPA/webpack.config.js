@@ -10,7 +10,11 @@ module.exports = {
         filename: './app/webpack.bundle.js'},
     module:{
         rules: [
-            {test: /\.(js|jsx)$/, use: 'babel-loader'}
+            {test: /\.(js|jsx)$/, use: 'babel-loader'},
+            {
+                test: /\.css$/,
+                use: [ 'style-loader', 'css-loader' ]
+            }
         ]
     },
     watch: NODE_ENV == 'development',

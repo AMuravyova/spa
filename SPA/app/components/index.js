@@ -8,7 +8,8 @@ import {listComp} from './list-comp/list.component';
 import {logoComp} from './logo-comp/logo.component';
 import {menuComp} from './menu-comp/menu.component';
 import {statisticComp} from './statistic-comp/statistic.component';
-
+import {singinComp} from './singin-comp/singin.component';
+import {singupComp} from './singup-comp/singup.component';
 
 
 export const compApp = angular.module('spApp.components',[])
@@ -18,4 +19,6 @@ export const compApp = angular.module('spApp.components',[])
     .component('logoComp', logoComp)
     .component('menuComp', menuComp)
     .component('statisticComp', statisticComp)
-    .component('centralComp', centralComp).name;
+    .component('centralComp', centralComp)
+    .component('singinComp', singinComp)
+    .component('singupComp', singupComp).name;

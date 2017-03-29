@@ -1,7 +1,7 @@
 /**
  * Created by amurav on 28.03.2017.
  */
-export function Routes ($stateProvider, $urlRouterProvider){
+export const Routes = ($stateProvider, $urlRouterProvider) => {
     $stateProvider
         .state('page',{
             abstract: true,
@@ -36,13 +36,11 @@ export function Routes ($stateProvider, $urlRouterProvider){
 
         .state('page.home.account',{
             url: '/account',
-            // controller: 'accountCtrl',
             templateUrl: '../pages/account-page/account.html'
         })
 
         .state('page.sing',{
             url: '/sing',
-            // controller: 'logoutCtrl',
             templateUrl: '../pages/sing-page/sing.html'
         });
 

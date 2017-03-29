@@ -3,6 +3,4 @@
  */
 export const accountComp = {
     templateUrl:'components/account-comp/account.template.html',
-    controller: function AccountCompController(){
-    }
 };

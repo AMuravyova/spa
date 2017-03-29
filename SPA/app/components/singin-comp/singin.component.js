@@ -2,10 +2,11 @@
  * Created by amurav on 29.03.2017.
  */
 
+
 class LogFormController {
     constructor($state) {
         this.$state = $state;
-        this.addNewUser = function (userDetails, isvalid) {
+        this.addNewUser = (userDetails, isvalid) => {
             if (isvalid) {
                 this.message = userDetails.login + " " + userDetails.email + " " + userDetails.password;
             }
@@ -15,9 +16,7 @@ class LogFormController {
             }
         };
 
-        //this.message = "Success";
-
-        this.getError = function (error) {
+        this.getError = (error) => {
             if (angular.isDefined(error)) {
                 if (error.required) {
                     return "Поле не должно быть пустым";
@@ -31,7 +30,6 @@ class LogFormController {
 
     clickHandler() {
         this.$state.go('page.home.dashboard');
-        //document.location.href = 'http://localhost:8000/#/home/dashboard';
     }
 }
 

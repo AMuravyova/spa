@@ -3,6 +3,4 @@
  */
 export const headerComp ={
     templateUrl:'components/header-comp/header-comp.template.html',
-    controller: function HeaderCompController(){
-    }
 };

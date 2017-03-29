@@ -2,14 +2,14 @@
  * Created by amurav on 23.03.2017.
  */
 import {accountComp} from './account-comp/account.component';
-import {centralComp} from './central-comp/central.component';
 import {headerComp} from './header-comp/header-comp.component';
 import {listComp} from './list-comp/list.component';
 import {logoComp} from './logo-comp/logo.component';
 import {menuComp} from './menu-comp/menu.component';
 import {statisticComp} from './statistic-comp/statistic.component';
 import {singinComp} from './singin-comp/singin.component';
-import {singupComp} from './singup-comp/singup.component';
+import {accountformComp} from './account-form-comp/accountform.component';
+import {commonComp} from './common-comp/common.component';
 
 
 export const compApp = angular.module('spApp.components',[])
@@ -19,6 +19,6 @@ export const compApp = angular.module('spApp.components',[])
     .component('logoComp', logoComp)
     .component('menuComp', menuComp)
     .component('statisticComp', statisticComp)
-    .component('centralComp', centralComp)
     .component('singinComp', singinComp)
-    .component('singupComp', singupComp).name;
+    .component('accountformComp', accountformComp)
+    .component('commonComp', commonComp).name;

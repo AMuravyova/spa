@@ -3,6 +3,4 @@
  */
 export const logoComp = {
     templateUrl:'components/logo-comp/logo.template.html',
-    controller: function LogoCompController(){
-    }
 };

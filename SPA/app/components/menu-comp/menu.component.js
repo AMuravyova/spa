@@ -5,6 +5,4 @@
 
 export const menuComp = {
     templateUrl:'components/menu-comp/menu.template.html',
-    controller: function MenuCompController(){
-    }
 };

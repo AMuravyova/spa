@@ -4,6 +4,4 @@
 
 export const centralComp = {
     templateUrl:'components/central-comp/central.template.html',
-    controller: function CentralCompController(){
-    }
 };

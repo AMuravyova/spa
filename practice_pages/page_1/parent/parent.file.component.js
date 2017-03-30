@@ -9,8 +9,8 @@ class ParentFileController {
     }
 }
 
-export const parentFileComp = {
+export const parentfileComp = {
     templateUrl: './files/parent.file.template.html',
-    controller: ParentFileController,
-    controllerAs: vm
+    controller: ParentFileController
+
 };

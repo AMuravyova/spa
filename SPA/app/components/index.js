@@ -10,6 +10,7 @@ import {statisticComp} from './statistic-comp/statistic.component';
 import {singinComp} from './singin-comp/singin.component';
 import {accountformComp} from './account-form-comp/accountform.component';
 import {commonComp} from './common-comp/common.component';
+import {addfileComp} from './add-file-comp/addfile.component';
 
 
 export const compApp = angular.module('spApp.components',[])
@@ -21,4 +22,5 @@ export const compApp = angular.module('spApp.components',[])
     .component('statisticComp', statisticComp)
     .component('singinComp', singinComp)
     .component('accountformComp', accountformComp)
-    .component('commonComp', commonComp).name;
+    .component('commonComp', commonComp)
+    .component('addfileComp', addfileComp).name;

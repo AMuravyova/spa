@@ -28,9 +28,9 @@ export const Routes = ($stateProvider, $urlRouterProvider) => {
             
         })
 
-        .state('page.home.requests',{
-            url: '/requests',
-            templateUrl: '../pages/requests-page/requests.html'
+        .state('page.home.team',{
+            url: '/team',
+            templateUrl: '../pages/team-page/team.html'
             
         })
 

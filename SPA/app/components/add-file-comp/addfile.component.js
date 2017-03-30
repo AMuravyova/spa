@@ -3,7 +3,7 @@
  */
 
 
-class LogFormController {
+class AddFileController {
     constructor($state) {
         this.$state = $state;
         this.addNewUser = (userDetails, isvalid) => {
@@ -35,9 +35,9 @@ class LogFormController {
 }
 
 
-export const singinComp = {
-    templateUrl: './components/singin-comp/singin.template.html',
+export const addfileComp = {
+    templateUrl: './components/add-file-comp/addfile.template.html',
     controllerAs: 'vm',
-    controller: LogFormController
+    controller: AddFileController
 
 };

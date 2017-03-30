@@ -3,11 +3,10 @@
  */
 import uiRouter from 'angular-ui-router';
 import {compApp} from './components/index';
+import {filesApp} from './files/index';
 import {Routes} from './routers.config';
 
-export const spApp = angular.module('spApp', [compApp, uiRouter, 'ngResource'])
-    .controller('spCtrl', function spCtrl() {
-    })
+export const spApp = angular.module('spApp', [compApp, filesApp, uiRouter, 'ngResource'])
     .config(['$stateProvider', '$urlRouterProvider', Routes]);
 
 

@@ -1,0 +1,22 @@
+
+<div>
+    <div class="doc__title">Images</div>
+    <div><a class="view__all" href="http://localhost:8000/#/home/images">View all</a></div>
+</div>
+
+<div class="content__container">
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <div class="row">
+
+                <div ng-repeat="img in imageCtrl.arrImages">
+                     <div class="col-md-3 col-sm-6">
+                          <div class="doc" ng-mouseenter="handlerEvent()">{{img.path}}</div>
+                     </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>

@@ -4,10 +4,13 @@
 
 import {imagefileComp} from './image/image.file.component';
 import {docfileComp} from './document/document.file.component';
-//import {serviceFile} from './service.file.js';
+import {serviceFile} from './service.file';
+import {serviceStatistic} from './service.statistic';
+
 
 export const filesApp = angular.module('spApp.files',[])
     .component('imagefileComp', imagefileComp)
     .component('docfileComp', docfileComp)
-    //.provider('serviceFile', serviceFile)
+    .factory('serviceFile', ['$resource',serviceFile])
+    .factory('serviceStatistic', serviceStatistic)
 .name;

@@ -15,7 +15,7 @@ class LogFormController {
                 this.showError = true;
             }
         };
-        this.message;
+
 
         this.getError = (error) => {
             if (angular.isDefined(error)) {

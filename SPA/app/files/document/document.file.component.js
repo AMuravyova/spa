@@ -7,9 +7,9 @@
 import {ParentFile} from '../parent.file.js';
 
 class DocumentFileController extends ParentFile{
-    constructor(){
+    constructor(serviceFile){
         super();
-
+        //this.arrDocuments = serviceFile.query();
         this.arrDocuments = [{
             userFirstName: 'userName',
             userTeam: 'userTeam',

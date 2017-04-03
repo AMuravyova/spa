@@ -9,11 +9,17 @@
         <div class="col-md-12 col-sm-12">
             <div class="row">
 
-                <div ng-repeat="img in imageCtrl.arrImages">
-                     <div class="col-md-3 col-sm-6">
-                          <div class="doc" ng-mouseenter="handlerEvent()">{{img.path}}</div>
-                     </div>
-                </div>
+                <!--<div ng-repeat="img in imageCtrl.arrImages">-->
+                     <!--<div class="col-md-3 col-sm-6">-->
+                          <!--<div class="doc" ng-mouseenter="handlerEvent()">{{img.path}}</div>-->
+                     <!--</div>-->
+                <!--</div>-->
+
+                <span ng-repeat="img in imageCtrl.arrImages">
+                    <div class="col-md-3 col-sm-6 pic">
+                        <img class="img-responsive center-block" ng-mouseenter="handlerEvent()" ng-src="{{img.path}}" />
+                    </div>
+                </span>
 
             </div>
         </div>

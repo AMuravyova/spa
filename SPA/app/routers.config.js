@@ -1,7 +1,8 @@
 /**
  * Created by amurav on 28.03.2017.
  */
-export const Routes = ($stateProvider, $urlRouterProvider) => {
+export const Routes = ($stateProvider, $urlRouterProvider, RestangularProvider) => {
+    RestangularProvider.setBaseUrl("http://localhost:3000");
     $stateProvider
         .state('page',{
             abstract: true,

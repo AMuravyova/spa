@@ -6,21 +6,71 @@ import {compApp} from './components/index';
 import {filesApp} from './files/index';
 import {Routes} from './routers.config';
 import uiBootstrap from 'angular-ui-bootstrap';
+import restangular from 'restangular';
+
+
+export const spApp = angular.module('spApp', [compApp, filesApp, uiRouter, 'ngResource', restangular, uiBootstrap])
+.constant('apikey', '123412341234')
+.config(['$stateProvider', '$urlRouterProvider',RestangularProvider, Routes]);
 
 
 
-export const spApp = angular.module('spApp', [compApp, filesApp, 'ui.router', 'ngResource','restangular' ,'ui.bootstrap'])
-.config(['$stateProvider', '$urlRouterProvider', RestangularProvider, Routes])
-.$controller('spController', function ($scope, Restangular) {
-    Restangular.all('tasks').getList().then(function(result) {
-        $scope.tasks = result;
-    });
 
 
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .$controller('spController', function ($scope, Restangular) {
+//     Restangular.all('tasks').getList().then(function(result) {
+//         $scope.tasks = result;
+//     });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Standardize data format (extract from meta-data where needed)
-app.config(function(RestangularProvider) {
+/*app.config(function(RestangularProvider) {
     // add a response intereceptor
     RestangularProvider.addResponseInterceptor(function (data, operation, what, url, response, deferred) {
         var extractedData;
@@ -34,6 +84,7 @@ app.config(function(RestangularProvider) {
         return extractedData;
     });
 });
+*/
 // In this file we do the following:
 //
 // we define the application name and the dependency on restangular,

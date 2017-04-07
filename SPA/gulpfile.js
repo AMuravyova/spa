@@ -59,33 +59,3 @@ gulp.task('default', ['serve']);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// gulp.task('two',['one'], () => {
-//     let stream = gulp.src('')
-//         .pipe()
-//         .pipe()
-//         .pipe(gulp.dest(''));
-//     return stream;
-// });
-//.pipe(reload({stream: true}));
-
-
-

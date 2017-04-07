@@ -2,7 +2,20 @@
  * Created by amurav on 28.03.2017.
  */
 export const Routes = ($stateProvider, $urlRouterProvider, RestangularProvider) => {
-    RestangularProvider.setBaseUrl("http://localhost:3000");
+
+    RestangularProvider.setBaseUrl("http://localhost:3000/appDB/");
+    //RestangularProvider.setDefaultRequestParams({apikey: apikey});
+    RestangularProvider.setRestangularFields({
+      id: '_id.$oid'
+    });
+    RestangularProvider.setRequestInterceptors((elem, operation, what) => {
+      if (operation === 'put'){
+        elem._id = undefined;
+        return elem;
+      }
+      return elem;
+    });
+
     $stateProvider
         .state('page',{
             abstract: true,

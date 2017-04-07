@@ -15,7 +15,9 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      '*.js'
+        '../bower_components',
+        'controller_test.js',
+        '*.js'
     ],
 
 
@@ -66,4 +68,4 @@ module.exports = function(config) {
     // how many browser should be started simultaneous
     concurrency: Infinity
   })
-}
+};

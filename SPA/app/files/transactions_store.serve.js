@@ -18,6 +18,29 @@ export const transactionsStore = (Restangular) => {
 
 };
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*
 https://ath3nd.wordpress.com/2013/08/05/15/
 Restagular.one('someVariable').get({someParameter: $stateParams.someParameter})

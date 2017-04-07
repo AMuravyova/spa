@@ -1,0 +1,63 @@
+
+
+    <div class="panel" style="width:220px;">
+        <form name="myForm" novalidate ng-submit="vm.addNewUser(vm.newFile, myForm.$valid)">
+            <div style="background-color: transparent">
+                <h3 style="margin-top:0; padding-bottom: 30px; padding-top: 0; color: #b73a6d">Add File:</h3>
+                <div class="form-group">
+
+                    <input name="fileName" type="text" class="form-control" ng-model="vm.newFile.firstName" placeholder="File name" required>
+                    <div class="error" ng-show="showError">
+                        {{vm.getError(myForm.fileName.$error)}}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <select class="form-control">
+                        <label>
+                            <option value="value">.txt</option>
+                            <option value="value" ng-selected="dataValue">.jpg</option>
+                            <option value="value" ng-selected="dataValue">.xls</option>
+                        </label>
+                    </select>
+                </div>
+                <div class="form-group">
+
+                    <input name="filePath" type="text" class="form-control" ng-model="vm.newFile.path" placeholder="Path" required>
+                    <div class="error" ng-show="showError">
+                        {{vm.getError(myForm.filePath.$error)}}
+                    </div>
+                </div>
+                <div class="form-group">
+                    <select class="form-control">
+                        <label>
+                            <option value="value">Mera team</option>
+                            <option value="value" ng-selected="dataValue">Guests team</option>
+                            <option value="value" ng-selected="dataValue">Other team</option>
+                        </label>
+                    </select>
+                </div>
+                <button type="submit" ng-disabled="myForm.$invalid" class="btn btn-primary btn-block" style="background-color: #b73a6d; font-size: 16px">Save</button>
+            </div>
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

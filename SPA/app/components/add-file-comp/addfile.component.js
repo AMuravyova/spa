@@ -36,7 +36,7 @@ class AddFileController {
 
 
 export const addfileComp = {
-    templateUrl: './components/add-file-comp/addfile.template.html',
+    templateUrl: 'components/add-file-comp/addfile.template.html',
     controllerAs: 'vm',
     controller: AddFileController
 

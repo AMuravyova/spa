@@ -1,9 +1,38 @@
 /**
  * Created by amurav on 30.03.2017.
  */
-/**
- * Created by amurav on 29.03.2017.
- */
+import {DocumentController} from './document.controller';
+import './documents-style.css';
+
+export const docfileComp = {
+    // templateUrl: './files/document/document.html',
+    controller: DocumentController,
+    controllerAs: 'docCtrl'
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 import {ParentFile} from '../parent.file.js';
 import './documents-style.css';
 
@@ -12,7 +41,6 @@ class DocumentController extends ParentFile{
         super();
         //this.arrDocuments = serviceFile.query();
         this.arrDocuments = [{
-            id: '',
             userFirstName: 'userName',
             userLastName: 'userLastName',
             userTeam: 'userTeam',
@@ -24,6 +52,7 @@ class DocumentController extends ParentFile{
             data: 'data'
         }];
         //this.countDocuments= this.arrDocuments.length;
+        this.typeDoc = true;
         this.documentService = documentService;
         this.refreshDocuments();
         console.log(this.getCountDocuments());
@@ -38,7 +67,7 @@ class DocumentController extends ParentFile{
         return this.arrDocuments.length;
     };
 
-    /*getListDocumentsFromMongoDB (){
+    getListDocumentsFromMongoDB (){
        return  this.arrDocuments.addRestangularMethod('','get','/document');
     };
 
@@ -55,12 +84,14 @@ class DocumentController extends ParentFile{
 
      return user;
      });
-*/
-}
 
+}
+*/
+/*
 export const docfileComp = {
-    templateUrl: './files/document/document.file.template.html',
+    templateUrl: './files/document/document.html',
     controller: DocumentController,
     controllerAs: 'docCtrl'
 
 };
+*/

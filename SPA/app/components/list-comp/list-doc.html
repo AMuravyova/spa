@@ -1,0 +1,25 @@
+<div>
+    <div class="doc__title">Documents</div>
+    <div><a class="view__all" href="http://localhost:8000/#/home/documents">{{listCtrl.view}}</a></div>
+</div>
+
+<div class="content__container">
+    <div class="row">
+
+        <div class="col-md-12 col-sm-12">
+            <div class="row">
+
+                <span ng-repeat="document in listCtrl.documents | limitTo:listCtrl.getLimitCount()">
+                    <div class="col-md-3 col-sm-6">
+                        <div class="doc" ng-mouseenter="handlerEvent()">
+                            <img class="img-responsive center-block" ng-src="{{document.path}}" alt="doc-icon">
+                            <div style="width: 60px; margin: 5px auto">{{document.title | date : "fullDate"}}</div>
+                            <!--<docfile-comp></docfile-comp>-->
+                        </div>
+                    </div>
+                </span>
+
+            </div>
+        </div>
+    </div>
+</div>

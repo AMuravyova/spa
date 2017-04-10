@@ -1,0 +1,84 @@
+<div class="content__container">
+    <div class="row">
+
+        <div>
+            <div class="doc__title">Documents</div>
+            <div><a class="view__all" href="http://localhost:8000/#/home/documents">View all</a></div>
+        </div>
+
+        <div class="col-md-12 col-sm-12">
+            <div class="row">
+
+                <span ng-repeat="component in listCtrl.arrComponents" ng-if="listCtrl.typeList = component.typeIsDoc">
+
+                    <div class="col-md-3 col-sm-6">
+                        <docfile-comp></docfile-comp>
+                    </div>
+
+                </span>
+
+
+
+                <!--<span ng-repeat="component in listCtrl.arrComponents" ng-if="listCtrl.typeList = component.typeIsImage">-->
+                    <!---->
+                    <!--<div class="col-md-3 col-sm-6">-->
+                        <!--<imgfile-comp></imgfile-comp>-->
+                    <!--</div>-->
+
+                <!--</span>-->
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+<!--<div class="content__container">-->
+    <!--<div class="row">-->
+
+        <!--<div class="col-md-12 col-sm-12">-->
+            <!--<div class="row">-->
+
+                <!--<span ng-repeat="file in listCtrl.arrFiles">-->
+                    <!--<div class="col-md-3 col-sm-6">-->
+                        <!--<div class="doc">{{file.name}}{{file.type}}</div>-->
+                    <!--</div>-->
+
+                <!--</span>-->
+
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+
+
+
+
+
+
+
+
+
+
+<!--<div class="content__container">-->
+    <!--<div class="row">-->
+
+        <!--<div class="col-md-12 col-sm-12">-->
+            <!--<div class="row">-->
+
+                <!--<span ng-repeat="doc in $ctrl.docs">-->
+                    <!--<div class="col-md-3 col-sm-6">-->
+                        <!--<div class="doc">{{doc.name}}{{doc.type}}</div>-->
+                    <!--</div>-->
+
+                <!--</span>-->
+
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->

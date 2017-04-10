@@ -1,0 +1,31 @@
+<div>
+    <div class="doc__title">Images</div>
+    <div><a class="view__all" href="http://localhost:8000/#/home/images">{{listImageCtrl.view}}</a></div>
+</div>
+
+<div class="content__container">
+    <div class="row">
+
+        <div class="col-md-12 col-sm-12">
+            <div class="row">
+
+                <span ng-repeat="image in listImageCtrl.images | limitTo:listImageCtrl.getLimitCount()">
+
+                    <div class="col-md-3 col-sm-6">
+                        <div class="pic">
+                            <img class="img-responsive center-block" ng-src="{{image.path}}" alt="picture" />
+                            <!--<imgfile-comp></imgfile-comp>-->
+                        </div>
+                    </div>
+
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+

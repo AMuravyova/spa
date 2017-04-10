@@ -1,9 +1,60 @@
 /**
  * Created by amurav on 29.03.2017.
  */
-import {ParentFile} from '../parent.file.js';
-import './images-style.css';
+import {FileOperations} from '../file-operations.js';
 
+export class ImageController extends FileOperations{
+    constructor(Restangular){
+
+        // let restAngular = Restangular.withConfig( (Configurer) => {
+        //     Configurer.setBaseUrl('/image');
+        // });
+
+        super();
+        this.image = {
+            userFirstName: 'userName',
+            userLastName: 'userLastName',
+            userTeam: 'userTeam',
+            userPassword: 'userPassword',
+            title: 'title',
+            description: 'desc',
+            type: 'type',
+            path: 'path',
+            data: 'data'
+        };
+        //
+        // this.addImage();
+        // this.deleteImage();
+        // this.getImage();
+        // this.updateImage();
+    };
+    // addImage(){
+    //     this.image.addFile();
+    // }
+    // deleteImage(){
+    //     this.image.deleteFile();
+    // }
+    // updateImage(){
+    //     this.image.updateFile();
+    // }
+    // getImage(){
+    //     this.image.getFile();
+    // }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 class ImageController extends ParentFile{
     constructor(){
         super();
@@ -100,9 +151,11 @@ class ImageController extends ParentFile{
     }
 
 }
-
+*/
+/*
 export const imagefileComp = {
-    templateUrl: './files/image/image.file.template.html',
+    templateUrl: './files/image/image.html',
     controller: ImageController,
     controllerAs: 'imageCtrl'
 };
+*/

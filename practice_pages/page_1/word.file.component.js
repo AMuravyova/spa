@@ -1,7 +1,7 @@
 /**
  * Created by amurav on 29.03.2017.
  */
-import {ParentFile} from '../../SPA/app/files/parent.file.js';
+import {ParentFile} from './parent.file.js';
 
 class DocumentFileController extends ParentFile{
     constructor(){

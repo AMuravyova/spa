@@ -11,6 +11,8 @@ import {singinComp} from './singin-comp/singin.component';
 import {accountformComp} from './account-form-comp/accountform.component';
 import {commonComp} from './common-comp/common.component';
 import {addfileComp} from './add-file-comp/addfile.component';
+import {dbService} from '../common-services/db.service';
+import {listimageComp} from './list-image-comp/list-image.component';
 
 
 export const compApp = angular.module('spApp.components',[])
@@ -23,4 +25,7 @@ export const compApp = angular.module('spApp.components',[])
     .component('singinComp', singinComp)
     .component('accountformComp', accountformComp)
     .component('commonComp', commonComp)
-    .component('addfileComp', addfileComp).name;
+    .component('addfileComp', addfileComp)
+    .component('listimageComp', listimageComp)
+    .factory('dbService', dbService)
+    .name;

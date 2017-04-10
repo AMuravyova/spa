@@ -10,8 +10,11 @@ import restangular from 'restangular';
 
 
 export const spApp = angular.module('spApp', [compApp, filesApp, uiRouter, 'ngResource', restangular, uiBootstrap])
-.constant('apikey', '123412341234')
-.config(['$stateProvider', '$urlRouterProvider',RestangularProvider, Routes]);
+//.constant('apikey', '123412341234')
+.config(['$stateProvider', '$urlRouterProvider', Routes])
+.run((Restangular) => {
+    Restangular.setBaseUrl('http://localhost:3000/appDB/');
+});
 
 
 

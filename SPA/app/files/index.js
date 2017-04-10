@@ -2,17 +2,19 @@
  * Created by amurav on 29.03.2017.
  */
 
-import {imagefileComp} from './image/image.controller';
+import {imgfileComp} from './image/image.component';
 import {docfileComp} from './document/document.component';
-import {serviceFile} from '../../../practice_pages/page_1/service.file';
 import {serviceStatistic} from './service.statistic';
+import {dbService} from '../common-services/db.service';
+import {fileService} from './file.service';
 import {documentService} from './document/document.service';
 
 
 export const filesApp = angular.module('spApp.files',[])
-    .component('imagefileComp', imagefileComp)
+    .component('imgfileComp', imgfileComp)
     .component('docfileComp', docfileComp)
-    .factory('serviceFile', ['$resource',serviceFile])
     .factory('serviceStatistic', serviceStatistic)
-    .factory('documentService', documentService)
+    .factory('dbService', dbService)
+    .factory('fileService', fileService)
+    .factory('documentService',documentService)
 .name;

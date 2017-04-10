@@ -2,6 +2,51 @@
  * Created by amurav on 22.03.2017.
  */
 
+import {ListController} from './list.controller';
+
+export const listComp = {
+    templateUrl: './components/list-comp/list-doc.html',
+    controller: ListController,
+    controllerAs: 'listCtrl'
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*getListDocumentsFromMongoDB (){
+     return  this.arrDocuments.addRestangularMethod('','get','/document');
+     };
+
+     getDocumentFromMongoDB () {
+     return this.arrDocuments.getDocument();
+     };
+
+     Creating new Restangular Methods
+     RestangularProvider.addElementTransformer('users', true, function(user) {
+     // This will add a method called login that will do a POST to the path login
+     // signature is (name, operation, path, params, headers, elementToPost)
+
+     user.addRestangularMethod('login', 'post', 'login');
+
+     return user;
+     });
+
+
+
+
+/*
+
 
 export const listComp = {
     templateUrl: './components/list-comp/list.template.html',
@@ -60,3 +105,4 @@ export const listComp = {
 
     }
 };
+    */

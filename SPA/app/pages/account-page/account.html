@@ -2,7 +2,7 @@
     <div class="row">
 
         <div class="col-md-3 col-sm-5 col-xs-12 column__left">
-                <!--<div class="blur"></div>-->
+                <div class="blur"></div>
                     <h4>Activity statistic</h4>
                     <statistic-comp></statistic-comp>
                     <h4>Upload files statistic</h4>
@@ -13,14 +13,20 @@
 
 
         <div class="col-md-6 col-sm-6 col-xs-12 column__right">
-            <!--<div class="blur"></div>-->
+            <div class="blur"></div>
             <accountform-comp></accountform-comp>
         </div>
 
         <div class="col-md-3 column__right">
-            <div class="doc"></div>
-            <div class="doc"></div>
-            <div class="doc"></div>
+
+            <div class="doc">
+                <h4>Documents:</h4>
+                <span class="label label-info">{{listCtrl.documentsLength}}</span>
+            </div>
+            <div class="doc">
+                <h4>Images:</h4>
+                <span class="label label-info">{{listImageCtrl.getCountImages}}</span>
+            </div>
         </div>
 
     </div>

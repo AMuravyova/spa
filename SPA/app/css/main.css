@@ -214,15 +214,31 @@ float: left;
     color: #ee83d0;
 }
 
+
+/*list-doc*/
 .doc
 {
     display: inline-block;
     width: 170px;
     height: 170px;
-    background: lightgray;
     margin-right:15px;
     margin-bottom:50px;
     margin-top: 20px;
+    border: 1px solid olive;
+    vertical-align: middle;
+    position: relative;
+}
+
+.doc img
+{
+    width: 128px;
+    height: 128px;
+    margin: auto;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    position: absolute;
 }
 
 
@@ -308,13 +324,24 @@ float: left;
     margin-right:15px;
     margin-bottom:50px;
     margin-top: 20px;
-    margin-left: 15px;
+    /*margin-left: 15px;*/
     border: 1px solid olive;
     display: inline-block;
+    vertical-align: middle;
 
 }
 
-.pic img {
+.pic img
+{
     width: auto;
     max-height: 100%;
+
+}
+
+.icon{
+    width: 128px;
+    height: 128px;
+    margin: auto;
+    position: absolute;
+
 }

@@ -15,7 +15,8 @@ export class ListController {
         this.limitCount = this.getCountDocuments();
         this.view = "View All";
         this.documentsLength = '';
-
+        this.docType = '.doc';
+        this.xlsType = '.xls';
     };
 
     getCountDocuments() {
@@ -39,6 +40,20 @@ export class ListController {
         return this.view;
     }
 
+
+    // download(){
+    //
+    //         let docArr = document.getElementsByClassName('download');
+    //         docArr.forEach((item, id) => {
+    //             item[id].onmouseover = () => {
+    //                 this.style.visible = true;
+    //             }
+    //         })
+    //
+    // }
+
+
+
     // addNewCourse {
     // documents.push({
     //
@@ -59,7 +74,5 @@ export class ListController {
             this.documents = data;
         });
     }
-
-
 
 }

@@ -338,10 +338,7 @@ float: left;
 
 }
 
-.icon{
-    width: 128px;
-    height: 128px;
-    margin: auto;
-    position: absolute;
-
+.download:hover {
+    opacity: .25;
+    /*box-shadow:0 0 0 128px rgba(0, 0, 0, 0.33) inset;*/
 }

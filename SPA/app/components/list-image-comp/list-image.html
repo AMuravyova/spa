@@ -12,8 +12,9 @@
                 <span ng-repeat="image in listImageCtrl.images | limitTo:listImageCtrl.getLimitCount()">
 
                     <div class="col-md-3 col-sm-6">
-                        <div class="pic">
+                        <div class="pic download">
                             <img class="img-responsive center-block" ng-src="{{image.path}}" alt="picture" />
+                            <div class="buttonDownload">скачать</div>
                             <!--<imgfile-comp></imgfile-comp>-->
                         </div>
                     </div>

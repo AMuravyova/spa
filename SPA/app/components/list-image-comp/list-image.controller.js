@@ -3,11 +3,11 @@
  */
 export class ListImageController {
 
-    constructor(dbService, fileService, Restangular) {
+    constructor(dbService, fileService, Restangular, $state) {
 
-        let restAngular = Restangular.withConfig( (Configurer) => {
-            Configurer.setBaseUrl('/images');
-        });
+        // let restAngular = Restangular.withConfig( (Configurer) => {
+        //     Configurer.setBaseUrl('/images');
+        // });
 
         this.images = Restangular.all('images').getList().$object;
         this.dbService = dbService;
@@ -16,18 +16,15 @@ export class ListImageController {
         this.limitCount = this.getCountImages();
         this.view = "View All";
         this.imagesLength = '';
+        this.$state = $state;
     };
 
     getView(){
         return this.view;
     }
 
-    // getLimitCount(){
-    //     return this.limitCount;
-    // }
     getLimitCount(){
-        //получить URL /dashboard - 8 /documents - length
-        if(window.location.href === 'http://localhost:8000/#/home/dashboard'){
+        if(this.$state.current.name==='page.home.dashboard'){
             this.limitCount = 8;
             this.view = "View All";
         }
@@ -37,6 +34,7 @@ export class ListImageController {
         }
         return this.limitCount;
     }
+
 
     refreshImages() {
         this.dbService.getImages().then((data) => {

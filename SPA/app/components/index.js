@@ -15,6 +15,7 @@ import {dbService} from '../common-services/db.service';
 import {listimageComp} from './list-image-comp/list-image.component';
 
 
+
 export const compApp = angular.module('spApp.components',[])
     .component('listComp', listComp)
     .component('headerComp', headerComp)

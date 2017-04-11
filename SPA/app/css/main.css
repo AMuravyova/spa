@@ -328,17 +328,42 @@ float: left;
     border: 1px solid olive;
     display: inline-block;
     vertical-align: middle;
-
+    position: relative;
 }
-
 .pic img
 {
     width: auto;
     max-height: 100%;
-
 }
 
+
+/*list-image list-doc*/
+.download{
+    position: relative;
+}
 .download:hover {
     opacity: .25;
+    /*background: rgba(247,77,101,.9);*/
     /*box-shadow:0 0 0 128px rgba(0, 0, 0, 0.33) inset;*/
 }
+.download button{
+    margin: auto;
+    width: 90px;
+    height: 30px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    position: absolute;
+    font-weight: bold;
+    font-size: 12px;
+    vertical-align: middle;
+    text-align: center;
+    padding: 5px;
+    opacity: 0;
+}
+.download:hover .btn {
+    opacity: 1;
+    position: absolute;
+}
+

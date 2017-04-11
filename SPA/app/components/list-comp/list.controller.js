@@ -2,7 +2,7 @@
  * Created by amurav on 08.04.2017.
  */
 export class ListController {
-    constructor(dbService, fileService, Restangular) {
+    constructor(dbService, fileService, Restangular, $state) {
 
         // let restAngular = Restangular.withConfig( (Configurer) => {
         //     Configurer.setBaseUrl('/documents');
@@ -17,15 +17,31 @@ export class ListController {
         this.documentsLength = '';
         this.docType = '.doc';
         this.xlsType = '.xls';
+        this.$state = $state;
+
+
+
     };
+
+
+    // getLimitCount(){
+    //     let compFirst = document.getElementById('firstList');
+    //     compFirst.getAttribute("data-limit-count");
+    //     compFirst.getAttribute("data-view");
+    //
+    //
+    //     let compSecond = document.getElementById('secondList');
+    //     compSecond.getAttribute("data-limit-count");
+    //     compSecond.getAttribute("data-view");
+    // }
+
 
     getCountDocuments() {
         return this.documentsLength = this.documents.length;
     }
 
     getLimitCount(){
-        //получить URL /dashboard - 8 /documents - length
-       if(window.location.href === 'http://localhost:8000/#/home/dashboard'){
+       if(this.$state.current.name==='page.home.dashboard'){
            this.limitCount = 8;
            this.view = "View All";
        }
@@ -41,16 +57,9 @@ export class ListController {
     }
 
 
-    // download(){
-    //
-    //         let docArr = document.getElementsByClassName('download');
-    //         docArr.forEach((item, id) => {
-    //             item[id].onmouseover = () => {
-    //                 this.style.visible = true;
-    //             }
-    //         })
-    //
-    // }
+    download(){
+           return alert('success loaded');
+    }
 
 
 

@@ -10,12 +10,16 @@
 <div class="col-md-9 col-sm-6 col-xs-12 column__right">
     <div class="row">
         <div class="blur"></div>
-        <list-comp></list-comp>
+        <list-comp data-limit-count="8" data-view="View all documents"></list-comp>
         <listimage-comp></listimage-comp>
+        <list-comp data-limit-count="5" data-view="View add documents"></list-comp>
     </div>
 </div>
 
-
+<script>
+    firstListComp.dataset.limitCount;
+    secondListComp.dataset.limitCount;
+</script>
 
 
 

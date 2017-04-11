@@ -1,7 +1,22 @@
-<div class="doc">
-    <img ng-src="{{docCtrl.document.path}}">
-    {{docCtrl.document.title}}{{docCtrl.document.type}}
+<div class="col-md-3 col-sm-6">
+    <div class="doc download">
+        <div ng-if = "docCtrl.document.type === docCtrl.docType">
+            <img class="img-responsive center-block" ng-src="files/document/icons/Word.png" alt="doc-icon">
+            <div style="width: 60px; margin: 5px auto">{{document.title}}</div>
+        </div>
+        <div ng-if = "docCtrl.document.type === docCtrl.xlsType">
+            <img class="img-responsive center-block" ng-src="files/document/icons/Excel.png" alt="doc-icon">
+            <div style="width: 60px; margin: 5px auto">{{document.title}}</div>
+        </div>
+        <button class="btn btn-success" ng-click="docCtrl.download()">Download</button>
+    </div>
 </div>
+
+
+<!--<div class="doc">-->
+    <!--<img ng-src="{{docCtrl.document.path}}">-->
+    <!--{{docCtrl.document.title}}{{docCtrl.document.type}}-->
+<!--</div>-->
 
 
 

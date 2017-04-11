@@ -7,5 +7,9 @@ import {ListController} from './list.controller';
 export const listComp = {
     templateUrl: './components/list-comp/list-doc.html',
     controller: ListController,
-    controllerAs: 'listCtrl'
+    controllerAs: 'listCtrl',
+    bindings: {
+        limitView: '<',
+        textView: '<'
+    }
 };

@@ -12,54 +12,52 @@ export class ListController {
         this.dbService = dbService;
         this.refreshDocuments();
         this.getCountDocuments();
-        this.limitCount = this.getCountDocuments();
-        this.view = "View All";
+        this.limitCount = '';
+        this.view = '';
         this.documentsLength = '';
-        this.docType = '.doc';
-        this.xlsType = '.xls';
+        // this.docType = '.doc';
+        // this.xlsType = '.xls';
         this.$state = $state;
+        this.getLimitCount();
+    }
 
+    getLimitCount(){
 
+        if(this.limitView){
+            this.limitCount = this.limitView;
+        }
+        if(this.textView){
+            this.view = this.textView;
+        }
+        else {
+            this.limitCount = this.getCountDocuments();
+            this.view = 'View all documents';
+        }
 
-    };
-
-
-    // getLimitCount(){
-    //     let compFirst = document.getElementById('firstList');
-    //     compFirst.getAttribute("data-limit-count");
-    //     compFirst.getAttribute("data-view");
-    //
-    //
-    //     let compSecond = document.getElementById('secondList');
-    //     compSecond.getAttribute("data-limit-count");
-    //     compSecond.getAttribute("data-view");
-    // }
-
+    }
 
     getCountDocuments() {
         return this.documentsLength = this.documents.length;
     }
 
-    getLimitCount(){
-       if(this.$state.current.name==='page.home.dashboard'){
-           this.limitCount = 8;
-           this.view = "View All";
-       }
-        else {
-          this.limitCount = this.getCountDocuments();
-          this.view = '';
-        }
-       return this.limitCount;
-    }
+    // getLimitCount(){
+    //    if (this.$state.current.name==='page.home.dashboard'){
+    //        this.limitCount = 8;
+    //        this.view = 'View All';
+    //    }
+    //     else {
+    //       this.limitCount = this.getCountDocuments();
+    //       this.view = '';
+    //     }
+    //    //return this.limitCount;
+    // }
 
-    getView(){
-        return this.view;
-    }
+    // getView(){
+    //     return this.view;
+    // }
 
 
-    download(){
-           return alert('success loaded');
-    }
+
 
 
 

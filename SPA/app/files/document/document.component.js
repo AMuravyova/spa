@@ -5,9 +5,12 @@ import {DocumentController} from './document.controller';
 import './documents-style.css';
 
 export const docfileComp = {
-    // templateUrl: './files/document/document.html',
+    templateUrl: './files/document/document.html',
     controller: DocumentController,
-    controllerAs: 'docCtrl'
+    controllerAs: 'docCtrl',
+    bindings: {
+        document: '<'
+    }
 
 };
 

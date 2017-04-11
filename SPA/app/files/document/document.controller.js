@@ -5,7 +5,7 @@ import {FileOperations} from '../file-operations.js';
 
 export class DocumentController extends FileOperations{
 
-    constructor(Restangular, documentService){
+    constructor(){
         // let restAngular = Restangular.withConfig( (Configurer) => {
         //   Configurer.setBaseUrl('/document');
         // });
@@ -20,12 +20,21 @@ export class DocumentController extends FileOperations{
             type: 'type',
             data: 'data'
         };
+
+        this.docType = '.doc';
+        this.xlsType = '.xls';
+
+
         // this.addDocument();
         // this.getDocument();
         // this.deleteDocument();
         // this.updateDocument();
 
-    };
+    }
+
+    download(){
+        return alert('success loaded');
+    }
 
     // addDocument(){
     //     this.document.addFile();

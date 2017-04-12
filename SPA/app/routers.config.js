@@ -57,34 +57,15 @@ export const Routes = ($stateProvider, $urlRouterProvider) => {
             templateUrl: '../pages/account-page/account.html'
         })
 
-        .state('page.sing',{
-            url: '/sing',
-            templateUrl: '../pages/sing-page/sing.html'
+        .state('page.registration',{
+            url: '/registration',
+            templateUrl: '../pages/registration-page/registration.html'
+        })
+
+        .state('page.auth',{
+            url: '/auth',
+            templateUrl: '../pages/auth-page/auth.html'
         });
 
-    //     .state('page.images.image', {
-    //         url: '/:pageName',
-    //         templateUrl: function ($stateParams) {
-    //             return '/app/images/' +
-    //                 $stateParams.pageName + '.html';
-    //         }
-    //     })
-    //
-    //     .state('page.requests.request', {
-    //         url: '/:pageName',
-    //         templateUrl: function ($stateParams) {
-    //             return '/app/requests/' +
-    //                 $stateParams.pageName + '.html';
-    //         }
-    //     })
-    //
-    //     .state('page.documents.document', {
-    //     url: '/:pageName',
-    //     templateUrl: function ($stateParams) {
-    //         return '/app/documents/' +
-    //             $stateParams.pageName + '.html';
-    //     }
-    // });
-
-    $urlRouterProvider.when('','/sing');
+    $urlRouterProvider.when('','/auth');
 };

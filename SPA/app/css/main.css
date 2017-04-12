@@ -342,7 +342,7 @@ float: left;
     position: relative;
 }
 .download:hover {
-    opacity: .25;
+    /*opacity: .25;*/
     /*background: rgba(247,77,101,.9);*/
     /*box-shadow:0 0 0 128px rgba(0, 0, 0, 0.33) inset;*/
 }
@@ -360,10 +360,49 @@ float: left;
     vertical-align: middle;
     text-align: center;
     padding: 5px;
-    opacity: 0;
+    display: none;
 }
 .download:hover .btn {
-    opacity: 1;
+    /*opacity: 1;*/
     position: absolute;
+    display: block;
 }
 
+.wrapperBtn{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.download:hover .wrapperBtn{
+    background-color: rgba(255, 255, 255, 0.78);
+}
+
+/*sign auth*/
+form .ng-invalid-required.ng-dirty{
+    background-color: lightpink;
+}
+
+form .ng-valid.ng-dirty{
+    background-color: white;
+}
+
+form .ng-invalid-email.ng-dirty{
+    background-color: lightgoldenrodyellow;
+}
+
+span.summary.ng-invalid{
+    color: red;
+    font-weight: bold;
+}
+
+span.summary.ng-valid{
+    color: green;
+}
+
+div.error{
+    color: red;
+    font-weight: bold;
+}

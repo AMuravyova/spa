@@ -3,15 +3,13 @@
  */
 import uiRouter from 'angular-ui-router';
 import {compApp} from './components/index';
-import {filesApp} from './files/index';
-import {pageApp} from './pages/index';
+// import {pageApp} from './pages/index';
 import {Routes} from './routers.config';
 import uiBootstrap from 'angular-ui-bootstrap';
 import restangular from 'restangular';
 
 
-export const spApp = angular.module('spApp', [compApp, filesApp, pageApp, uiRouter, 'ngResource', restangular, uiBootstrap])
-//.constant('apikey', '123412341234')
+export const spApp = angular.module('spApp', [compApp, uiRouter, 'ngResource', restangular, uiBootstrap])
 .config(['$stateProvider', '$urlRouterProvider', Routes])
 .run((Restangular) => {
     Restangular.setBaseUrl('http://localhost:3000/appDB/');

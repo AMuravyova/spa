@@ -29,9 +29,6 @@ class AddFileController {
         };
     }
 
-    clickHandler() {
-        this.$state.go('page.home.dashboard');
-    }
 }
 
 

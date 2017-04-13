@@ -4,9 +4,10 @@
 import {FileOperations} from '../file-operations.js';
 
 export class ImageController extends FileOperations{
-    constructor(Restangular){
+    constructor(Restangular, fileService){
 
         super();
+        this.fileService = fileService;
         this.image = {
             userFirstName: 'userName',
             userLastName: 'userLastName',
@@ -17,7 +18,16 @@ export class ImageController extends FileOperations{
             type: 'type',
             path: 'path',
             data: 'data'
-        }
+        };
+        this.imgType = '.png';
+    }
+
+    deleteImage(fileService){
+
+    }
+
+    addImage(fileService){
+
     }
 }
 

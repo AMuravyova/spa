@@ -380,7 +380,11 @@ float: left;
     background-color: rgba(255, 255, 255, 0.78);
 }
 
-/*sign auth*/
+
+
+
+
+/*reg auth*/
 form .ng-invalid-required.ng-dirty{
     background-color: lightpink;
 }

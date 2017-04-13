@@ -11,9 +11,19 @@ import restangular from 'restangular';
 
 export const spApp = angular.module('spApp', [compApp, uiRouter, 'ngResource', restangular, uiBootstrap])
 .config(['$stateProvider', '$urlRouterProvider', Routes])
-.run((Restangular) => {
+.run(
+    (Restangular) => {
     Restangular.setBaseUrl('http://localhost:3000/appDB/');
-});
+    }
+)
+    .run(['$rootScope', '$state', '$stateParams', 'authService',
+        ($rootScope, $state, $stateParams, authService) => {
+        $rootScope.$state = $state;
+        $rootScope.$stateParams = $stateParams;
+        $rootScope.$on('$stateChangeStart', (event, toState) => {
+            authService.checkAccess(event, toState);
+        })
+    }]);
 
 
 

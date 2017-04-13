@@ -7,5 +7,4 @@ export const authComp = {
     templateUrl: './components/auth/login-comp/auth.html',
     controllerAs: 'vm',
     controller: AuthController
-
 };

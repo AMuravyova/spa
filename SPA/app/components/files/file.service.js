@@ -4,81 +4,85 @@
 /**
  * Created by amurav on 08.04.2017.
  */
-export const fileService = (Restangular) => {
 
-    let documents = Restangular.all('documents');
-    let images = Restangular.all('images');
-    let users = Restangular.all('users');
-    //let component = Restangular.one('components');
-    //Restangular.all('users').customGET('documents', {team: 'team'});
-    //Restangular.one('users','userEmail').customGET('documents');
+export class FileService {
 
-    return {
-        getDocuments: () => {
-            return Restangular.all('documents').getList().$object;
-        },
-        getImages: () => {
-            return images.getList().$object;
-        },
-        getUsers: () => {
-            return users.getList().$object;
-        },
-
-        addDocument: (newDocument) => {
-            let documents = Restangular.all('documents');
-            documents.post(newDocument).then((newDoc) => {
-                documents = documents.getList();
-            })
-        },
-
-        addImage: (newImage) => {
-            let images = Restangular.all('images');
-            images.post(newImage).then((newImg) => {
-                images = images.getList();
-            })
-        },
-
-        addUser: (newUser) => {
-            let users = Restangular.all('users');
-            users.post(newUser).then((newUsr) => {
-                users = users.getList();
-            })
-        },
-
-        getDocByUserEmail: () => {
-            let user = Restangular.one('users','email');
-            let documents = user.getList('documents');
-        },
-
-        getUserByEmailPassword: () => {
-
-        },
-
-        updateData: () => {
-
-        }
-
-        // refreshComponents() {
-        //     this.dbService.getData().then((data) => {
-        //         this.arrComponents = data;
-        //     });
-        // }
-
-
-        // getComponent: () => {
-        //     return component.get({id: id})
-        //         .then((result) => {
-        //             $scope.component = result;
-        //         });
-        // }
+    constructor(Restangular){
+       this.Restangular = Restangular;
+       this.documents = Restangular.all('documents');
+       this.images = Restangular.all('images');
     }
-};
+
+    getDocuments() {
+        return this.documents.getList().$object;
+    }
+
+    getImages() {
+        return this.images.getList().$object;
+    }
+
+    refreshDocuments() {
+        this.getDocuments().then((data) => {
+            this.documents = data;
+        });
+    }
+
+    refreshImages() {
+        this.getImages().then((data) => {
+            this.Images = data;
+        });
+    }
+
+    addDocument(newDocument) {
+        this.documents.post(newDocument).then((newDoc) => {
+            this.documents = documents.getList();
+        })
+    }
+
+    addImage(newImage) {
+        this.images.post(newImage).then((newImg) => {
+            this.images = images.getList();
+        })
+    }
+
+    getDocByUserEmail() {
+        let user = this.Restangular.one('users', 'email');
+        this.documents = user.getList('documents');
+    }
+
+    getImgByUserEmail() {
+        let user = this.Restangular.one('users', 'email');
+        this.images = user.getList('images');
+    }
+
+    getDocByUserTeam() {
+        let user = this.Restangular.one('users', 'team');
+        this.documents = user.getList('documents');
+    }
+
+    getImgByUserTeam() {
+        let user = this.Restangular.one('users', 'team');
+        this.images = user.getList('images');
+    }
+
+}
+
+
+
+
+
 
 
 
 
 
 /*
+ // getComponent: () => {
+ //     return component.get({id: id})
+ //         .then((result) => {
+ //             $scope.component = result;
+ //         });
+ // }
 
  //These users are being fetched out of a mongo instance
  let users = Restangular.all('users');

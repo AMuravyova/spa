@@ -33,7 +33,6 @@ export const Routes = ($stateProvider, $urlRouterProvider) => {
         .state('page.home.dashboard',{
             url: '/dashboard',
             templateUrl: '../pages/dashboard-page/dashboard.html'
-            
         })
         .state('page.home.documents',{
             url: '/documents',
@@ -59,12 +58,18 @@ export const Routes = ($stateProvider, $urlRouterProvider) => {
 
         .state('page.registration',{
             url: '/registration',
-            templateUrl: '../pages/registration-page/registration.html'
+            templateUrl: '../pages/registration-page/registration.html',
+            data: {
+                'noLogin': true
+            }
         })
 
         .state('page.auth',{
             url: '/auth',
-            templateUrl: '../pages/auth-page/auth.html'
+            templateUrl: '../pages/auth-page/auth.html',
+            data: {
+                'noLogin': true
+            }
         });
 
     $urlRouterProvider.when('','/auth');

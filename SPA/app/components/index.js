@@ -15,7 +15,10 @@ import {listimageComp} from './files/list-image-comp/list-image.component';
 import {authComp} from './auth/login-comp/auth.component';
 import {imgfileComp} from './files/image/image.component';
 import {docfileComp} from './files/document/document.component';
-import {fileService} from './files/file.service';
+import {FileService} from './files/file.service';
+import {UsersService} from './users/users.service';
+import {AuthService}from './auth/auth.service';
+
 
 
 export const compApp = angular.module('spApp.components',[])
@@ -33,5 +36,7 @@ export const compApp = angular.module('spApp.components',[])
     .component('authComp', authComp)
     .component('imgfileComp', imgfileComp)
     .component('docfileComp', docfileComp)
-    .factory('fileService', fileService)
+    .service('fileService', FileService)
+    .service('usersService', UsersService)
+    .service('authService', AuthService)
     .name;

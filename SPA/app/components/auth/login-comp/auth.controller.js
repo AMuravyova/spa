@@ -3,15 +3,23 @@
  */
 
 export class AuthController {
-    constructor($state, fileService) {
+    constructor($state, usersService, authService) {
         this.$state = $state;
-        this.fileService = fileService;
-        this.users = this.fileService.getUsers();
+        this.usersService = usersService;
+        this.users = this.usersService.getUsers();
+        this.user = {};
 
-        this.addNewUser = (userDetails, isvalid) => {
+        this.searchUser = (userDetails, isvalid) => {
             if (isvalid) {
+                // this.usersService.getUserByEmailPassword(userDetails)
+                //     .then((result) => {
+                //     this.user = result;
+                //     this.$state.go('page.home.dashboard');
+                // })
+                this.authService.setUser(userDetails);
                 this.$state.go('page.home.dashboard');
             }
+
             else {
                 this.message = "Error";
                 this.showError = true;
@@ -30,11 +38,6 @@ export class AuthController {
         };
 
     }
-
-
-    // clickHandler() {
-    //     this.$state.go('page.home.dashboard');
-    // }
 
     goToSign() {
         this.$state.go('page.registration');

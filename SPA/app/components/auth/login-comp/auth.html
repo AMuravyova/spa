@@ -3,7 +3,7 @@
 <button ng-click="vm.goToSign()" class="btn btn-info btn-block" style="background-color: palevioletred; width: 80px; float: right">Sign in</button>
 <div class="row col-md-2 col-md-offset-5">
     <div class="panel" style="width:300px; margin-top: 150px">
-        <form name="myForm" novalidate ng-submit="vm.addNewUser(vm.newUser, myForm.$valid)">
+        <form name="myForm" novalidate ng-submit="vm.searchUser(vm.newUser, myForm.$valid)">
             <div class="well" style="background-color: transparent">
 
                 <div class="form-group">
@@ -21,7 +21,7 @@
                         {{vm.getError(myForm.userPassword.$error)}}
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary btn-block" style="background-color: palevioletred; width: 80px; float: right">Save</button>
+                <button type="submit" class="btn btn-primary btn-block" style="background-color: palevioletred; width: 80px; float: right">send</button>
             </div>
         </form>
     </div>

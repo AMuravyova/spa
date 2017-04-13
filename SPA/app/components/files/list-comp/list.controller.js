@@ -8,7 +8,7 @@ export class ListController {
         this.documents = this.fileService.getDocuments();
         this.limitCount = this.getCountDocuments();
         this.view = "";
-        this.documentsLength = this.getCountDocuments();
+        this.documentsLength = this.documents.length;
         // this.getLimitCount();
 
         this.choiseView = () => {
@@ -21,12 +21,7 @@ export class ListController {
             return this.view;
         };
 
-        this.getCountDocuments();
-    }
 
-    getCountDocuments(){
-        this.documentsLength = this.documents.length;
-        return this.documentsLength;
     }
 
     refreshDocuments(){
@@ -41,6 +36,10 @@ export class ListController {
         }
     }
 
+    getCountDocuments() {
+        this.documentsLength = this.documents.length;
+        return this.documentsLength;
+    }
 
 
     // getLimitCount(){

@@ -1,20 +1,21 @@
 
 
     <div class="panel" style="width:220px;">
-        <form name="myForm" novalidate ng-submit="vm.addNewUser(vm.newFile, myForm.$valid)">
+        <form name="myForm" novalidate ng-submit="vm.addNewFile(vm.newFile, myForm.$valid)">
             <div style="background-color: transparent">
-                <h3 style="margin-top:0; padding-bottom: 30px; padding-top: 0; color: #b73a6d">Add File:</h3>
+                <!--<h3 style="margin-top:0; padding-bottom: 30px; padding-top: 0; text-align: center; color: #b73a6d">{{vm.choiseTitle()}}</h3>-->
                 <div class="form-group">
 
-                    <input name="fileName" type="text" class="form-control" ng-model="vm.newFile.firstName" placeholder="File name" required>
-                    <div class="error" ng-show="showError">
+                    <input name="fileName" type="text" class="form-control" ng-model="vm.newFile.fileName" placeholder="File name" required>
+                    <div class="error" ng-show="vm.showError">
                         {{vm.getError(myForm.fileName.$error)}}
                     </div>
                 </div>
                 <div class="form-group">
                     <select class="form-control">
                         <label>
-                            <option value="value">.doc</option>
+                            <!--<option value="value"></option>-->
+                            <option value="value" ng-selected="dataValue">.doc</option>
                             <option value="value" ng-selected="dataValue">.xls</option>
                             <option value="value" ng-selected="dataValue">.png</option>
                         </label>
@@ -30,7 +31,7 @@
                         </label>
                     </select>
                 </div>
-                <button type="submit" class="btn btn-primary btn-block" style="background-color: #b73a6d; font-size: 16px">Save</button>
+                <button type="submit" class="btn btn-primary btn-block" style="background-color: #b73a6d; font-size: 16px">{{vm.choiseTitle()}}</button>
             </div>
         </form>
     </div>

@@ -21,6 +21,14 @@ export class DocumentController extends FileOperations{
         this.docType = '.doc';
         this.xlsType = '.xls';
         this.fileService = fileService;
+    }
+
+    deleteDocument(fileService){
+
+
+    }
+
+    addDocument(fileService){
 
     }
 

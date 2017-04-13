@@ -25,12 +25,10 @@ export class UsersService {
         })
     }
 
-
-
 //customer
     getUserByEmailPassword (userDetails) {
-    return this.user.get({email: email,
-        password: password})
+    return this.user.get({email: userDetails.email,
+        password: userDetails.password})
         .then((result) => {
                 this.user = result;
             },
@@ -40,6 +38,27 @@ export class UsersService {
         );
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // export const usersService = (Restangular, $state) => {
 //

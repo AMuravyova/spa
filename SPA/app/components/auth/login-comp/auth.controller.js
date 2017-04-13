@@ -5,17 +5,13 @@
 export class AuthController {
     constructor($state, usersService, authService) {
         this.$state = $state;
+
         this.usersService = usersService;
-        this.users = this.usersService.getUsers();
-        this.user = {};
+        // this.users = this.usersService.getUsers();
+        this.authService = authService;
 
         this.searchUser = (userDetails, isvalid) => {
             if (isvalid) {
-                // this.usersService.getUserByEmailPassword(userDetails)
-                //     .then((result) => {
-                //     this.user = result;
-                //     this.$state.go('page.home.dashboard');
-                // })
                 this.authService.setUser(userDetails);
                 this.$state.go('page.home.dashboard');
             }
@@ -43,3 +39,21 @@ export class AuthController {
         this.$state.go('page.registration');
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// this.usersService.getUserByEmailPassword(userDetails)
+//     .then((result) => {
+//     this.user = result;
+//     this.$state.go('page.home.dashboard');
+// })

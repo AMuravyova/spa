@@ -13,7 +13,7 @@ export class AuthController {
         this.searchUser = (userDetails, isvalid) => {
             if (isvalid) {
                 this.authService.setUser(userDetails);
-                this.$state.go('page.home.dashboard');
+               // this.$state.go('page.home.dashboard');
             }
 
             else {

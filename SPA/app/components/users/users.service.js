@@ -13,6 +13,7 @@ export class UsersService {
     constructor(Restangular){
         this.Restangular = Restangular;
         this.users = Restangular.all('users');
+        this.user = Restangular.one('users');
     }
 
     getUsers() {
@@ -27,16 +28,25 @@ export class UsersService {
 
 //customer
     getUserByEmailPassword (userDetails) {
-    return this.user.get({email: userDetails.email,
-        password: userDetails.password})
-        .then((result) => {
-                this.user = result;
-            },
-            (error) => {
-                alert('Incorrect e-mail or password. Try enter again.');
-            }
-        );
-    }
+
+       // return this.Restangular.all("users").getList().find(userDetails);
+       //return this.users.getList(userDetails);
+      // return this.users.customGET("", userDetails);
+       // return this.Restangular.one('users').get(userDetails);
+        //return this.Restangular.one('users').customGET("", userDetails);
+
+
+        return this.users.get({email: userDetails.email,
+            password: userDetails.password})
+            .then((result) => {
+                    this.users = result;
+                },
+                (error) => {
+                    alert('Incorrect e-mail or password. Try enter again.');
+                }
+            );
+        }
+
 }
 
 

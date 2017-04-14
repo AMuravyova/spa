@@ -62,6 +62,7 @@ export const Routes = ($stateProvider, $urlRouterProvider) => {
             data: {
                 'noLogin': true
             }
+
         })
 
         .state('page.auth',{
@@ -72,5 +73,6 @@ export const Routes = ($stateProvider, $urlRouterProvider) => {
             }
         });
 
-    $urlRouterProvider.when('','/auth');
+    //$urlRouterProvider.when('','/auth');
+    $urlRouterProvider.otherwise('/auth');
 };

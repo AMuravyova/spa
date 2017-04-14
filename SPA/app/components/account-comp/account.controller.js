@@ -4,8 +4,9 @@
 export class AccountController {
     constructor(authService) {
         this.authService = authService;
-        //this.currentUser = this.authService.getUser();
-        this.currentUser = {email: "amurav@mera.ru"};
+        this.currentUser = this.authService.getUser();
+        //this.email = this.currentUser.email;
+
     }
 
     getCurrentUser () {

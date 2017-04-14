@@ -2,10 +2,13 @@
  * Created by amurav on 29.03.2017.
  */
 class AccountFormController {
-    constructor($state, usersService) {
+    constructor($state, usersService, authService) {
         this.titleForm = "";
         this.$state = $state;
+        this.authService = authService;
         this.usersService = usersService;
+        this.currentUser = this.authService.getUser();
+        this.newUser = this.newUser || this.currentUser;
         this.addNewUser = (userDetails, isvalid) => {
             if (isvalid) {
                 this.usersService.addUser(userDetails);

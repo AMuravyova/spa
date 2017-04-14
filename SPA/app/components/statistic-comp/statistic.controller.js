@@ -5,8 +5,9 @@ export class StatisticController {
     constructor(authService, fileService) {
         this.authService = authService;
         this.fileService = fileService;
-        //this.currentUser = this.authService.getUser();
-        this.currentUser = {email: "amurav@mera.ru"};
+        this.currentUser = this.authService.getUser();
+        //this.email = this.currentUser.email;
+
 
     }
 

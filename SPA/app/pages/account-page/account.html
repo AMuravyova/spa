@@ -3,12 +3,13 @@
 
         <div class="col-md-3 col-sm-5 col-xs-12 column__left">
                 <div class="blur"></div>
-                    <h4>Activity statistic</h4>
-                    <statistic-comp></statistic-comp>
-                    <h4>Upload files statistic</h4>
-                    <statistic-comp></statistic-comp>
-                    <h4>Quantity statistic</h4>
-                    <statistic-comp></statistic-comp>
+                <common-comp></common-comp>
+                    <!--<h4>Activity statistic</h4>-->
+                    <!--<statistic-comp></statistic-comp>-->
+                    <!--<h4>Upload files statistic</h4>-->
+                    <!--<statistic-comp></statistic-comp>-->
+                    <!--<h4>Quantity statistic</h4>-->
+                    <!--<statistic-comp></statistic-comp>-->
         </div>
 
 
@@ -19,14 +20,16 @@
 
         <div class="col-md-3 column__right">
 
-            <div class="doc">
-                <h4>Documents:</h4>
-                <span class="label label-info">{{this.usersService.getDocByUserEmail()}}</span>
-            </div>
-            <div class="doc">
-                <h4>Images:</h4>
-                <span class="label label-info">{{usersService.getImgByUserEmail()}}</span>
-            </div>
+            <statistic-comp></statistic-comp>
+
+            <!--<div>-->
+                <!--<h4>Documents:</h4>-->
+                <!--<span class="label label-info">{{pageCtrl.getCurrentUser().email}}</span>-->
+            <!--</div>-->
+            <!--<div>-->
+                <!--<h4>Images:</h4>-->
+                <!--<span class="label label-info">{{pageCtrl.getCurrentUser().email}}</span>-->
+            <!--</div>-->
         </div>
 
     </div>

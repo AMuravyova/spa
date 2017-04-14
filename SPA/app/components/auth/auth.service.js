@@ -7,12 +7,18 @@ export class AuthService {
         this.$state = $state;
         this.authenticated = false;
         this.users = [];
+        this.user = {};
 
+    }
+
+    getUser(){
+        return this.user;
     }
 
     setUser(user) {
         //this.user = user;
-        this.checkUser(user).then(()=> {
+        this.checkUser(user).then((data)=> {
+            this.user = data;
             this.authenticated = true;
             this.checkAccess();
         });
@@ -69,6 +75,7 @@ export class AuthService {
 
     checkAccess(event, toState) {
         if (!toState.data && !this.authenticated){
+            // this.$state.go('page.home.dashboard');
             return;
         }
         // if (toState.data.noLogin === undefined || toState.data.noLogin === false || !this.authenticated) {
@@ -79,6 +86,7 @@ export class AuthService {
         if (!(toState.data.noLogin !== undefined && toState.data.noLogin || this.authenticated)) {
             event.preventDefault();
             this.$state.go('page.auth');
+            //alert("Введите правильный email и пароль.")
         }
     }
 

@@ -73,6 +73,6 @@ export const Routes = ($stateProvider, $urlRouterProvider) => {
             }
         });
 
-    //$urlRouterProvider.when('','/auth');
-    $urlRouterProvider.otherwise('/auth');
+    $urlRouterProvider.when('','/auth');
+    //$urlRouterProvider.otherwise('/auth');
 };

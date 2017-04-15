@@ -5,17 +5,14 @@
 export class AuthController {
     constructor($state, usersService, authService) {
         this.$state = $state;
-
         this.usersService = usersService;
-        // this.users = this.usersService.getUsers();
         this.authService = authService;
 
         this.searchUser = (userDetails, isvalid) => {
             if (isvalid) {
                 this.authService.setUser(userDetails);
-               // this.$state.go('page.home.dashboard');
+                //this.$state.go('page.home.dashboard');
             }
-
             else {
                 this.message = "Error";
                 this.showError = true;
@@ -32,7 +29,6 @@ export class AuthController {
                 }
             }
         };
-
     }
 
     goToSign() {

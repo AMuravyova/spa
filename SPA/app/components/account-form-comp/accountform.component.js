@@ -20,7 +20,6 @@ class AccountFormController {
             }
         };
 
-
         this.getError = (error) => {
             if (angular.isDefined(error)) {
                 if (error.required) {

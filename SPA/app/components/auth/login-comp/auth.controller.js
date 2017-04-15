@@ -11,7 +11,6 @@ export class AuthController {
         this.searchUser = (userDetails, isvalid) => {
             if (isvalid) {
                 this.authService.setUser(userDetails);
-                //this.$state.go('page.home.dashboard');
             }
             else {
                 this.message = "Error";

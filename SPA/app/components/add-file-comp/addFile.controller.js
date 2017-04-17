@@ -3,25 +3,16 @@
  */
 
 export class AddFileController {
-    constructor($state, fileService) {
+    constructor($state, fileService, authService) {
         this.$state = $state;
         this.titleForm = "";
         this.fileService = fileService;
-
-        this.addNewFile = (fileDetails, isvalid) => {
-            if (isvalid) {
-                if(fileDetails.dataValue === '.png') {
-                    this.fileService.addImage(fileDetails);
-                }
-                else {
-                    this.fileService.addDocument(fileDetails);
-                }
-            }
-            else {
-                this.message = "Error";
-                this.showError = true;
-            }
-        };
+        this.authService = authService;
+        this.currentUser = this.authService.getUser();
+        // this.newFile = this.newFile || this.currentUser;
+         this.newFile = {
+             userId: this.currentUser._id
+         };
 
         this.getError = (error) => {
             if (angular.isDefined(error)) {
@@ -45,6 +36,21 @@ export class AddFileController {
         }
 
     }
+
+    addNewFile (fileDetails, isvalid){
+    if (isvalid) {
+        if(fileDetails.type === '.png') {
+            this.fileService.addImage(fileDetails);
+        }
+        else {
+            this.fileService.addDocument(fileDetails);
+        }
+    }
+    else {
+        this.message = "Error";
+        this.showError = true;
+    }
+};
 
 }
 

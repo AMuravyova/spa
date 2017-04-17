@@ -6,13 +6,12 @@
         </div>
         <div ng-if = "docCtrl.document.type === docCtrl.xlsType">
             <img class="img-responsive center-block" ng-src="components/files/document/icons/Excel.png" alt="doc-icon">
-            <div style="width: 60px; margin: 5px auto">{{docCtrl.document.title}}</div>
+            <div style="width: 90px; margin: 5px auto">{{docCtrl.document.title}}</div>
         </div>
         <div class="wrapperBtn">
             <button class="btn btn-success" ng-click="docCtrl.download()">Download</button>
-            <button class="btn btn-success" ng-click="docCtrl.delete()">Delete</button>
+            <button class="btn btn-success" ng-click="docCtrl.deleteDocument()">Delete</button>
         </div>
-
     </div>
 </div>
 

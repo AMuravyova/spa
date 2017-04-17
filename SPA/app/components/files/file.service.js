@@ -7,65 +7,124 @@
 
 export class FileService {
 
-    constructor(Restangular){
-       this.Restangular = Restangular;
-       this.documents = Restangular.all('documents');
-       this.images = Restangular.all('images');
+    constructor(Restangular, authService) {
+        this.Restangular = Restangular;
+        this.authService = authService;
+        this.documents = Restangular.all('documents');
+        this.document = Restangular.one('documents');
+        this.images = Restangular.all('images');
+        this.image = Restangular.one('images');
+        this.currentUser = this.authService.getUser();
+        this.oneUser = Restangular.one('users', this.currentUser._id);
     }
 
     getDocuments() {
         return this.documents.getList().$object;
     }
 
+    getDocumentsByUser() {
+        return this.documents.getList('documents', this.currentUser._id);
+    }
+
     getImages() {
         return this.images.getList().$object;
     }
 
-    refreshDocuments() {
-        this.getDocuments().then((data) => {
-            this.documents = data;
-        });
+    getImagesByUser() {
+        return this.images.getList('images', this.currentUser._id);
     }
 
-    refreshImages() {
-        this.getImages().then((data) => {
-            this.Images = data;
-        });
-    }
+    // refreshDocuments() {
+    //     this.getDocuments().then((data) => {
+    //         this.documents = data;
+    //     });
+    // }
+    //
+    // refreshImages() {
+    //     this.getImages().then((data) => {
+    //         this.Images = data;
+    //     });
+    // }
 
     addDocument(newDocument) {
+
+        console.log(newDocument);
         this.documents.post(newDocument).then((newDoc) => {
-            this.documents = documents.getList();
+            return this.documents.getList();
+            //this.getDocuments();
         })
     }
+
+    deleteDocument() {
+        // this.document.get(doc).then((doc) => {
+        //     //this.documents.remove(doc);
+        //     doc.remove();
+        // })
+        this.document.remove().then(() => {
+            return this.documents.getList();
+        });
+    }
+
+    deleteImage() {
+        this.image.remove();
+    }
+
 
     addImage(newImage) {
+
         this.images.post(newImage).then((newImg) => {
-            this.images = images.getList();
+            return this.images.getList();
         })
-    }
-
-    getDocByUserEmail() {
-        let user = this.Restangular.one('users', 'email');
-        this.documents = user.getList('documents');
-    }
-
-    getImgByUserEmail() {
-        let user = this.Restangular.one('users', 'email');
-        this.images = user.getList('images');
-    }
-
-    getDocByUserTeam() {
-        let user = this.Restangular.one('users', 'team');
-        this.documents = user.getList('documents');
-    }
-
-    getImgByUserTeam() {
-        let user = this.Restangular.one('users', 'team');
-        this.images = user.getList('images');
     }
 
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // getDocByUserEmail() {
+    //     let user = this.Restangular.one('users', 'email');
+    //     this.documents = user.getList('documents');
+    // }
+    //
+    // getImgByUserEmail() {
+    //     let user = this.Restangular.one('users', 'email');
+    //     this.images = user.getList('images');
+    // }
+    //
+    // getDocByUserTeam() {
+    //     let user = this.Restangular.one('users', 'team');
+    //     this.documents = user.getList('documents');
+    // }
+    //
+    // getImgByUserTeam() {
+    //     let user = this.Restangular.one('users', 'team');
+    //     this.images = user.getList('images');
+    // }
+
+
 
 
 

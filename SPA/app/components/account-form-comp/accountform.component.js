@@ -11,8 +11,13 @@ class AccountFormController {
         this.newUser = this.newUser || this.currentUser;
         this.addNewUser = (userDetails, isvalid) => {
             if (isvalid) {
-                this.usersService.addUser(userDetails);
-                this.$state.go('page.auth');
+                    if(this.newUser){
+                        this.usersService.addUser(userDetails);
+                        this.$state.go('page.auth');
+                    }
+                    if(this.currentUser){
+                        this.usersService.updateUser(userDetails);
+                    }
             }
             else {
                 this.message = "Error";

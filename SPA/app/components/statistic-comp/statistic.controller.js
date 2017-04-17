@@ -11,4 +11,12 @@ export class StatisticController {
     getCurrentUser () {
         return this.currentUser;
     }
+
+    countUsersDocuments(){
+        return this.fileService.getDocumentsByUser().length;
+    }
+
+    countUsersImages(){
+        return this.fileService.getImagesByUser().length;
+    }
 }

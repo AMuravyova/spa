@@ -10,12 +10,6 @@ export class FileOperations {
         return alert('success loaded');
     }
 
-    delete(){
 
-    }
-
-    add(){
-
-    }
 
 }

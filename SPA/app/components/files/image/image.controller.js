@@ -4,15 +4,15 @@
 import {FileOperations} from '../file-operations.js';
 
 export class ImageController extends FileOperations{
-    constructor(Restangular, fileService){
+    constructor(Restangular, fileService, authService){
 
         super();
         this.fileService = fileService;
         this.image = {
-            userFirstName: 'userName',
-            userLastName: 'userLastName',
-            userTeam: 'userTeam',
-            userPassword: 'userPassword',
+            firstName: 'userName',
+            lastName: 'userLastName',
+            team: 'userTeam',
+            password: 'userPassword',
             title: 'title',
             description: 'desc',
             type: 'type',
@@ -20,15 +20,22 @@ export class ImageController extends FileOperations{
             data: 'data'
         };
         this.imgType = '.png';
+        this.authService = authService;
+        this.currentUser = this.authService.getUser();
     }
 
-    deleteImage(fileService){
+    deleteImage(){
+        if(this.currentUser.lastName === this.image.lastName &&
+            this.currentUser.password === this.image.password){
+            this.fileService.deleteImage();
+        }
+        else {
+            alert("Вы не можете удалить документ другого пользователя.");
+        }
 
     }
 
-    addImage(fileService){
 
-    }
 }
 
 

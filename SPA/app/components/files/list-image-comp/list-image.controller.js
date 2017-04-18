@@ -3,7 +3,7 @@
  */
 export class ListImageController {
 
-    constructor(fileService, Restangular, $state) {
+    constructor(fileService, Restangular, $state, usersService) {
 
         this.fileService = fileService;
         this.images = this.fileService.getImages();
@@ -12,6 +12,8 @@ export class ListImageController {
         this.imagesLength = this.getCountImages();
         this.$state = $state;
         this.getCountImages();
+        this.usersService = usersService;
+        this.currentUser = this.usersService.getUser();
 
         this.choiseView = () => {
             if (this.$state.current.name === 'page.home.dashboard') {
@@ -27,6 +29,10 @@ export class ListImageController {
 
     };
 
+    getCurrentUser () {
+        return this.currentUser;
+    }
+
     getCountImages(){
         this.imagesLength = this.images.length;
         return this.imagesLength;
@@ -38,11 +44,11 @@ export class ListImageController {
         }
     }
 
-    refreshImages() {
-        this.fileService.getImages().then((data) => {
-            this.images = data;
-        });
-    }
+    // refreshImages() {
+    //     this.fileService.getImages().then((data) => {
+    //         this.images = data;
+    //     });
+    // }
 
 }
 

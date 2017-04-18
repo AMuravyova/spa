@@ -4,7 +4,7 @@
 import {FileOperations} from '../file-operations.js';
 
 export class ImageController extends FileOperations{
-    constructor(Restangular, fileService, authService){
+    constructor(Restangular, fileService, usersService){
 
         super();
         this.fileService = fileService;
@@ -16,26 +16,25 @@ export class ImageController extends FileOperations{
             title: 'title',
             description: 'desc',
             type: 'type',
-            path: 'path',
-            data: 'data'
+            path: 'path'
         };
         this.imgType = '.png';
-        this.authService = authService;
-        this.currentUser = this.authService.getUser();
+        this.usersService = usersService;
+        this.currentUser = this.usersService.getUser();
     }
 
     deleteImage(){
-        if(this.currentUser.lastName === this.image.lastName &&
-            this.currentUser.password === this.image.password){
-            this.fileService.deleteImage();
+        if(this.currentUser._id === this.image.userId){
+            console.log("imageController: ");
+            console.log(this.currentUser._id);
+            console.log(this.image.userId);
+            console.log(this.image);
+            this.fileService.deleteImage(this.image);
         }
         else {
-            alert("Вы не можете удалить документ другого пользователя.");
+            alert("Вы не можете удалить файл другого пользователя.");
         }
-
     }
-
-
 }
 
 

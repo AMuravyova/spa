@@ -7,14 +7,14 @@
 
 export class FileService {
 
-    constructor(Restangular, authService) {
+    constructor(Restangular, usersService) {
         this.Restangular = Restangular;
-        this.authService = authService;
+        this.usersService = usersService;
         this.documents = Restangular.all('documents');
         this.document = Restangular.one('documents');
         this.images = Restangular.all('images');
         this.image = Restangular.one('images');
-        this.currentUser = this.authService.getUser();
+        this.currentUser = this.usersService.getUser();
         this.oneUser = Restangular.one('users', this.currentUser._id);
     }
 
@@ -22,54 +22,49 @@ export class FileService {
         return this.documents.getList().$object;
     }
 
-    getDocumentsByUser() {
-        return this.documents.getList('documents', this.currentUser._id);
-    }
+    // getDocumentsByUser() {
+    //     return this.documents.getList('documents', this.currentUser._id);
+    // }
 
     getImages() {
         return this.images.getList().$object;
     }
 
-    getImagesByUser() {
-        return this.images.getList('images', this.currentUser._id);
-    }
-
-    // refreshDocuments() {
-    //     this.getDocuments().then((data) => {
-    //         this.documents = data;
-    //     });
-    // }
-    //
-    // refreshImages() {
-    //     this.getImages().then((data) => {
-    //         this.Images = data;
-    //     });
+    // getImagesByUser() {
+    //     return this.images.getList('images', this.currentUser._id);
     // }
 
     addDocument(newDocument) {
 
-        console.log(newDocument);
         this.documents.post(newDocument).then((newDoc) => {
             return this.documents.getList();
-            //this.getDocuments();
+
         })
     }
 
-    deleteDocument() {
-        // this.document.get(doc).then((doc) => {
-        //     //this.documents.remove(doc);
-        //     doc.remove();
-        // })
+    deleteDocument(doc) {
+        console.log("fileService: ");
+        //this.document.get(doc);
+        this.document = this.Restangular.one('documents', doc._id);
+        console.log(doc._id);
+        console.log(doc);
+        console.log(this.document);
         this.document.remove().then(() => {
             return this.documents.getList();
         });
+      
     }
 
-    deleteImage() {
-        this.image.remove();
+    deleteImage(img) {
+        console.log("fileService: ");
+        this.image = this.Restangular.one('images', img._id);
+        console.log(img._id);
+        console.log(img);
+        console.log(this.image);
+        this.image.remove().then(() => {
+            return this.images.getList();
+        });
     }
-
-
     addImage(newImage) {
 
         this.images.post(newImage).then((newImg) => {

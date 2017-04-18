@@ -24,11 +24,11 @@ export class ListController {
 
     }
 
-    refreshDocuments(){
-        this.fileService.getDocuments().then((data) => {
-            this.documents = data;
-        });
-    }
+    // refreshDocuments(){
+    //     this.fileService.getDocuments().then((data) => {
+    //         this.documents = data;
+    //     });
+    // }
 
     getLimitCount(){
         if(this.limitView){
@@ -40,7 +40,6 @@ export class ListController {
         this.documentsLength = this.documents.length;
         return this.documentsLength;
     }
-
 
     // getLimitCount(){
     //    if (this.$state.current.name==='page.home.dashboard'){

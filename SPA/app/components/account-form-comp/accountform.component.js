@@ -7,17 +7,24 @@ class AccountFormController {
         this.$state = $state;
         this.authService = authService;
         this.usersService = usersService;
-        this.currentUser = this.authService.getUser();
+        this.currentUser = this.usersService.getUser();
         this.newUser = this.newUser || this.currentUser;
         this.addNewUser = (userDetails, isvalid) => {
             if (isvalid) {
-                    if(this.newUser){
-                        this.usersService.addUser(userDetails);
-                        this.$state.go('page.auth');
-                    }
                     if(this.currentUser){
-                        this.usersService.updateUser(userDetails);
+                       this.usersService.updateUser(userDetails);
                     }
+                    else if(!this.currentUser){
+                       this.usersService.addUser(userDetails);
+                       this.$state.go('page.auth');
+                    }
+                // if(this.$state.current.name === 'page.home.account'){
+                //     this.usersService.updateUser(userDetails);
+                // }
+                // if(this.$state.current.name === 'page.registration'){
+                //     this.usersService.addUser(userDetails);
+                //     this.$state.go('page.auth');
+                // }
             }
             else {
                 this.message = "Error";

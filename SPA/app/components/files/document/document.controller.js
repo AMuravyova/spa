@@ -5,7 +5,7 @@ import {FileOperations} from '../file-operations.js';
 
 export class DocumentController extends FileOperations{
 
-    constructor(fileService, Restangular, authService){
+    constructor(fileService, Restangular, usersService){
         super();
         this.document = {
             firstName: 'userName',
@@ -14,24 +14,27 @@ export class DocumentController extends FileOperations{
             password: 'userPassword',
             title: 'title',
             description: 'desc',
-            type: 'type',
-            data: 'data'
+            type: 'type'
         };
 
         this.docType = '.doc';
         this.xlsType = '.xls';
         this.fileService = fileService;
-        this.authService = authService;
-        this.currentUser = this.authService.getUser();
+        this.usersService = usersService;
+        this.currentUser = this.usersService.getUser();
     }
 
 
     deleteDocument(){
 
-        if(this.currentUser.lastName === this.document.lastName &&
-            this.currentUser.password === this.document.password){
-            this.fileService.deleteDocument();
+        if(this.currentUser._id === this.document.userId){
+            console.log("documentController: ");
+            console.log(this.currentUser._id);
+            console.log(this.document.userId);
+            console.log(this.document);
+            this.fileService.deleteDocument(this.document);
         }
+
         else {
             alert("Вы не можете удалить документ другого пользователя.");
         }

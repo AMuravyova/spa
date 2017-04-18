@@ -2,9 +2,9 @@
  * Created by amurav on 13.04.2017.
  */
 export class AccountController {
-    constructor(authService) {
-        this.authService = authService;
-        this.currentUser = this.authService.getUser();
+    constructor(usersService) {
+        this.usersService = usersService;
+        this.currentUser = this.usersService.getUser();
     }
 
     getCurrentUser () {

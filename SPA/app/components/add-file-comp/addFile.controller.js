@@ -3,13 +3,12 @@
  */
 
 export class AddFileController {
-    constructor($state, fileService, authService) {
+    constructor($state, fileService, usersService) {
         this.$state = $state;
         this.titleForm = "";
         this.fileService = fileService;
-        this.authService = authService;
-        this.currentUser = this.authService.getUser();
-        // this.newFile = this.newFile || this.currentUser;
+        this.usersService = usersService;
+        this.currentUser = this.usersService.getUser();
          this.newFile = {
              userId: this.currentUser._id
          };

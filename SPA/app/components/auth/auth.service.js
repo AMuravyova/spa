@@ -1,7 +1,8 @@
 export class AuthService {
 
-    constructor(Restangular, $rootScope, $state, $q) {
+    constructor(Restangular, $rootScope, $state, $q, usersService) {
         this.Restangular = Restangular;
+        this.usersService = usersService;
         this.$rootScope = $rootScope;
         this.$q = $q;
         this.$state = $state;
@@ -10,16 +11,19 @@ export class AuthService {
         this.user = {};
     }
 
-    getUser() {
-        return this.user;
-    }
+    // getUser() {
+    //     return this.user;
+    // }
 
     setUser(user) {
 
         this.searchUser = user;
         this.checkUser(this.searchUser).then(
             (data) => {
-                this.user = data;
+
+                this.usersService.setUser(data);
+                //this.user = data;
+                this.user = this.usersService.getUser();
 
                 if (this.user) {
                     this.authenticated = true;
@@ -41,7 +45,7 @@ export class AuthService {
             return this.$q.resolve(this.findUser(this.getUsers(), user));
         }
         else {
-            return this.getUsersAsync().then((data) => this.findUser(data, user));
+            return this.usersService.getUsersAsync().then((data) => this.findUser(data, user));
         }
     }
 
@@ -56,10 +60,11 @@ export class AuthService {
             return this.users;
         }
 
-        getUsersAsync()
-        {
-            return this.users = this.Restangular.all('users').getList();
-        }
+        // getUsersAsync()
+        // {
+        //
+        //     return this.users = this.Restangular.all('users').getList();
+        // }
 
         checkAccess(event, toState)
         {

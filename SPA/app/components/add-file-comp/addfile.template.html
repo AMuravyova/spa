@@ -3,7 +3,7 @@
     <div class="panel" style="width:220px;">
         <form name="myForm" novalidate ng-submit="vm.addNewFile(vm.newFile, myForm.$valid)">
             <div style="background-color: transparent">
-                <!--<h3 style="margin-top:0; padding-bottom: 30px; padding-top: 0; text-align: center; color: #b73a6d">{{vm.choiseTitle()}}</h3>-->
+
                 <div class="form-group">
                     <input name="fileName" type="text" class="form-control" ng-model="vm.newFile.title" placeholder="Title" required>
                     <div class="error" ng-show="vm.showError">
@@ -13,56 +13,27 @@
                 <div class="form-group" placeholder="Type">
                     <select class="form-control" ng-model="vm.newFile.type">
                         <label>
-                            <option disabled>Choice type</option>
                             <option value=".doc">.doc</option>
-                            <option value=".xls">.xls</option>
-                            <option value=".png">.png</option>
+                            <option value=".xls" ng-selected="dataValue">.xls</option>
+                            <option value=".png" ng-selected="dataValue">.png</option>
                         </label>
                     </select>
                 </div>
                 <div class="form-group" ng-if = "vm.newFile.type === '.png'">
                     <input name="path" type="text" class="form-control" ng-model="vm.newFile.path" placeholder="Path" required>
                     <div class="error" ng-show="vm.showError">
-                        {{vm.getError(myForm.fileName.$error)}}
+                        {{vm.getError(myForm.path.$error)}}
                     </div>
                 </div>
                 <div class="form-group">
                     <select class="form-control" ng-model="vm.newFile.team">
                         <label>
-                            <option disabled>Choice team</option>
-                            <option value="Mera team" ng-selected="dataValue">Mera team</option>
+                            <option value="Mera team">Mera team</option>
                             <option value="Guests team" ng-selected="dataValue">Guests team</option>
                             <option value="Other team" ng-selected="dataValue">Other team</option>
                         </label>
                     </select>
                 </div>
-
-                <!--<div class="form-group" style="visibility: visible">-->
-                    <!--<label>Creator's team:</label>-->
-                    <!--<input name="team" type="text" class="form-control" ng-model="vm.currentUser.team" placeholder="Team" required disabled>-->
-                <!--</div>-->
-
-                <!--<div class="form-group" style="visibility: visible">-->
-                    <!--<label>Creator's First Name:</label>-->
-                    <!--<input name="firstName" type="text" class="form-control" ng-model="vm.currentUser.firstName" placeholder="First name" required disabled>-->
-                <!--</div>-->
-                <!--<div class="form-group" style="visibility: visible">-->
-                    <!--<label>Creator's Last Name:</label>-->
-                    <!--<input name="lastName" type="text" class="form-control" ng-model="vm.currentUser.lastName" placeholder="Last name" required disabled>-->
-
-                <!--</div>-->
-
-                <!--<div class="form-group" style="visibility: visible">-->
-                    <!--<label>Creator's Email:</label>-->
-                    <!--<input name="email" type="email" class="form-control" ng-model="vm.currentUser._id" placeholder="E-mail" required disabled>-->
-
-                <!--</div>-->
-
-                <!--<div class="form-group" style="visibility: visible">-->
-                    <!--<label>Password:</label>-->
-                    <!--<input name="password" type="password" class="form-control" ng-model="vm.currentUser.password" placeholder="Password" required disabled>-->
-                <!--</div>-->
-
 
                 <button type="submit" class="btn btn-primary btn-block" style="background-color: #b73a6d; font-size: 16px">{{vm.choiseTitle()}}</button>
             </div>

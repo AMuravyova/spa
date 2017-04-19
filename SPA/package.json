@@ -5,10 +5,10 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "http-server ./app -a localhost -p 8000 -c-1 webpack-dev-server --hot",
+    "start": "http-server ./app -a localhost -p 8000 -c-1 ",
     "build": "babel app -d dist --presets es2015",
     "watch": "babel app -d dist --presets es2015 -w",
-    "webpack": "./node_modules/.bin/webpack",
+    "webpack": "./node_modules/.bin/webpack -w",
     "lint": "eslint"
   },
   "author": "muravjeva",
@@ -46,7 +46,7 @@
     "http-server": "^0.9.0",
     "less": "^2.7.2",
     "less-loader": "^4.0.3",
-    "mongodb-rest": "^0.10.14",
+    "mongodb-rest": "0.10.11",
     "postcss-loader": "^1.3.3",
     "style-loader": "^0.16.1",
     "uglify-js": "git+https://github.com/mishoo/UglifyJS2.git#harmony",

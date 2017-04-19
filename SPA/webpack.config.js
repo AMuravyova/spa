@@ -42,6 +42,7 @@ module.exports = {
     },
     plugins: [
         new ExtractTextPlugin('bundle.css')
+
     ],
     watch: NODE_ENV == 'development',
     watchOptions: {

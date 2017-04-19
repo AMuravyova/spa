@@ -14,6 +14,7 @@ export class ListImageController {
         this.getCountImages();
         this.usersService = usersService;
         this.currentUser = this.usersService.getUser();
+        this.limitTeam = this.currentUser.team;
 
         this.choiseView = () => {
             if (this.$state.current.name === 'page.home.dashboard') {
@@ -24,8 +25,7 @@ export class ListImageController {
             }
             return this.view;
         };
-
-
+        this.getLimitTeam();
 
     };
 
@@ -41,6 +41,15 @@ export class ListImageController {
     getLimitCount(){
         if(this.limitView){
             this.limitCount = this.limitView;
+        }
+    }
+
+    getLimitTeam(){
+        if(this.limitTeam){
+            console.log(this.limitTeam);
+            this.limitTeam = this.currentUser.team;
+            console.log(this.currentUser.team);
+            console.log(this.limitTeam);
         }
     }
 

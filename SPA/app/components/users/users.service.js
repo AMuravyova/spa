@@ -28,10 +28,9 @@ export class UsersService {
         this.user = data;
     }
 
-    getUser(){
+    getUser() {
         return this.user;
     }
-
 
     getUsersImages() {
         return this.oneUser.get().then((user) => {
@@ -52,22 +51,17 @@ export class UsersService {
     }
 
     updateUser(user) {
-        user.put();
+        let userId = user._id;
+        //user = user.plain ? user.plain() : user;
+
+       // Because you can't modify the _id field, a ' +
+        //'better approach is to simply remove the that field from your  ' +
+        //'map object instead of converting it to an ObjectId.
+        delete user._id;
+        this.Restangular.one('users', userId).customPUT(user);
     }
 
-    // updateUser(user) {
-    //     this.users.put(user);
-    // }
-
 }
-
-
-
-
-
-
-
-
 
 
 
@@ -85,36 +79,34 @@ export class UsersService {
 
 
 /*
-//customer
-    getUserByEmailPassword (userDetails) {
+ //customer
+ getUserByEmailPassword (userDetails) {
 
-       // return this.Restangular.all("users").getList().find(userDetails);
-       //return this.users.getList(userDetails);
-      // return this.users.customGET("", userDetails);
-       // return this.Restangular.one('users').get(userDetails);
-        //return this.Restangular.one('users').customGET("", userDetails);
-
-
-        return this.users.get({email: userDetails.email,
-            password: userDetails.password})
-            .then((result) => {
-                    this.users = result;
-                },
-                (error) => {
-                    alert('Incorrect e-mail or password. Try enter again.');
-                }
-            );
-        }
-
-}
-
-*/
+ // return this.Restangular.all("users").getList().find(userDetails);
+ //return this.users.getList(userDetails);
+ // return this.users.customGET("", userDetails);
+ // return this.Restangular.one('users').get(userDetails);
+ //return this.Restangular.one('users').customGET("", userDetails);
 
 
+ return this.users.get({email: userDetails.email,
+ password: userDetails.password})
+ .then((result) => {
+ this.users = result;
+ },
+ (error) => {
+ alert('Incorrect e-mail or password. Try enter again.');
+ }
+ );
+ }
+
+ }
+
+ */
 
 
 
-//Restangular.all('users').customGET('documents', {team: 'team'});
-//Restangular.one('users','userEmail').customGET('documents');
+
+
 
 

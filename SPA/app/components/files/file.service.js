@@ -22,6 +22,7 @@ export class FileService {
         return this.documents.getList().$object;
     }
 
+
     // getDocumentsByUser() {
     //     return this.documents.getList('documents', this.currentUser._id);
     // }
@@ -52,7 +53,7 @@ export class FileService {
         this.document.remove().then(() => {
             return this.documents.getList();
         });
-      
+
     }
 
     deleteImage(img) {

@@ -9,8 +9,8 @@ export const listimageComp = {
     controller: ListImageController,
     controllerAs: 'listImageCtrl',
     bindings: {
-        limitView: '<'
-        // limitTeam: '='
+        limitView: '<',
+        limitTeam: '<'
     }
 };
 

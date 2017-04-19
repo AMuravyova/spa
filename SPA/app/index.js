@@ -10,43 +10,20 @@ import restangular from 'restangular';
 
 
 export const spApp = angular.module('spApp', [compApp, uiRouter, 'ngResource', restangular, uiBootstrap])
-.config(['$stateProvider', '$urlRouterProvider', Routes])
-.run(
-    (Restangular) => {
-    Restangular.setBaseUrl('http://localhost:3000/appDB/');
-    }
-)
+    .config(['$stateProvider', '$urlRouterProvider', Routes])
+    .run(
+        (Restangular) => {
+            Restangular.setBaseUrl('http://localhost:3000/appDB/');
+        }
+    )
     .run(['$rootScope', '$state', '$stateParams', 'authService',
         ($rootScope, $state, $stateParams, authService) => {
-        $rootScope.$state = $state;
-        $rootScope.$stateParams = $stateParams;
-        $rootScope.$on('$stateChangeStart', (event, toState) => {
-            authService.checkAccess(event, toState);
-        })
-    }]);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+            $rootScope.$state = $state;
+            $rootScope.$stateParams = $stateParams;
+            $rootScope.$on('$stateChangeStart', (event, toState) => {
+                authService.checkAccess(event, toState);
+            })
+        }]);
 
 
 // .$controller('spController', function ($scope, Restangular) {
@@ -55,48 +32,22 @@ export const spApp = angular.module('spApp', [compApp, uiRouter, 'ngResource', r
 //     });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Standardize data format (extract from meta-data where needed)
 /*app.config(function(RestangularProvider) {
-    // add a response intereceptor
-    RestangularProvider.addResponseInterceptor(function (data, operation, what, url, response, deferred) {
-        var extractedData;
-        // .. to look for getList operations
-        if (operation === "getList") {
-            // .. and handle the data and meta data
-            extractedData = data.tasks;
-        } else {
-            extractedData = data;
-        }
-        return extractedData;
-    });
-});
-*/
+ // add a response intereceptor
+ RestangularProvider.addResponseInterceptor(function (data, operation, what, url, response, deferred) {
+ var extractedData;
+ // .. to look for getList operations
+ if (operation === "getList") {
+ // .. and handle the data and meta data
+ extractedData = data.tasks;
+ } else {
+ extractedData = data;
+ }
+ return extractedData;
+ });
+ });
+ */
 // In this file we do the following:
 //
 // we define the application name and the dependency on restangular,

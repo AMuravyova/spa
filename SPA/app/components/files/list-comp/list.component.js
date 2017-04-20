@@ -9,6 +9,7 @@ export const listComp = {
     controller: ListController,
     controllerAs: 'listCtrl',
     bindings: {
-        limitView: '<'
+        limitView: '<',
+        nameTeam: '<'
     }
 };

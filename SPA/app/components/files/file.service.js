@@ -7,7 +7,7 @@
 
 export class FileService {
 
-    constructor(Restangular, usersService) {
+    constructor(Restangular, usersService, $state) {
         this.Restangular = Restangular;
         this.usersService = usersService;
         this.documents = Restangular.all('documents');
@@ -16,58 +16,86 @@ export class FileService {
         this.image = Restangular.one('images');
         this.currentUser = this.usersService.getUser();
         this.oneUser = Restangular.one('users', this.currentUser._id);
+        this.$state = $state;
+
+
+        this.isTeam = (item) => {
+
+            console.log(item.team);
+            console.log(this.currentUser.team);
+            let param = this.currentUser.team;
+            return item.team === param;
+        }
     }
 
     getDocuments() {
         return this.documents.getList().$object;
     }
 
-
-    // getDocumentsByUser() {
-    //     return this.documents.getList('documents', this.currentUser._id);
+    // getImagesByTeam(){
+    //     return this.images.getList('images', this.currentUser.team);
     // }
 
-    getImages() {
-        return this.images.getList().$object;
+    // getDocumentsByNameTeam(){
+    //     let queryParamObj = {team: this.currentUser.team};
+    //     return this.documents.getList('documents', queryParamObj);
+    // }
+
+    // getImagesByTeam(){
+    //     let queryParamObj = {team: this.currentUser.team};
+    //     return this.images.getList('images', queryParamObj);
+    // }
+
+    getDocumentsByTeam() {
+        return this.documents.getList('documents', this.currentUser.team);
     }
 
-    // getImagesByUser() {
-    //     return this.images.getList('images', this.currentUser._id);
-    // }
+    getImages() {
+         if(this.$state.current.name === 'page.home.team'){
+
+             let currentTeam = this.currentUser.team;
+             //запрос с параметром
+             let paramTeam = {query: {teamId: currentTeam.id}};
+
+            return this.images.getList(paramTeam);
+            //return this.Restangular.all("images").customGETLIST("", paramTeam).$object;
+            // return this.images.getList().then((data) => {
+            //     let arrTeam = this.findImages(data);
+            //     console.log(arrTeam);
+            //     return arrTeam;
+            // });
+         }
+         else{
+             return this.images.getList();
+         }
+    }
+
+    findImages(images)
+    {
+        return images.filter(this.isTeam);
+    }
 
     addDocument(newDocument) {
-
         this.documents.post(newDocument).then((newDoc) => {
             return this.documents.getList();
-
         })
     }
 
     deleteDocument(doc) {
-        console.log("fileService: ");
-        //this.document.get(doc);
         this.document = this.Restangular.one('documents', doc._id);
-        console.log(doc._id);
-        console.log(doc);
-        console.log(this.document);
         this.document.remove().then(() => {
             return this.documents.getList();
         });
-
     }
 
     deleteImage(img) {
-        console.log("fileService: ");
         this.image = this.Restangular.one('images', img._id);
-        console.log(img._id);
-        console.log(img);
-        console.log(this.image);
         this.image.remove().then(() => {
             return this.images.getList();
         });
     }
-    addImage(newImage) {
 
+    addImage(newImage) {
         this.images.post(newImage).then((newImg) => {
             return this.images.getList();
         })

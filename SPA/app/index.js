@@ -3,17 +3,27 @@
  */
 import uiRouter from 'angular-ui-router';
 import {compApp} from './components/index';
-// import {pageApp} from './pages/index';
+import {pageApp} from './pages/index';
 import {Routes} from './routers.config';
 import uiBootstrap from 'angular-ui-bootstrap';
 import restangular from 'restangular';
 
 
-export const spApp = angular.module('spApp', [compApp, uiRouter, 'ngResource', restangular, uiBootstrap])
+export const spApp = angular.module('spApp', [compApp, pageApp, uiRouter, 'ngResource', restangular, uiBootstrap])
     .config(['$stateProvider', '$urlRouterProvider', Routes])
     .run(
         (Restangular) => {
             Restangular.setBaseUrl('http://localhost:3000/appDB/');
+
+            Restangular.setRequestInterceptor(
+                (elem, operation, what) => {
+
+                    if (operation === 'put') {
+                        elem._id = undefined;
+                        return elem;
+                    }
+                    return elem;
+                })
         }
     )
     .run(['$rootScope', '$state', '$stateParams', 'authService',
@@ -24,6 +34,32 @@ export const spApp = angular.module('spApp', [compApp, uiRouter, 'ngResource', r
                 authService.checkAccess(event, toState);
             })
         }]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 // .$controller('spController', function ($scope, Restangular) {

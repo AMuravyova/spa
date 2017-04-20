@@ -9,43 +9,10 @@ export const listimageComp = {
     controller: ListImageController,
     controllerAs: 'listImageCtrl',
     bindings: {
-        limitView: '<',
-        limitTeam: '<'
+        limitView: '<'
+        //limitTeam: '&'
     }
 };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /*getListDocumentsFromMongoDB (){
-     return  this.arrDocuments.addRestangularMethod('','get','/document');
-     };
-
-     getDocumentFromMongoDB () {
-     return this.arrDocuments.getDocument();
-     };
-
-     Creating new Restangular Methods
-     RestangularProvider.addElementTransformer('users', true, function(user) {
-     // This will add a method called login that will do a POST to the path login
-     // signature is (name, operation, path, params, headers, elementToPost)
-
-     user.addRestangularMethod('login', 'post', 'login');
-
-     return user;
-     });
-
-*/
 
 

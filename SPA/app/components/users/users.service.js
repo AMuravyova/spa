@@ -14,10 +14,6 @@ export class UsersService {
         this.Restangular = Restangular;
         this.users = this.Restangular.all('users');
         this.user = {};
-        //this.user = this.Restangular.one('users');
-        //this.authService = authService;
-        //this.currentUser = this.authService.getUser();
-        //this.oneUser = this.Restangular.one('users', this.currentUser._id);
     }
 
     getUsersAsync() {
@@ -32,17 +28,17 @@ export class UsersService {
         return this.user;
     }
 
-    getUsersImages() {
-        return this.oneUser.get().then((user) => {
-            user.getList('images');
-        })
-    }
-
-    getUsersDocuments() {
-        return this.oneUser.get().then((user) => {
-            user.getList('documents');
-        })
-    }
+    // getUsersImages() {
+    //     return this.oneUser.get().then((user) => {
+    //         user.getList('images');
+    //     })
+    // }
+    //
+    // getUsersDocuments() {
+    //     return this.oneUser.get().then((user) => {
+    //         user.getList('documents');
+    //     })
+    // }
 
     addUser(newUser) {
         this.users.post(newUser).then((newUsr) => {
@@ -51,14 +47,12 @@ export class UsersService {
     }
 
     updateUser(user) {
-        let userId = user._id;
+        // let userId = user._id;
         //user = user.plain ? user.plain() : user;
+        //delete user._id;
+        //this.Restangular.one('users', userId).customPUT(user);
 
-       // Because you can't modify the _id field, a ' +
-        //'better approach is to simply remove the that field from your  ' +
-        //'map object instead of converting it to an ObjectId.
-        delete user._id;
-        this.Restangular.one('users', userId).customPUT(user);
+        this.Restangular.one('users', user._id).customPUT(user);
     }
 
 }

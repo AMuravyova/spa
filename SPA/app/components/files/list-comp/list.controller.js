@@ -20,15 +20,7 @@ export class ListController {
             }
             return this.view;
         };
-
-
     }
-
-    // refreshDocuments(){
-    //     this.fileService.getDocuments().then((data) => {
-    //         this.documents = data;
-    //     });
-    // }
 
     getLimitCount(){
         if(this.limitView){
@@ -41,36 +33,45 @@ export class ListController {
         return this.documentsLength;
     }
 
-    // getLimitCount(){
-    //    if (this.$state.current.name==='page.home.dashboard'){
-    //        this.limitCount = 8;
-    //        this.view = 'View All';
-    //    }
-    //     else {
-    //       this.limitCount = this.getCountDocuments();
-    //       this.view = '';
-    //     }
-    //    //return this.limitCount;
-    // }
-
-
-
-
-    // addNewCourse {
-    // documents.push({
-    //
-    //     userFirstName: 'userName',
-    //     userLastName: 'userLastName',
-    //     userTeam: 'userTeam',
-    //     userPassword: 'userPassword',
-    //     title: 'title',
-    //     description: 'desc',
-    //     type: 'type',
-    //     path: '',
-    //     data: 'data'
-    // });
-    // };
-
-
-
+    getDocumentsByNameTeam(){
+        if(this.nameTeam){
+            //запрос с параметром
+            console.log(this.limitTeam);
+            console.log(this.currentUser.team);
+            this.documents = this.fileService.getDocumentsByNameTeam();
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// getLimitCount(){
+//    if (this.$state.current.name==='page.home.dashboard'){
+//        this.limitCount = 8;
+//        this.view = 'View All';
+//    }
+//     else {
+//       this.limitCount = this.getCountDocuments();
+//       this.view = '';
+//     }
+//    //return this.limitCount;
+// }

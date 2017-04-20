@@ -16,7 +16,6 @@ export class DocumentController extends FileOperations{
             description: 'desc',
             type: 'type'
         };
-
         this.docType = '.doc';
         this.xlsType = '.xls';
         this.fileService = fileService;
@@ -24,9 +23,7 @@ export class DocumentController extends FileOperations{
         this.currentUser = this.usersService.getUser();
     }
 
-
     deleteDocument(){
-
         if(this.currentUser._id === this.document.userId){
             console.log("documentController: ");
             console.log(this.currentUser._id);
@@ -34,12 +31,8 @@ export class DocumentController extends FileOperations{
             console.log(this.document);
             this.fileService.deleteDocument(this.document);
         }
-
         else {
             alert("Вы не можете удалить документ другого пользователя.");
         }
     }
-
-
-
 }

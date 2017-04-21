@@ -10,7 +10,6 @@ export const listimageComp = {
     controllerAs: 'listImageCtrl',
     bindings: {
         limitView: '<'
-        //limitTeam: '&'
     }
 };
 

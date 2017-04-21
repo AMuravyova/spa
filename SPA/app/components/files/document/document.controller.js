@@ -10,7 +10,7 @@ export class DocumentController extends FileOperations{
         this.document = {
             firstName: 'userName',
             lastName: 'userLastName',
-            team: 'userTeam',
+            teamId: 'userTeam',
             password: 'userPassword',
             title: 'title',
             description: 'desc',

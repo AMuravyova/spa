@@ -17,62 +17,39 @@ export class FileService {
         this.currentUser = this.usersService.getUser();
         this.oneUser = Restangular.one('users', this.currentUser._id);
         this.$state = $state;
-
-
-        this.isTeam = (item) => {
-
-            console.log(item.team);
-            console.log(this.currentUser.team);
-            let param = this.currentUser.team;
-            return item.team === param;
-        }
+        this.teams = Restangular.all('teams');
     }
+
+    // getDocuments() {
+    //     return this.documents.getList().$object;
+    // }
+
+    // getTeams(){
+    //     return this.teams.getList().$object;
+    // }
 
     getDocuments() {
-        return this.documents.getList().$object;
-    }
-
-    // getImagesByTeam(){
-    //     return this.images.getList('images', this.currentUser.team);
-    // }
-
-    // getDocumentsByNameTeam(){
-    //     let queryParamObj = {team: this.currentUser.team};
-    //     return this.documents.getList('documents', queryParamObj);
-    // }
-
-    // getImagesByTeam(){
-    //     let queryParamObj = {team: this.currentUser.team};
-    //     return this.images.getList('images', queryParamObj);
-    // }
-
-    getDocumentsByTeam() {
-        return this.documents.getList('documents', this.currentUser.team);
+        if(this.$state.current.name === 'page.home.team'){
+            let currentTeam = this.currentUser.team;
+            //let paramTeam = {query: {teamId: currentTeam._id}};
+            let paramTeam = {query: {teamId: currentTeam}};
+            return this.documents.getList(paramTeam);
+        }
+        else{
+            return this.documents.getList();
+        }
     }
 
     getImages() {
          if(this.$state.current.name === 'page.home.team'){
-
              let currentTeam = this.currentUser.team;
-             //запрос с параметром
-             let paramTeam = {query: {teamId: currentTeam.id}};
-
+             //let paramTeam = {query: {teamId: currentTeam._id}};
+             let paramTeam = {query: {teamId: currentTeam}};
             return this.images.getList(paramTeam);
-            //return this.Restangular.all("images").customGETLIST("", paramTeam).$object;
-            // return this.images.getList().then((data) => {
-            //     let arrTeam = this.findImages(data);
-            //     console.log(arrTeam);
-            //     return arrTeam;
-            // });
          }
          else{
              return this.images.getList();
          }
-    }
-
-    findImages(images)
-    {
-        return images.filter(this.isTeam);
     }
 
     addDocument(newDocument) {

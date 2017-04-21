@@ -11,7 +11,7 @@ export class ImageController extends FileOperations{
         this.image = {
             firstName: 'userName',
             lastName: 'userLastName',
-            team: 'userTeam',
+            teamId: 'userTeam',
             password: 'userPassword',
             title: 'title',
             description: 'desc',

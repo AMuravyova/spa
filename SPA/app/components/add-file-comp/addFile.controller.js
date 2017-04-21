@@ -9,9 +9,9 @@ export class AddFileController {
         this.fileService = fileService;
         this.usersService = usersService;
         this.currentUser = this.usersService.getUser();
-         this.newFile = {
-             userId: this.currentUser._id
-         };
+        this.newFile = {
+            userId: this.currentUser._id
+        };
 
         this.getError = (error) => {
             if (angular.isDefined(error)) {
@@ -37,19 +37,18 @@ export class AddFileController {
     }
 
     addNewFile (fileDetails, isvalid){
-    if (isvalid) {
-        if(fileDetails.type === '.png') {
-            this.fileService.addImage(fileDetails);
+        if (isvalid) {
+            if(fileDetails.type === '.png') {
+                this.fileService.addImage(fileDetails);
+            }
+            else {
+                this.fileService.addDocument(fileDetails);
+            }
         }
         else {
-            this.fileService.addDocument(fileDetails);
+            this.message = "Error";
+            this.showError = true;
         }
-    }
-    else {
-        this.message = "Error";
-        this.showError = true;
-    }
-};
+    };
 
 }
-

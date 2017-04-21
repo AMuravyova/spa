@@ -28,18 +28,6 @@ export class UsersService {
         return this.user;
     }
 
-    // getUsersImages() {
-    //     return this.oneUser.get().then((user) => {
-    //         user.getList('images');
-    //     })
-    // }
-    //
-    // getUsersDocuments() {
-    //     return this.oneUser.get().then((user) => {
-    //         user.getList('documents');
-    //     })
-    // }
-
     addUser(newUser) {
         this.users.post(newUser).then((newUsr) => {
             this.users = users.getList();
@@ -48,10 +36,9 @@ export class UsersService {
 
     updateUser(user) {
         // let userId = user._id;
-        //user = user.plain ? user.plain() : user;
-        //delete user._id;
-        //this.Restangular.one('users', userId).customPUT(user);
-
+        // delete user._id;
+        //
+        // this.Restangular.one('users', userId).customPUT(user);
         this.Restangular.one('users', user._id).customPUT(user);
     }
 

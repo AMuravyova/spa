@@ -8,7 +8,9 @@ class AccountFormController {
         this.authService = authService;
         this.usersService = usersService;
         this.currentUser = this.usersService.getUser();
-        this.newUser = this.newUser || this.currentUser;
+        this.cloneUser = this.clone(this.currentUser);
+        this.newUser = this.newUser || this.cloneUser;
+        //this.newUser = this.newUser || this.currentUser;
         this.addNewUser = (userDetails, isvalid) => {
             if (isvalid) {
                 if(this.currentUser){
@@ -53,6 +55,16 @@ class AccountFormController {
             return this.titleForm;
         }
     }
+
+    clone(obj) {
+    if (null == obj || "object" != typeof obj) return obj;
+    let copy = obj.constructor();
+    for (let attr in obj) {
+        if (obj.hasOwnProperty(attr)) copy[attr] = obj[attr];
+    }
+    return copy;
+    }
+
 }
 
 export const accountformComp = {

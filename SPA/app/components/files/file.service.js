@@ -59,17 +59,23 @@ export class FileService {
     }
 
     deleteDocument(doc) {
-        this.document = this.Restangular.one('documents', doc._id);
-        this.document.remove().then(() => {
-            return this.documents.getList();
-        });
+        if(confirm("Уверены, что хотите удалить документ?")){
+            this.document = this.Restangular.one('documents', doc._id);
+            this.document.remove().then(() => {
+                return this.documents.getList();
+            });
+            alert("Документ успешно удален!");
+        }
     }
 
     deleteImage(img) {
-        this.image = this.Restangular.one('images', img._id);
-        this.image.remove().then(() => {
-            return this.images.getList();
-        });
+        if(confirm("Уверены, что хотите удалить документ?")) {
+            this.image = this.Restangular.one('images', img._id);
+            this.image.remove().then(() => {
+                return this.images.getList();
+            });
+            alert("Документ успешно удален!");
+        }
     }
 
     addImage(newImage) {

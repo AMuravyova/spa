@@ -35,11 +35,14 @@ export class UsersService {
     }
 
     updateUser(user) {
+
         // let userId = user._id;
         // delete user._id;
         //
         // this.Restangular.one('users', userId).customPUT(user);
+
         this.Restangular.one('users', user._id).customPUT(user);
+
     }
 
 }
